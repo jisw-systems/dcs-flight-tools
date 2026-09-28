@@ -10,7 +10,8 @@ window.siteConfig = window.siteConfig || {
     threats: 'J&I Flight Tools — Threat Database',
     comms: 'J&I Flight Tools — Comms',
     brevities: 'J&I Flight Tools — Brevities',
-    formations: 'J&I Flight Tools — Formations'
+    formations: 'J&I Flight Tools — Formations',
+    'tot-calculator': 'J&I Flight Tools — TOT Calculator'
   }
 };
 

@@ -19,6 +19,7 @@
       '    <a href="comms.html">Comms</a>',
       '    <a href="brevities.html">Brevities</a>',
       '    <a href="formations.html">Formations</a>',
+      '    <a href="tot-calculator.html">TOT Calculator</a>',
       '  </div>',
       '</nav>'
     ].join('');
