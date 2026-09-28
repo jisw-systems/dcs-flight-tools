@@ -8,9 +8,18 @@ The project is intentionally lightweight and framework-free: HTML, CSS, vanilla 
 
 J&I Flight Tools is part of [J&I SimWorks Systems](https://jisw-systems.github.io/main-site/).
 
+This repository is the active project site for the J&I SimWorks Systems portfolio and is published independently at [https://jisw-systems.github.io/dcs-flight-tools/](https://jisw-systems.github.io/dcs-flight-tools/). The main portfolio homepage remains the parent project and contains the broader project overview, roadmap, and public-facing brand context.
+
 The site is organized as a framework-free static application. Public HTML pages stay at the repository root for stable GitHub Pages URLs; shared frontend resources live under `assets/`, generated data lives under `data/`, authoring references live under `docs/`, and data-generation utilities live under `tools/`.
 
-A comprehensive digital kneeboard and reference toolkit for DCS World (Digital Combat Simulator). This web application provides quick-access checklists, procedures, unit converters, and a location finder for various aircraft and maps.
+A comprehensive digital kneeboard and reference toolkit for DCS World (Digital Combat Simulator). This web application provides quick-access checklists, procedures, unit converters, a location finder, and mission-planning aids such as the Route Timing Calculator.
+
+## Project Relationship
+
+- Parent site: [J&I SimWorks Systems](https://jisw-systems.github.io/main-site/)
+- Project site: [J&I Flight Tools](https://jisw-systems.github.io/dcs-flight-tools/)
+- This repo focuses on the functional DCS tooling and quick-reference modules.
+- The parent site provides the project overview, roadmap, and portfolio context.
 
 ## Features
 
@@ -52,6 +61,12 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 - Standard radio procedures and phrases
 - Real-time search filtering
 
+### Route Timing Calculator
+- Build multi-leg routes with distance and speed per leg
+- Calculate cumulative en-route time and ETA
+- Support departure times and midnight rollover
+- Useful for mission planning and flight timing estimates
+
 ### Global Toolbox
 
 #### Unit Converter
@@ -92,9 +107,10 @@ Convert between common aviation units:
 ## Project Structure
 
 dcs-flight-tools/
-├── index.html              # Landing page
+├── index.html              # Landing page and module overview
 ├── flight-checklists.html  # Aircraft checklists
 ├── threat-database.html    # Searchable threat reference page
+├── tot-calculator.html     # Multi-leg route timing and ETA calculator
 ├── assets/
 │   ├── css/
 │   │   └── styles.css      # Global styles
@@ -102,6 +118,7 @@ dcs-flight-tools/
 │       ├── main.js         # Shared frontend logic and tools
 │       ├── shared-nav.js   # Shared navigation component
 │       ├── site-config.js  # Brand, title, and favicon configuration
+│       ├── tot-calculator.js # Route timing calculator logic
 │       └── threats.js      # Threat database rendering and filtering
 ├── calendar.html           # Training calendar page
 ├── comms.html              # Communications page
