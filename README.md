@@ -308,6 +308,6 @@ This is a community tool for DCS World players. DCS World is a trademark of Eagl
 
 ---
 
-**Live Demo:** [https://javier97prnorth.github.io/dcs-pernera-web/](https://javier97prnorth.github.io/dcs-pernera-web/)
+**Live Demo:** [https://jisw-systems.github.io/dcs-flight-tools/](https://jisw-systems.github.io/dcs-flight-tools/)
 
 **Built with ❤️ for the DCS community**
