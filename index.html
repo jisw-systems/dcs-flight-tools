@@ -1,0 +1,100 @@
+<!-- ===========================
+     FILE: index.html
+     =========================== -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="inicio" class="splash-active">
+  <div class="splash-screen" id="splash-screen" aria-label="Welcome to J&I Flight Tools">
+    <div class="splash-content">
+      <div class="splash-mark">
+        <span class="splash-corner splash-corner-top" aria-hidden="true"></span>
+        <img src="assets/jisw-logo.png" alt="" class="splash-logo">
+        <span class="splash-corner splash-corner-bottom" aria-hidden="true"></span>
+      </div>
+      <span class="splash-kicker">Welcome</span>
+      <span class="splash-title">J&amp;I Flight Tools</span>
+      <span class="splash-message">Your DCS World flight toolkit</span>
+    </div>
+  </div>
+  <div id="site-nav-root"></div>
+
+  <div class="home-dynamic-grid" aria-hidden="true">
+    <div class="home-dynamic-grid-plane"></div>
+    <div class="home-dynamic-grid-scan"></div>
+    <span class="home-flight-triangle home-flight-triangle-one"></span>
+    <span class="home-flight-triangle home-flight-triangle-two"></span>
+    <span class="home-flight-triangle home-flight-triangle-three"></span>
+    <span class="home-flight-triangle home-flight-triangle-reverse home-flight-triangle-reverse-one"></span>
+    <span class="home-flight-triangle home-flight-triangle-reverse home-flight-triangle-reverse-two"></span>
+    <span class="home-flight-triangle home-flight-triangle-reverse home-flight-triangle-reverse-three"></span>
+  </div>
+
+  <header class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-logo-wrap">
+        <img src="assets/jisw-logo.png" alt="J&I SimWorks Systems logo" class="hero-logo">
+      </div>
+      <h1>J&amp;I Flight Tools</h1>
+      <p class="hero-intro">A considered set of tools for pilots who want every sortie to have a purpose.</p>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <section class="tool-shelf" aria-labelledby="tool-shelf-title">
+      <div class="tool-shelf-heading">
+        <span class="section-kicker">Your next sortie</span>
+        <h2 id="tool-shelf-title">Choose what to fly, practise, or refine.</h2>
+        <p>From a loose idea to a sharper routine, these tools keep your time in DCS moving forward.</p>
+      </div>
+
+      <div class="tool-grid">
+        <a class="tool-card" href="calendar.html">
+          <span class="tool-number">01</span>
+          <span class="tool-card-title">Training Calendar</span>
+          <span class="tool-card-description">A six-week flight plan for pilots with too many modules and no clear next mission. Find a rhythm, build confidence, and always know what to practise next.</span>
+          <span class="tool-card-link">Explore the plan <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="tool-card" href="flight-checklists.html">
+          <span class="tool-number">02</span>
+          <span class="tool-card-title">Flight Checklists</span>
+          <span class="tool-card-description">Aircraft references for the moments that matter: start-up, preparation, systems, and the small details that make a sortie feel under control.</span>
+          <span class="tool-card-link">Open the checklists <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="tool-card" href="threat-database.html">
+          <span class="tool-number">03</span>
+          <span class="tool-card-title">Threat Database</span>
+          <span class="tool-card-description">A field reference for reading the battlespace: surface threats, radars, missiles, naval systems, and airborne dangers in one searchable view.</span>
+          <span class="tool-card-link">Read the threat picture <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="tool-card" href="comms.html">
+          <span class="tool-number">04</span>
+          <span class="tool-card-title">Open Comms</span>
+          <span class="tool-card-description">Practical radio language for clearer coordination in the air, from the first call to the last transmission of the mission.</span>
+          <span class="tool-card-link">Tune your comms <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="tool-card" href="brevities.html">
+          <span class="tool-number">05</span>
+          <span class="tool-card-title">Brevities</span>
+          <span class="tool-card-description">A quick-reference glossary for the words and calls that keep a formation, an intercept, or a strike package on the same page.</span>
+          <span class="tool-card-link">Browse the glossary <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="tool-card" href="formations.html">
+          <span class="tool-number">06</span>
+          <span class="tool-card-title">Formations</span>
+          <span class="tool-card-description">Official military aviation formations with exact aircraft positions, attack geometries, and top-down visual references.</span>
+          <span class="tool-card-link">Study the formations <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/shared-nav.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!-- ===========================
+     FILE: comms.html
+    (separate Comms page)
+     =========================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="comms">
+  <div id="site-nav-root"></div>
+
+  <main class="comms-page">
+    <section class="panel comms-panel">
+      <header class="comms-header">
+        <span class="section-kicker">Radio reference</span>
+        <h1>Comms</h1>
+        <p>Clear, concise language for every stage of a sortie, from start-up to landing.</p>
+      </header>
+
+      <nav class="comms-nav" aria-label="Comms sections">
+        <a href="#startup">START‑UP</a>
+        <a href="#taxi">TAXI</a>
+        <a href="#takeoff">TAKE‑OFF</a>
+        <a href="#departure">DEPARTURE</a>
+        <a href="#push">PUSH</a>
+        <a href="#nav">NAVIGATION</a>
+        <a href="#fencein">FENCE‑IN</a>
+        <a href="#awacs">AWACS</a>
+        <a href="#commit">COMMIT</a>
+        <a href="#combat">COMBAT</a>
+        <a href="#egress">EGRESS</a>
+        <a href="#tanker">TANKER</a>
+        <a href="#fenceout">FENCE‑OUT</a>
+        <a href="#landing">LANDING</a>
+      </nav>
+
+      <!-- START-UP -->
+      <h3 id="startup">START‑UP</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>ATC responds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Request start-up</td><td>“Ground, Colt 1‑1, request start‑up.”</td><td>“Colt 1‑1, start‑up approved.”</td></tr>
+            <tr><td>After start-up</td><td>“Colt 1‑1, systems check complete, ready for taxi.”</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TAXI -->
+      <h3 id="taxi">TAXI</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>ATC responds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Request taxi</td><td>“Ground, Colt 1‑1, request taxi to active runway.”</td><td>“Colt 1‑1, taxi to runway 27 via Alpha. Hold short runway 27.”</td></tr>
+            <tr><td>At runway threshold</td><td>“Colt 1‑1 holding short runway 27, ready for departure.”</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TAKEOFF -->
+      <h3 id="takeoff">TAKE‑OFF</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>Tower responds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Request line-up</td><td>“Tower, Colt 1‑1, request line‑up.”</td><td>“Colt 1‑1, line up and wait runway 27.”</td></tr>
+            <tr><td>Request takeoff</td><td>“Tower, Colt 1‑1, request takeoff.”</td><td>“Colt 1‑1, cleared for takeoff runway 27.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- DEPARTURE -->
+      <h3 id="departure">DEPARTURE</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>Response</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Frequency change</td><td>“Switching Departure, Colt 1‑1.”</td><td>“Colt 1‑1, contact Departure on 261.0.”</td></tr>
+            <tr><td>Initial contact</td><td>“Departure, Colt 1‑1, passing 3,000 feet.”</td><td>“Colt 1‑1, radar contact, proceed on course.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PUSH -->
+      <h3 id="push">PUSH TACTICAL</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>Wingmen</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Switch to tactical</td><td>“Colt, push tactical.”</td><td>“2.” / “3.” / “4.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- NAV -->
+      <h3 id="nav">NAVIGATION</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>Response</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Continue along route</td><td>“Pushing waypoint 2.”</td><td></td></tr>
+            <tr><td>Level off</td><td>“Leveling at 15,000.”</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FENCE-IN -->
+      <h3 id="fencein">FENCE‑IN</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tactical setup</td><td>“Colt 1‑1, fence‑in complete.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- AWACS -->
+      <h3 id="awacs">AWACS / GCI</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>AWACS responds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Request picture</td><td>“Overlord, Colt 1‑1, request picture.”</td><td>“Colt 1‑1, picture clean.”</td></tr>
+            <tr><td>Request bogey dope</td><td>“Overlord, Colt 1‑1, request bogey dope.”</td><td>“Single group, bullseye 270 for 35.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- COMMIT -->
+      <h3 id="commit">COMMIT</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>Wingmen</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Commit</td><td>“Colt, commit west.”</td><td>“2.” / “3.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- COMBAT -->
+      <h3 id="combat">A/A COMBAT</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Phrase</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Visual</td><td>“Tally.”</td></tr>
+            <tr><td>Sin visual</td><td>“No joy.”</td></tr>
+            <tr><td>Offensive</td><td>“Engaged offensive.”</td></tr>
+            <tr><td>Defensive</td><td>“Engaged defensive.”</td></tr>
+            <tr><td>Missiles</td><td>“Fox 1 / Fox 2 / Fox 3.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- EGRESS -->
+      <h3 id="egress">EGRESS</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Egress</td><td>“Off target.”</td></tr>
+            <tr><td>Safe heading</td><td>“Egressing heading 090.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TANKER -->
+      <h3 id="tanker">TANKER</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>Tanker responds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Request rejoin</td><td>“Texaco, Colt 1‑1, request rejoin.”</td><td>“Proceed to pre‑contact.”</td></tr>
+            <tr><td>Pre‑contact</td><td>“Ready pre‑contact.”</td><td>“Cleared contact.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FENCE-OUT -->
+      <h3 id="fenceout">FENCE‑OUT</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tactical egress</td><td>“Colt 1‑1, fence‑out complete.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- LANDING -->
+      <h3 id="landing">LANDING</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr><th>Situation</th><th>Flight says</th><th>Tower responds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Arrival</td><td>“Tower, Colt 1‑1, inbound for landing.”</td><td>“Report initial runway 27.”</td></tr>
+            <tr><td>Pattern</td><td>“Turning final.”</td><td>“Cleared to land runway 27.”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/shared-nav.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

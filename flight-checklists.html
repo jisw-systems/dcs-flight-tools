@@ -1,0 +1,1572 @@
+<!-- ===========================
+    FILE: flight-checklists.html
+     =========================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="flight-checklists">
+  <div id="site-nav-root"></div>
+
+  <main style="padding-top:86px">
+    <section class="panel">
+      <h2>Aircraft Quick Reference</h2>
+      <p style="color:var(--sub)">Select an aircraft to view its quick reference: cold start essentials and key operating procedures designed for fast consultation.</p>
+
+      <div class="perneras-layout" style="margin-top:12px">
+        <div class="perneras-list">
+          <div class="guide-card" id="chuck-guide" aria-live="polite">
+            <h4>Chuck's Guides</h4>
+            <p>Access the general guide page to view references, procedures, and quick notes without depending on a specific aircraft.</p>
+            <a class="guide-link" href="https://chucksguides.com/" target="_blank" rel="noopener noreferrer">Open Chuck's general guides</a>
+          </div>
+
+          <section class="aircraft-selector" aria-labelledby="aircraft-selector-title">
+            <header class="aircraft-selector-header">
+              <span>Aircraft selector</span>
+              <h3 id="aircraft-selector-title">Choose aircraft</h3>
+            </header>
+            <div class="search-wrapper aircraft-selector-search">
+              <input type="text" id="perneras-search" class="search-input" placeholder="Search aircraft..." aria-label="Search aircraft">
+            </div>
+            <div class="aircraft-selector-list">
+              <div id="perneras-empty" class="perneras-empty" hidden>No aircraft found.</div>
+              <ul class="aircraft-selector-options">
+            <li><button data-plane="apache">AH-64D Apache <span class="wip-badge" title="Work in progress: pending validation">WIP</span></button></li>
+            <li><button data-plane="bf109">BF-109 K4 Kurfürst</button></li>
+            <li><button data-plane="c130">C-130 Hercules <span class="wip-badge" title="Work in progress: pending validation">WIP</span></button></li>
+            <li><button data-plane="eurofighter">Eurofighter Typhoon <span class="wip-badge" title="Work in progress: pending validation">WIP</span></button></li>
+            <li><button data-plane="f100d">F-100D Super Sabre</button></li>
+            <li><button data-plane="f14">F-14 Tomcat</button></li>
+            <li><button data-plane="f4e">F-4E Phantom II</button></li>
+            <li><button data-plane="f4u1d">F4U-1D Corsair</button></li>
+            <li><button data-plane="f86f">F-86F Sabre</button></li>
+            <li><button data-plane="fa18">F/A-18C Hornet</button></li>
+            <li><button data-plane="fw190a8">FW-190 A8 Anton</button></li>
+            <li><button data-plane="fw190d9">FW-190 D9 Dora</button></li>
+            <li><button data-plane="g91">Fiat G.91 <span class="wip-badge" title="Work in progress: pending validation">WIP</span></button></li>
+            <li><button data-plane="i16">I-16 Ishak</button></li>
+            <li><button data-plane="la7">Lavochkin LA-7</button></li>
+            <li><button data-plane="mig19">MiG-19P Farmer <span class="wip-badge" title="Work in progress: pending validation">WIP</span></button></li>
+            <li><button data-plane="mig15">MiG-15bis Fagot</button></li>
+            <li><button data-plane="mig21">MiG-21bis Fishbed <span class="wip-badge" title="Work in progress: pending validation">WIP</span></button></li>
+            <li><button data-plane="mig29">MiG-29 Fulcrum</button></li>
+            <li><button data-plane="mi24p">Mi-24P Hind <span class="wip-badge" title="Work in progress: pending validation">WIP</span></button></li>
+            <li><button data-plane="mosquito">Mosquito FB Mk VI</button></li>
+            <li><button data-plane="p47">P-47D Thunderbolt</button></li>
+            <li><button data-plane="spitfire">Spitfire Mk IX</button></li>
+            <li><button data-plane="tf51">TF-51D / P-51D Mustang</button></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div class="pernera-content">
+          <div id="pernera-tf51" class="pernera-panel active">
+            <h3>TF-51D / P-51D Mustang - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="tf51">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="tf51-1a">Raise the flaps</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-1b">Set the carburetor to RAM AIR</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-1c">Set RPM to maximum</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-1d">Set the parking brake</button></li>   
+              <li><button class="check-item" type="button" data-key="tf51-2a">Turn on the battery and generator</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-2b">Turn on the fuel pump</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-2c">Open the fuel flow</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-3a">Set magnetos to BOTH</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-3b">Prime the engine for 2-5 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-3c">Press the starter and move mixture to RUN when ignition occurs</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-4">Warm up the engine at 1200 RPM until coolant exceeds 60 °C</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-5a">Set rudder trim to 5° to the RIGHT</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-5b">Set elevator trim to NH 2° when unloaded</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-5c">Set elevator trim to NH 4° when loaded</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-6a">Close the canopy and unlock the altimeter</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-6b">Set the radio to REM and select the radio channel</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-6c">Open oxygen</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-6d">Turn on the Pitot heater</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-7a">Raise flaps when unloaded</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-7b">Set flaps to 20° when loaded</button></li>
+              <li><button class="check-item" type="button" data-key="tf51-7c">Lock the tailwheel after taxi</button></li>
+                <li><button class="check-item" type="button" data-key="tf51-7d">Hold the stick fully back and maintain it until reaching 100 mph</button></li>
+            </ul>
+            <div class="engine-management takeoff-management">
+              <h4>Takeoff</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="tf51-takeoff">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="tf51-takeoff-1">Line up and hold centerline</button></li>
+                <li><button class="check-item" type="button" data-key="tf51-takeoff-2">Advance throttle smoothly to 61 in/Hg and 3000 RPM</button></li>
+                <li><button class="check-item" type="button" data-key="tf51-takeoff-3">Use right rudder to counter torque and keep heading</button></li>
+                <li><button class="check-item" type="button" data-key="tf51-takeoff-4">Let the tail come up gently, avoid over-controlling</button></li>
+                <li><button class="check-item" type="button" data-key="tf51-takeoff-5">Rotate around 100 mph and establish a positive climb</button></li>
+                <li><button class="check-item" type="button" data-key="tf51-takeoff-6">Maintain climb speed and transition to climb power</button></li>
+              </ul>
+            </div>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="tf51-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="tf51-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="tf51-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+            <div class="technical-notes">
+              <h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <ul>
+                <li>Applying power progressively reduces torque yaw and improves directional control during the takeoff roll.</li>
+                <li>With conventional landing gear, keeping the tail under control during acceleration minimizes lateral oscillation.</li>
+                <li>Respecting takeoff power limits prevents thermal overstress during high-load, low-speed phases.</li>
+              </ul>
+            </div>
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Maximum WEP</th><td>3000</td><td>67 in/Hg</td><td>5 minutes</td></tr>
+                    <tr><th scope="row">Take off</th><td>3000</td><td>61 in/Hg</td><td>5 minutos</td></tr>
+                    <tr><th scope="row">Combat power</th><td>3000</td><td>61 in/Hg</td><td>15 minutos</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2700</td><td>46 in/Hg</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2400</td><td>36 in/Hg</td><td>Efficient consumption</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="pernera-p47" class="pernera-panel">
+            <h3>P-47D Thunderbolt - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="p47">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="p47-1a">Open the carburetor cold air</button></li>
+               <li><button class="check-item" type="button" data-key="p47-1b">Set the fuel pump rheostat to START/ALTITUDE</button></li>
+               <li><button class="check-item" type="button" data-key="p47-1c">Set the fuel tank selector to MAIN</button></li>
+               <li><button class="check-item" type="button" data-key="p47-2a">Set the parking brake</button></li>
+               <li><button class="check-item" type="button" data-key="p47-2b">Turn on the generator</button></li>
+               <li><button class="check-item" type="button" data-key="p47-2c">Raise the RPM selector switch</button></li>
+               <li><button class="check-item" type="button" data-key="p47-3a">Turn on the battery</button></li>
+               <li><button class="check-item" type="button" data-key="p47-3b">Set the intercooler and oil cooler to NEUTRAL</button></li>
+               <li><button class="check-item" type="button" data-key="p47-3c">Set RPM to maximum and open the throttle 1"</button></li>
+               <li><button class="check-item" type="button" data-key="p47-3d">Prime the engine 2-6 times</button></li>
+               <li><button class="check-item" type="button" data-key="p47-4a">Set magnetos to BOTH</button></li>
+               <li><button class="check-item" type="button" data-key="p47-4b">Set the starter to ENERGIZE for 15 seconds</button></li>
+               <li><button class="check-item" type="button" data-key="p47-4c">Switch the starter to ENGAGE and set mixture to AUTO RICH when ignition occurs</button></li>
+               <li><button class="check-item" type="button" data-key="p47-5">Warm up the engine at 900 RPM until cylinder head temperature reaches 100 °C, then increase to 1200 RPM</button></li>
+               <li><button class="check-item" type="button" data-key="p47-6a">Open the engine cooling flaps</button></li>
+               <li><button class="check-item" type="button" data-key="p47-6b">Unlock the artificial horizon</button></li>
+               <li><button class="check-item" type="button" data-key="p47-6c">Radio to REM and choose channel</button></li>
+               <li><button class="check-item" type="button" data-key="p47-6d">Pitot heater on</button></li>
+               <li><button class="check-item" type="button" data-key="p47-7a">Set aileron trim to N</button></li>
+               <li><button class="check-item" type="button" data-key="p47-7b">Set rudder trim to T.O</button></li>
+               <li><button class="check-item" type="button" data-key="p47-7c">Set elevator trim to N when unloaded</button></li>
+               <li><button class="check-item" type="button" data-key="p47-7d">Set elevator trim to 0.75" NH when loaded</button></li>               
+               <li><button class="check-item" type="button" data-key="p47-8a">Raise flaps when unloaded</button></li>
+               <li><button class="check-item" type="button" data-key="p47-8b">Set flaps to 20° when loaded</button></li>
+               <li><button class="check-item" type="button" data-key="p47-8c">Lock the tailwheel after taxi</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="p47-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="p47-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="p47-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Maximum WEP</th><td>2800</td><td>64 in/Hg</td><td>15 minutes with MW</td></tr>
+                    <tr><th scope="row">Take off</th><td>2800</td><td>52 in/Hg</td><td>5 minutos</td></tr>
+                    <tr><th scope="row">Combat</th><td>2800</td><td>52 in/Hg</td><td>15 minutos</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2550</td><td>42 in/Hg</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2250</td><td>32 in/Hg</td><td>AUTO LEAN</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="technical-notes">
+              <h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <ul>
+                <li>Above 10,000 feet, open the supercharger lever without exceeding 22,000 supercharger RPM.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="pernera-f4u1d" class="pernera-panel">
+            <h3>F4U-1D Corsair - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f4u1d">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="f4u1d-1">Turn on the battery</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-1b">Unlock the artificial horizon</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-1c">Set the fuel selector to RESERVE</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-2">Set RPM to maximum</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-2b">Open the throttle 1"</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-2c">Turn on the fuel pump</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-2d">Prime the engine for 7-10 seconds</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-3">Set magnetos to BOTH</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-3b">Hold the brakes and uncover the starter</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-3c">Press until ignition occurs</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-3d">Set mixture to AUTO RICH</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-4">Warm up the engine at 900 RPM until oil pressure begins to drop</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-4b">Increase to 1200 RPM and close engine cowl and oil cooling flaps</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-4c">Wait until oil is 40 °C and head cylinders 120 °C</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-5">Open engine cowl and oil cooling flaps to 1/3</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-5b">Turn radio on</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-5c">Pitot heater on</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-5d">Start lowering the wings and push the wing lock handle</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-5e">After wings are down, pull wing lock handle</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-6">Set aileron and rudder trim to 6° right</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-6b">Set elevator trim to NH 1°</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-7">Set flaps to 0° when unloaded (from runway)</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-7b">Set flaps to 20° when loaded (from runway)</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-7c">Set flaps to 50° when launching from carrier</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-8">Lock the tailwheel after taxi</button></li>
+               <li><button class="check-item" type="button" data-key="f4u1d-8b">Set mixture to AUTO LEAN after takeoff</button></li>                 
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="f4u1d-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="f4u1d-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="f4u1d-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Maximum WEP</th><td>2700</td><td>58 in/Hg</td><td>5 minutes, AUTO LEAN, water injection</td></tr>
+                    <tr><th scope="row">Take off</th><td>2700</td><td>54 in/Hg</td><td>5 minutos, AUTO RICH</td></tr>
+                    <tr><th scope="row">Combat power</th><td>2700</td><td>52 in/Hg</td><td>30 minutos, AUTO LEAN</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2550</td><td>49 in/Hg</td><td>AUTO LEAN</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2200</td><td>36 in/Hg</td><td>AUTO LEAN</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="technical-notes">
+              <h4>Technical Notes</h4>
+              <ul>
+                <li>Above 5,000 feet, set the supercharger to LOW; above 20,000 feet, set it to HIGH.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="pernera-bf109" class="pernera-panel">
+            <h3>BF-109 K4 Kurfürst - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="bf109">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="bf109-1">Turn on the battery and generator</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-1b">Set the radiators to AUF</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-1c">Request wheel chocks</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-2">Activate fuel pumps P1+P2</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-2b">Set magnetos to M1+M2</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-2c">Turn on ignition</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-3">Open the clutch guard</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-3b">Request the starter and prime the engine 2-6 times</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-3c">Engage the clutch until the engine starts</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-4">Warm up the engine at 2000 RPM until coolant exceeds 50 °C</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-5">Set propeller RPM to the 12:00 position</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-5b">Turn on the Pitot heater</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-5c">Remove wheel chocks</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-6">Close the canopy and open oxygen</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-6b">Set radio to ON and IFF</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-6c">Set trim to +1° unloaded and +2° loaded</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-7">Set radiators to AUTOMATIK</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-7b">Lock steering wheel after taxi</button></li>
+               <li><button class="check-item" type="button" data-key="bf109-7c">Set the governor to automatic after takeoff</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="bf109-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="bf109-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="bf109-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Maximum WEP</th><td>2800</td><td>1.75 ATA</td><td>10 minutes with MW-50</td></tr>
+                    <tr><th scope="row">Take off</th><td>2600</td><td>1.35 ATA</td><td>5 minutos</td></tr>
+                    <tr><th scope="row">Combat power</th><td>2600</td><td>1.35 ATA</td><td>30 minutos</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2400</td><td>1.25 ATA</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2000</td><td>1.05 ATA</td><td>Efficient consumption</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="pernera-fw190a8" class="pernera-panel">
+            <h3>FW-190 A8 Anton - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="fw190a8">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="fw190a8-1">Open the button panels and press all switches axcept IFF killer</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-1b">Activate navigation lights only if needed</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-1c">Request wheel chocks</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-2">Open the fuel shutoff lever</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-2b">Turn on E13, E14 and E96 switches</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-2c">Turn on E16 if an external tank is installed</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-3">Prime the engine 1-15 times until proper fuel pressure is reached</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-3b">Confirm that the fuel indicator shows yellow</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-4">Set magnetos to M1+M2</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-4b">Set throttle to START-IDLE and RPM selector to manual at the 12:00 position</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-4c">Close the engine cowls</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-5">Uncover the starter and press for 25 seconds</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-5b">Pull the starter to engage the clutch until the engine starts</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-6">Warm up the engine at 600 RPM until oil pressure indicator starts incresing</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-6b">Increase to 1200 RPM until oil temperature exceeds 25 °C</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-7">Increase to 1500 RPM until oil pressure exceeds 50 °C</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-7b">Open engine cowls as necessary</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-8">Set flaps to takeoff position</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-8b">Close the canopy and open oxygen</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-8c">Uncover landing gear rise cover</button></li>
+               <li><button class="check-item" type="button" data-key="fw190a8-8d">Remove wheel chocks and leave the governor in automatic after takeoff</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="fw190a8-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="fw190a8-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="fw190a8-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Take off y WEP</th><td>2700</td><td>1.4 ATA</td><td>3 minutos</td></tr>
+                    <tr><th scope="row">Combat power</th><td>2400</td><td>1.3 ATA</td><td>30 minutos</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2300</td><td>1.2 ATA</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2200</td><td>1.1 ATA</td><td>Efficient consumption</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="pernera-fw190d9" class="pernera-panel">
+            <h3>FW-190 D9 Dora - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="fw190d9">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="fw190d9-1">Open the button panel and press all switches</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-1b">Request wheel chocks</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-2">Open the fuel shutoff lever</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-2b">Turn on E13, E14 and E96</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-2c">Turn on E85 if an external tank is installed</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-3">Set magnetos to M1+M2</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-3b">Set throttle to START-IDLE and close the engine cooling flaps</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-4">Uncover the starter and press for 25 seconds</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-4b">Pull the starter to engage the clutch until the engine starts</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-5">Warm up the engine at 2000 RPM</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-5b">Wait until oil temperature exceeds 120 °C and coolant reaches 80 °C</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-5c">Open engine cowls if needed</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-6">Set flaps to takeoff position</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-6b">Close the canopy and open oxygen</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-6c">Remove wheel chocks and uncover the landing gear cover</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-7">Lock the tailwheel after taxi</button></li>
+               <li><button class="check-item" type="button" data-key="fw190d9-7b">Hold the stick back until reaching 160 km/h</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="fw190d9-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="fw190d9-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="fw190d9-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">WEP y combat power</th><td>3250</td><td>-</td><td>30 minutos</td></tr>
+                    <tr><th scope="row">Take off</th><td>3250</td><td>-</td><td>3 minutos</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>3000</td><td>-</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2100-2700</td><td>-</td><td>Cruise range</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="pernera-spitfire" class="pernera-panel">
+            <h3>Spitfire Mk IX - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="spitfire">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="spitfire-1">Open the main fuel tank shutoff valve</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-1b">Set RPM to maximum and open the throttle 1"</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-1c">Set the carburetor air filter</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-2">Set magnetos to M1 and M2</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-2b">Prime the engine 2-6 times</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-2c">Turn on the fuel pump</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-3">Uncover the starter and booster coil</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-3b">Press both and move mixture to RUN when ignition occurs</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-4">Warm up the engine at 1200 RPM</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-4b">Wait until coolant exceeds 60 °C</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-4c">Radio to REM and choose channel</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-5">Turn on the Pitot heater</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-5b">Close the canopy and open oxygen</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-6">Set rudder trim to the right until the “O” of PORT is vertical</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-6b">Set elevator trim to 0° unloaded and −1° loaded</button></li>
+               <li><button class="check-item" type="button" data-key="spitfire-7">Remove the carburetor air filter after takeoff</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="spitfire-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="spitfire-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="spitfire-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Maximum WEP</th><td>3000</td><td>+18 lb</td><td>5 minutes</td></tr>
+                    <tr><th scope="row">Take off</th><td>3000</td><td>+8 lb</td><td>5 minutos</td></tr>
+                    <tr><th scope="row">Combat power</th><td>2850</td><td>+12 lb</td><td>1 hora</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2650</td><td>+7 lb</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2500</td><td>+4 lb</td><td>Efficient consumption</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="pernera-mosquito" class="pernera-panel">
+            <h3>Mosquito FB Mk VI - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="mosquito">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="mosquito-1">Close the door</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-1b">Set the parking brake</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-1c">Turn on the battery</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-2">Select the outer fuel tanks</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-2b">Open the fuel shutoff valves</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-2c">Open the pressure valve and close the fuel transfer valve</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-3">Open the throttles 0.5"</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-3b">Set RPM to maximum</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-3c">Mixture to RICH</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-4">Open the side window</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-4b">Request engine priming</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-4c">Turn on magnetos 1 and 2 for both engines</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-5">Uncover and press the starters until the rotors make 3 revolutions</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-5b">Activate the booster coils until ignition occurs</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-5c">Open radiators flaps and air carburetor air filter</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-6">Warm up both engines at 1200 RPM</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-6b">Wait until oil temperature exceeds 20 °C and coolant reaches 40 °C</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7">Close the window</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7b">Open oxygen</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7c">Set the radio to REM*</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7d">Turn on radio indicating compass (RI compass) and inverter 106A</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7e">Flaps to 15°</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7f">Turn on the Pitot heater</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7g">Turn on R 3078 IFF</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7h">Lights as necessary</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-7i">Turn on immersed fuel pump if using long-range fuselage fuel tanks</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-8">Set elevator trim 0.5 divs nose down unloaded and no flaps</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-8b">Set elevator trim 2 divs nose down unloaded and with flaps</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-8c">Set elevator trim 2.5 divs nose down loaded and with flaps</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-9">Rudder trim 0.5 div right</button></li>
+               <li><button class="check-item" type="button" data-key="mosquito-10">Lock the tailwheel after taxi</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="mosquito-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="mosquito-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="mosquito-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Maximum WEP</th><td>3000</td><td>+25 lb</td><td>5 minutes</td></tr>
+                    <tr><th scope="row">Take off</th><td>3000</td><td>+18 lb</td><td>5 minutos</td></tr>
+                    <tr><th scope="row">Combat power</th><td>2850</td><td>+9 lb</td><td>1 hora</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2650</td><td>+7 lb</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>2300</td><td>+2 lb</td><td>Lean</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="pernera-mi24p" class="pernera-panel">
+            <h3>Mi-24P Hind - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="mi24p">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mi24p-1">Turn on all left-side circuit breakers.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-2">Turn on all right-side circuit breakers.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-3">Release the rotor brake.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-4">Turn on the left and right DC power switches.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-5">Turn on the left battery switch.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-6">Turn on the left and right generator switches.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-7">Turn on battery network power.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-8">Turn on the PO-750A inverter.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-9">Turn on all fuel pumps.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-10">Set the left and right engine fire valves to OPEN.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-11">Set the Feed Tank 1 and Feed Tank 2 valve switches to OPEN.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-12">Press the APU start button.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-13">Wait for the temperature to rise and the APU START light to illuminate.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-14">Press the engine start button.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-15">Open the left engine shutoff valve.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-16">Set the fire extinguisher control switch UP.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-17">Turn on fire extinguisher power.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-18">Turn on the gunsight.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-19">When the engine start light goes out, move the engine selector switch DOWN to select the right engine.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-20">Press the engine start button.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-21">Open the right engine shutoff valve.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-22">Turn on the map.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-23">Calibrate the map.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-24">Ask Petrovich to turn on the weapons systems.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-25">Increase the throttle. Once the rotor and engine speeds are within the yellow range, turn on the 115 V and 36 V AC transformers.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-26">Turn battery network power OFF.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-27">Turn the APU generator OFF.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-28">Turn the PO-750A inverter OFF.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-29">Turn on all radio-navigation switches except “Airspeed Sensor to Doppler Navigator” and “RWR Signal”.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-30">Turn on the IFF.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-31">Turn on the ARC-U2.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-32">Close the doors.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-33">Open the oxygen valve.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-34">Set the cabin sealing control to CLOSED.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-35">Set the aircraft trim.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-36">Reset the gyros.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-37">Set the PU-38 gyro to the middle position, press the PU-38 SYNC (MATCH) button for 2 seconds, then return the PU-38 gyro to the MAGNETIC position.</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-38">Turn on the autopilot heading channel (YAW).</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-39">Turn on the autopilot roll channel (ROLL).</button></li>
+              <li><button class="check-item" type="button" data-key="mi24p-40">Turn on the autopilot attitude channel (PITCH).</button></li>
+            </ul>
+            <div class="technical-notes">
+              <h4>Technical Notes</h4>
+              <ul>
+                <li>Preserve speed: regain control of the engagement without stalling.</li>
+                <li><strong>Break turn:</strong> maximum-performance turn with 30° or more of bank; normally 180°. Counter the descent with collective and use flares if needed.</li>
+                <li><strong>Combat turn:</strong> climbing U-turn, up to 30° nose-up and 45° of bank. Exit above 100 km/h.</li>
+                <li><strong>Zoom climb:</strong> start above 200 km/h and do not exceed 30° nose-up. Recover between 150 and 100 km/h by pushing the cyclic forward.</li>
+                <li><strong>Climbing turn:</strong> recover from the zoom with 30° of bank between 150 and 100 km/h; apply slight collective to maintain level flight on exit.</li>
+                <li><strong>Dive:</strong> do not exceed -30° or 350 km/h. If retreating-blade stall occurs, lower the collective and pull back on the cyclic.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="pernera-i16" class="pernera-panel">
+            <h3>I-16 Ishak - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="i16">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="i16-1">Request ground electrical power</button></li>
+               <li><button class="check-item" type="button" data-key="i16-1b">Request wheel chocks</button></li>
+               <li><button class="check-item" type="button" data-key="i16-1c">Close the cockpit doors</button></li>
+               <li><button class="check-item" type="button" data-key="i16-2">Open the engine cooling flaps</button></li>
+               <li><button class="check-item" type="button" data-key="i16-2b">Set mixture to AUTO RICH</button></li>
+               <li><button class="check-item" type="button" data-key="i16-2c">Set RPM to maximum and open the throttle 1"</button></li>
+               <li><button class="check-item" type="button" data-key="i16-3">Turn on the battery, generator, and radio</button></li>
+               <li><button class="check-item" type="button" data-key="i16-4">Open the fuel valve</button></li>
+               <li><button class="check-item" type="button" data-key="i16-4b">Prime the engine 5 times</button></li>
+               <li><button class="check-item" type="button" data-key="i16-4c">Pump fuel to the carburetor for 3 seconds and then to the engine for 3 seconds</button></li>
+               <li><button class="check-item" type="button" data-key="i16-5">Set magnetos to 1+2</button></li>
+               <li><button class="check-item" type="button" data-key="i16-5b">Pull the inertial starter for 8 seconds, then push to engage the clutch</button></li>
+               <li><button class="check-item" type="button" data-key="i16-6">Warm up the engine at 1200 RPM until oil reaches 50 °C</button></li>
+               <li><button class="check-item" type="button" data-key="i16-6b">Open cooling flaps if necessary</button></li>
+               <li><button class="check-item" type="button" data-key="i16-7">Disconnect ground electrical power</button></li>
+               <li><button class="check-item" type="button" data-key="i16-7b">Remove wheel chocks</button></li>
+               <li><button class="check-item" type="button" data-key="i16-7c">Pitot heater</button></li>
+               <li><button class="check-item" type="button" data-key="i16-7d">Check external lights</button></li>
+               <li><button class="check-item" type="button" data-key="i16-8">Lock the tailwheel after taxi</button></li>
+               <li><button class="check-item" type="button" data-key="i16-8b">Brake the wheels during takeoff before raising the landing gear</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="i16-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="i16-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="i16-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Maximum WEP</th><td>2300</td><td>910 mmHg</td><td>5 minutes</td></tr>
+                    <tr><th scope="row">Take off</th><td>2300</td><td>700 mmHg</td><td>4 minutos</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2200</td><td>640 mmHg</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>1800</td><td>500 mmHg</td><td>Efficient consumption</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="technical-notes">
+              <h4>Technical Notes</h4>
+              <ul>
+                <li>Above 3,000 meters, set the supercharger to second stage.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="pernera-la7" class="pernera-panel">
+            <h3>Lavochkin LA-7 - Checklist</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="la7">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+               <li><button class="check-item" type="button" data-key="la7-1">Request connection of ground air supply</button></li>
+               <li><button class="check-item" type="button" data-key="la7-1b">Request wheel chocks and open the fuel shutoff valve</button></li>
+               <li><button class="check-item" type="button" data-key="la7-1c">Close the oil and engine cooling flaps</button></li>
+               <li><button class="check-item" type="button" data-key="la7-2">Request application of ground air pressure</button></li>
+               <li><button class="check-item" type="button" data-key="la7-2b">Open the aircraft air supply valve</button></li>
+               <li><button class="check-item" type="button" data-key="la7-3">Prime the engine until reaching 1 kg/cm²</button></li>
+               <li><button class="check-item" type="button" data-key="la7-3b">Open the fuel valve and fill it using the primer handle</button></li>
+               <li><button class="check-item" type="button" data-key="la7-4">Set RPM to maximum and open the throttle 1 cm</button></li>
+               <li><button class="check-item" type="button" data-key="la7-4b">Turn on the battery and open the air feed to the ignition pump</button></li>
+               <li><button class="check-item" type="button" data-key="la7-5">Wait for two rotor revolutions</button></li>
+               <li><button class="check-item" type="button" data-key="la7-5b">Turn on the magnetos and press the starter buttons</button></li>
+               <li><button class="check-item" type="button" data-key="la7-6">Pump fuel using the manual pump</button></li>
+               <li><button class="check-item" type="button" data-key="la7-6b">Maintain fuel pressure until the engine runs steadily</button></li>
+               <li><button class="check-item" type="button" data-key="la7-7">Warm up the engine at 1000 RPM</button></li>
+               <li><button class="check-item" type="button" data-key="la7-7b">Increase to 1200 RPM until oil exceeds 50 °C and cylinder heads reach 140 °C</button></li>
+               <li><button class="check-item" type="button" data-key="la7-8">Open oil and engine cooling flaps as needed</button></li>
+               <li><button class="check-item" type="button" data-key="la7-8b">Disconnect ground air supply and remove wheel chocks</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="la7-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="la7-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="la7-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Profile</th><th>RPM</th><th>Pressure / power</th><th>Notes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Combat power</th><td>2300</td><td>870 mmHg</td><td>1 hora</td></tr>
+                    <tr><th scope="row">Maximum continuous</th><td>2000</td><td>-</td><td>Continuous rating</td></tr>
+                    <tr><th scope="row">Economy cruise</th><td>1600</td><td>-</td><td>Efficient consumption</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="technical-notes">
+              <h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <ul>
+                <li>Above 4,500 meters, set the supercharger to second stage; do not exceed 1000 mmHg in this configuration.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="pernera-fa18" class="pernera-panel">
+            <h3>F/A-18C Hornet - Checklist Cold Start quick</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="fa18">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="fa18-1">Battery switch ON</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-2">Parking brake SET</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-3">APU ON</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-4">Close canopy</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-5">Engine crank RIGHT</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-6">At 21% RPM release right stick</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-7">Repeat for left engine</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-8">Power up MFDs, HUD and HMD if applicable</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-9">Artificial horizon</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-10">Radar OPR</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-11">INS NAV</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-12">HSI select STD HDG (Storage Heading)</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-13">Oxygen Flow ON</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-14">FCS Reset</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-15">Flaps HALF</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-16">Hook Bypass FIELD/CARRIER</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-17">FCS BIT test</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-18">When complete, press T/O Trim</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-19">Configure IFF, TACAN, ILS, Data Link</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-20">Radar altimeter ON</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-21">Arm ejection seat</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-22">FLIR STBY (if applicable)</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-23">When INS indicates OK, switch to NAV or IFA</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-24">RWR, ECM, dispensers ON (in air)</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-25">Taxi light ON</button></li>
+              <li><button class="check-item" type="button" data-key="fa18-26">Parking brake RELEASE</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="fa18-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="fa18-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Shore Takeoff (Essential)</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="fa18-shore">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="fa18-shore-1">Anti-Skid ON</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-2">Flaps HALF</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-3">Launch Bar RETRACTED</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-4">Parking Brake RELEASED</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-5">Taxi speed below 20 knots</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-6">NWS LOW gives plus/minus 16 degrees</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-7">NWS HI gives plus/minus 75 degrees (hold Undesignate / Nosewheel Steer Switch)</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-8">Line up on runway</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-9">Hold brakes</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-10">Advance throttles to 80 percent RPM</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-11">Release brakes</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-12">Set throttles to MAX afterburner</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-13">Rotate at approximately 150 knots</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-14">Target pitch is 7 degrees angle of attack</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-15">Positive climb</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-16">Raise landing gear before reaching 240 knots</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-17">Set flaps to AUTO</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-shore-18">Set ALTITUDE switch to BARO at 3000 feet</button></li>
+              </ul>
+            </div>
+            <div class="engine-management">
+              <h4>Carrier Takeoff (Essential)</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="fa18-carrier">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="fa18-carrier-1">INS alignment in CV mode</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-2">After alignment set INS to IFA if GPS available or NAV if not</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-3">Anti-Skid OFF</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-4">Launch Bar RETRACT</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-5">Hook Bypass CARRIER</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-6">Parking Brake RELEASED</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-7">Taxi with wings folded</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-8">Spread and lock wings before catapult hookup</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-9">Flaps HALF</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-10">Speed Brake IN</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-11">Trim for catapult according to weight</button></li>
+                <li style="padding-left:20px"><button class="check-item" type="button" data-key="fa18-carrier-12">44000 lbs and below: 16 degrees nose up</button></li>
+                <li style="padding-left:20px"><button class="check-item" type="button" data-key="fa18-carrier-13">45000 to 48000 lbs: 17 degrees nose up</button></li>
+                <li style="padding-left:20px"><button class="check-item" type="button" data-key="fa18-carrier-14">49000 lbs and above: 19 degrees nose up</button></li>
+                <li style="padding-left:20px"><button class="check-item" type="button" data-key="fa18-carrier-15">If weight 43000 lbs or above and expecting 10 knots or less excess endspeed: add 3 degrees nose up</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-16">Launch Bar EXTEND</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-17">Nosewheel steering disconnects automatically</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-18">If no Supercarrier use U to hook into shuttle</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-19">Run-up</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-20">Throttle MAX afterburner</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-21">If afterburner lockout occurs raise finger lifts (keys 0 and 9)</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-22">Salute with Left Control plus Left Shift plus S</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-23">Catapult shot lasts about two seconds</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-24">FCS sets climb attitude automatically</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-25">Regain control after positive climb</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-26">Raise landing gear before reaching 240 knots</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-27">Set flaps to AUTO</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-28">Perform clearing turn</button></li>
+                <li style="padding-left:20px"><button class="check-item" type="button" data-key="fa18-carrier-29">Twenty degrees left</button></li>
+                <li style="padding-left:20px"><button class="check-item" type="button" data-key="fa18-carrier-30">Heading BRC</button></li>
+                <li style="padding-left:20px"><button class="check-item" type="button" data-key="fa18-carrier-31">Maintain 500 feet and 300 knots</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-32">After seven nautical miles you may climb above 500 feet</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-carrier-33">Set ALTITUDE switch to BARO at 3000 feet</button></li>
+              </ul>
+            </div>
+            <div class="video-accordion">
+              <button class="video-accordion-toggle" type="button" aria-expanded="false">
+                Recommended videos
+              </button>
+
+              <div class="video-accordion-content" hidden>
+                <div class="video-grid">
+                  <iframe src="https://www.youtube.com/embed/gWulKpNqtP8" title="F/A-18C recommended video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/udRZ3O7dbD8" title="F/A-18C short recommended video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="pernera-f14" class="pernera-panel">
+            <h3>F-14 Tomcat - Checklist Cold Start quick</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f14">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f14-1">Connect external power and external air</button></li>
+              <li><button class="check-item" type="button" data-key="f14-2">Turn on oxygen and arm ejection seat</button></li>
+              <li><button class="check-item" type="button" data-key="f14-3">ICS com check with Jester</button></li>
+              <li><button class="check-item" type="button" data-key="f14-4">Close canopy</button></li>
+              <li><button class="check-item" type="button" data-key="f14-5">Engine crank RIGHT, wait 20% RPM, throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f14-6">Engine crank LEFT, repeat</button></li>
+              <li><button class="check-item" type="button" data-key="f14-7">Air source BOTH ENGINES</button></li>
+              <li><button class="check-item" type="button" data-key="f14-8">Disconnect external power and external air</button></li>
+              <li><button class="check-item" type="button" data-key="f14-9">Configure UHF/TACAN radios to T/R</button></li>
+              <li><button class="check-item" type="button" data-key="f14-10">Turn on AFCS</button></li>
+              <li><button class="check-item" type="button" data-key="f14-11">Turn on VDI, HUD, HSD; HSD → TID</button></li>
+              <li><button class="check-item" type="button" data-key="f14-12">Request INS alignment from Jester</button></li>
+              <li><button class="check-item" type="button" data-key="f14-13">Turn on RWR</button></li>
+              <li><button class="check-item" type="button" data-key="f14-14">Reset altimeter and radar altimeter</button></li>
+              <li><button class="check-item" type="button" data-key="f14-15">Uncage standby attitude</button></li>
+              <li><button class="check-item" type="button" data-key="f14-16">Parking brake RELEASE</button></li>
+              <li><button class="check-item" type="button" data-key="f14-17">Wing sweep FULL FWD, cover panel</button></li>
+              <li><button class="check-item" type="button" data-key="f14-18">Master Reset</button></li>
+              <li><button class="check-item" type="button" data-key="f14-19">Flaps as needed</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="f14-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="f14-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="f14-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+
+          <div class="engine-management">
+            <h4>Shore Takeoff (Essential)</h4>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f14-shore">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f14-shore-1">Anti-Skid Spoiler Brake OFF</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-2">Hook Bypass FIELD</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-3">Nose Strut RETRACTED</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-4">HUD Mode TO</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-5">Parking Brake IN</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-6">Taxi speed below 10 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-7">NWS steering ±70 degrees (toggle Nosewheel Steering button)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-8">Wing Sweep Emergency Handle set to 20 degrees</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-9">Master Reset pressed</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-10">Exercise wings full range</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-11">Wing Sweep AUTO (wings set to 20 degrees)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-12">Anti-Skid Spoiler Brake BOTH</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-13">Flaps UP</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-14">Takeoff Elevator Trim 0 degrees</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-15">Disengage NWS</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-16">Throttle MIL power (90 percent RPM N2)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-17">Afterburner takeoff prohibited</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-18">Rotate at 130–140 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-19">Landing Gear UP before 250 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f14-shore-20">Afterburner allowed once airborne</button></li>
+            </ul>
+          </div>
+
+          <div class="engine-management">
+            <h4>Carrier Takeoff (Essential)</h4>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f14-carrier">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f14-carrier-1">INS alignment in CVA mode then INS NAV</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-2">Anti-Skid Spoiler Brake OFF</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-3">Hook Bypass CARRIER</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-4">Nose Strut RETRACTED</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-5">HUD Mode TO</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-6">Parking Brake IN</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-7">Taxi with wings in OVERSWEEP</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-8">NWS steering ±70 degrees</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-9">Emergency Wing Sweep Handle to 20 degrees</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-10">Master Reset pressed</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-11">Exercise wings full range</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-12">Wing Sweep AUTO (wings set to 20 degrees)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-13">Flaps DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-14">Launch Bar: Nose Strut KNEEL</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-15">NWS disconnects automatically</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-16">Hook into catapult shuttle (use U if no Supercarrier)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-17">Power idle once locked</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-18">Takeoff Elevator Trim 2–3 degrees nose up</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-19">Speed Brakes IN</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-20">Engine Run-Up: MIL power (90 percent RPM N2)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-21">Afterburner takeoff prohibited</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-22">Control wipeout (full stick and rudder movements)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-23">Day launch salute: LSHIFT+U</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-24">Night launch: flash navigation lights</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-25">Catapult shot about two seconds</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-26">Landing Gear UP before 250 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-27">Flaps UP before 225 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-28">Clearing turn: 20 degrees left, heading BRC, 500 feet, 300 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f14-carrier-29">After 7 nautical miles cleared to climb above 500 feet</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="pernera-f4e" class="pernera-panel">
+            <h3>F-4E Phantom II - Checklist Cold Start quick</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f4e">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f4e-1">Connect external power</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-2">Generators EXTERNAL</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-3">Connect external air to right engine</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-4">Right engine master ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-5">Start air flow RIGHT ENGINE</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-6">At 10% RPM throttle to mid, maintain ignition, return to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-7">Right generator ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-8">Repeat process for left engine</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-9">Left generator ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-10">Cycle right generator OFF → ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-11">Request INS alignment from Jester</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-12">Stop air flow and disconnect external air/power</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-13">Radios T/R and guard</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-14">IFF NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-15">Radar altimeter ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-16">Alignment complete → PRIMARY</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-17">Trim 3 units DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-18">Slats and flaps OUT</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-19">Optical sight STBY/CAGE</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-20">RWR ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-21">DSCG radar ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-22">Oxygen NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-23">Reset regulator and altimeter</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-24">Uncage standby attitude</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-25">Stab augmentation ON</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-26">Remove wheel chocks</button></li>
+              <li><button class="check-item" type="button" data-key="f4e-27">Close canopy</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="f4e-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="f4e-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div id="pernera-f86f" class="pernera-panel">
+            <h3>F-86F Sabre - Checklist Cold Start</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f86f">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f86f-1a">Request ground electrical power</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-1b">Set the hydraulic system to ALTERNATE</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-2">Engine master switch ON</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-3a">Set battery to STARTER for 3 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-3b">Set battery to ON</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-4a">Wait for 3% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-4b">Move throttle to OUTBOARD</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-5a">Wait for 9% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-5b">Move throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-5c">Wait for 30% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-6a">Set flight master switch to RESET</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-6b">Set flight master switch to NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-7">Set hydraulic system to NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-8a">Retract speedbrakes</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-8b">Set radio ON</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-8c">Set IFF to NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-9">Disconnect ground electrical power</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-10a">Set flaps DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-10b">Set trim NOSE UP until the dashboard light turns on</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-11a">Close canopy</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-11b">Open oxygen</button></li>
+            </ul>
+            <div class="technical-notes">
+              <h4>Technical notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <ul>
+                <li>Recommended RPM range: 85%-95%.</li>
+                <li>Do not exceed 690 °C exhaust gas temperature.</li>
+              </ul>
+            </div>
+
+          <div class="engine-management">
+            <h4>Takeoff (Essential)</h4>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f86f-takeoff">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-1">Engine to 60% RPM to start moving, then throttle IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-2">Use nosewheel steering (S) and rudder pedals for taxi</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-3">NWS will not engage if nosewheel > 21 degrees</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-4">Flaps DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-5">Airbrakes RETRACTED</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-6">Trim elevator until TAKE-OFF POS indicator blinks (takeoff trim set)</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-7">Hold wheel brakes</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-8">Throttle slowly to MAX POWER (MIL)</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-9">Release brakes at full power</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-10">Use rudder only (no NWS) during takeoff roll</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-11">At 95–100 knots: pull stick fully aft to lift nosewheel</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-12">Liftoff expected at 110–115 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-13">Rotate at 120–125 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-14">Keep airspeed below 125 knots to avoid overspeeding gear/flaps</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-15">Landing Gear UP below 155 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-16">Flaps UP below 140 knots (then set lever to NEUTRAL)</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-17">Best climb: accelerate to 455 knots IAS at sea level</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-takeoff-18">Climb so IAS decreases 50 knots per 10,000 ft</button></li>
+            </ul>
+
+            <div class="engine-management">
+              <h4>Best Climb Speeds</h4>
+              <div class="engine-table-wrapper">
+                <table class="engine-table">
+                  <thead>
+                    <tr><th>Altitude</th><th>Speed (knots)</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Sea Level</td><td>455</td></tr>
+                    <tr><td>5,000 ft</td><td>430</td></tr>
+                    <tr><td>10,000 ft</td><td>400</td></tr>
+                    <tr><td>15,000 ft</td><td>385</td></tr>
+                    <tr><td>20,000 ft</td><td>350</td></tr>
+                    <tr><td>25,000 ft</td><td>325</td></tr>
+                    <tr><td>30,000 ft</td><td>300</td></tr>
+                    <tr><td>35,000 ft</td><td>285</td></tr>
+                    <tr><td>40,000 ft</td><td>255</td></tr>
+                    <tr><td>45,000 ft</td><td>230</td></tr>
+                    <tr><td>50,000 ft</td><td>205</td></tr>
+                    <tr><td>55,000 ft</td><td>180</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="engine-management">
+            <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f86f-landing">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f86f-landing-1">Extend speed brakes and slow to 185 knots IAS</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-2">Below 185 knots: extend landing gear and flaps</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-3">Hold IAS around 140 knots</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-4">Monitor glideslope and touchdown point</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-5">At 3–5 feet above runway: level off and throttle IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-6">Touchdown on main wheels at ~115 knots IAS</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-7">Keep nosewheel up initially for airbraking</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-8">After nosewheel touches down: brake as needed</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-9">Flaps UP</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-10">Speed brakes RETRACTED</button></li>
+              <li><button class="check-item" type="button" data-key="f86f-landing-11">Taxi to parking</button></li>
+            </ul>
+          </div>
+          </div>
+
+          <div id="pernera-f100d" class="pernera-panel">
+            <h3>F-100D Super Sabre - Checklist Cold Start</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f100d">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f100d-1a">Request ground electrical power</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-1b">Set battery ON</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-1c">Set instrument inverter ON</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-2">Set UHF radio to BOTH</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-3">Press the left warning panel lights</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-4">Engine master switch ON</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-5a">Close canopy</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-5b">Connect ground air supply</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-5c">Apply ground air supply</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-6a">Start engine</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-6b">At 12% RPM move throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-7a">Remove ground air supply</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-7b">Stop starter at 40% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-8">When generator light turns off, disconnect ground electrical power</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-9">Set hydraulic system to SYS 2</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-10a">Enable anti-skid</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-10b">Enable elevator damper</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-11a">Set flaps to HALF</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-11b">Set speedbrake IN</button></li>
+              <li><button class="check-item" type="button" data-key="f100d-12">Lock nosewheel steering after taxi</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="f100d-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="f100d-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="f100d-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div id="pernera-apache" class="pernera-panel">
+            <h3>AH-64D Apache - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="apache">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="apache-1">Set battery and essential electrical power ON</button></li>
+              <li><button class="check-item" type="button" data-key="apache-2">Set APU control to STBY and start APU</button></li>
+              <li><button class="check-item" type="button" data-key="apache-3">Confirm APU and utility hydraulic indications</button></li>
+              <li><button class="check-item" type="button" data-key="apache-4">Start the left and right engines using the approved sequence</button></li>
+              <li><button class="check-item" type="button" data-key="apache-5">Set generators and flight essential buses ON</button></li>
+              <li><button class="check-item" type="button" data-key="apache-6">Configure flight instruments, radios, and navigation</button></li>
+              <li><button class="check-item" type="button" data-key="apache-7">Run flight control and flight augmentation checks</button></li>
+              <li><button class="check-item" type="button" data-key="apache-8">Set rotor and weapon systems safe for taxi</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="apache-landing">Mark/unmark all</button></div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="apache-landing-1">Confirm landing area and approach path clear</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-2">Set approach configuration and stabilize the descent</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-3">Touch down within the planned landing area and maintain rotor control</button></li>
+              </ul>
+            </div>
+            <div class="engine-management">
+              <h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="engine-table-wrapper"><table class="engine-table">
+                <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Ground idle</th><td>Example - validate</td><td>Minimum stable power</td><td>Monitor engine instruments</td></tr>
+                  <tr><th scope="row">Takeoff</th><td>Example - validate</td><td>Approved takeoff setting</td><td>Respect aircraft and ambient limits</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+            <div class="technical-notes"><h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><ul>
+              <li>Example content only; validate switch positions and start logic in the AH-64D module.</li>
+              <li>Use the aircraft and engine instruments to confirm a stable configuration before taxi.</li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-c130" class="pernera-panel">
+            <h3>C-130 Hercules - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="c130">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="c130-1">Set parking brake and verify propellers clear</button></li>
+              <li><button class="check-item" type="button" data-key="c130-2">Set battery and external power as required</button></li>
+              <li><button class="check-item" type="button" data-key="c130-3">Configure fuel, hydraulic, and electrical panels for start</button></li>
+              <li><button class="check-item" type="button" data-key="c130-4">Start each engine using the approved propeller sequence</button></li>
+              <li><button class="check-item" type="button" data-key="c130-5">Confirm generators, propeller governors, and engine indications</button></li>
+              <li><button class="check-item" type="button" data-key="c130-6">Set radios, navigation, oxygen, and anti-ice systems as required</button></li>
+              <li><button class="check-item" type="button" data-key="c130-7">Complete flight control, trim, and warning panel checks</button></li>
+              <li><button class="check-item" type="button" data-key="c130-8">Release external power and configure for taxi</button></li>
+            </ul>
+            <div class="engine-management"><h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="c130-landing">Mark/unmark all</button></div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="c130-landing-1">Confirm landing weight, runway, and braking plan</button></li>
+                <li><button class="check-item" type="button" data-key="c130-landing-2">Configure gear, flaps, and propellers for the planned approach</button></li>
+                <li><button class="check-item" type="button" data-key="c130-landing-3">Maintain the validated approach speed and touchdown attitude</button></li>
+              </ul>
+            </div>
+            <div class="engine-management"><h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="engine-table-wrapper"><table class="engine-table">
+              <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
+              <tbody><tr><th scope="row">Taxi</th><td>Example - validate</td><td>Low power</td><td>Use propeller control carefully</td></tr><tr><th scope="row">Takeoff</th><td>Example - validate</td><td>Approved takeoff setting</td><td>Monitor torque, temperature, and oil pressure</td></tr></tbody>
+            </table></div></div>
+            <div class="technical-notes"><h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><ul>
+              <li>Example content only; validate engine start order and propeller controls in the selected C-130 module.</li>
+              <li>Use aircraft loading and runway data before applying any takeoff setting.</li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-eurofighter" class="pernera-panel">
+            <h3>Eurofighter Typhoon - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="eurofighter">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="eurofighter-1">Set battery and external power as required</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-2">Set both engine master controls and verify fire indications</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-3">Start engines using the approved ground sequence</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-4">Confirm flight control, hydraulic, and electrical indications</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-5">Configure displays, navigation, radios, and identification systems</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-6">Set flight control laws and trim for taxi</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-7">Complete flight control, flight instrument, and warning checks</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-8">Set armament and external stores safe for taxi</button></li>
+            </ul>
+            <div class="engine-management"><h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="eurofighter-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="eurofighter-landing-1">Confirm fuel state, runway, and landing configuration</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-landing-2">Set gear and high-lift devices according to the validated procedure</button></li>
+              <li><button class="check-item" type="button" data-key="eurofighter-landing-3">Maintain the validated approach speed and monitor energy state</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="engine-table-wrapper"><table class="engine-table">
+              <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
+              <tbody><tr><th scope="row">Idle</th><td>Example - validate</td><td>Idle thrust</td><td>Confirm both engines stable</td></tr><tr><th scope="row">Takeoff</th><td>Example - validate</td><td>Approved takeoff setting</td><td>Validate reheat and runway limits</td></tr></tbody>
+            </table></div></div>
+            <div class="technical-notes"><h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><ul>
+              <li>Example content only; module availability and switch logic require validation.</li>
+              <li>Do not treat the example engine values as aircraft limits.</li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-g91" class="pernera-panel">
+            <h3>Fiat G.91 - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="g91">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="g91-1">Set battery and generator controls for start</button></li>
+              <li><button class="check-item" type="button" data-key="g91-2">Request ground power if required by the module</button></li>
+              <li><button class="check-item" type="button" data-key="g91-3">Set fuel system and engine controls for start</button></li>
+              <li><button class="check-item" type="button" data-key="g91-4">Start the engine and monitor RPM, temperature, and oil pressure</button></li>
+              <li><button class="check-item" type="button" data-key="g91-5">Confirm generator and hydraulic indications</button></li>
+              <li><button class="check-item" type="button" data-key="g91-6">Configure radios, navigation, oxygen, and pitot heat</button></li>
+              <li><button class="check-item" type="button" data-key="g91-7">Set trim, speedbrakes, flaps, and landing gear controls</button></li>
+              <li><button class="check-item" type="button" data-key="g91-8">Complete flight control and warning panel checks</button></li>
+            </ul>
+            <div class="engine-management"><h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="g91-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="g91-landing-1">Confirm landing configuration and runway condition</button></li>
+              <li><button class="check-item" type="button" data-key="g91-landing-2">Set gear and flaps using the validated sequence</button></li>
+              <li><button class="check-item" type="button" data-key="g91-landing-3">Maintain the example approach speed until validated</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="engine-table-wrapper"><table class="engine-table">
+              <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
+              <tbody><tr><th scope="row">Idle</th><td>Example - validate</td><td>Idle thrust</td><td>Monitor temperature and pressure</td></tr><tr><th scope="row">Takeoff</th><td>Example - validate</td><td>Approved takeoff setting</td><td>Validate time and temperature limits</td></tr></tbody>
+            </table></div></div>
+            <div class="technical-notes"><h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><ul>
+              <li>Example content only; confirm the specific G.91 variant and module before use.</li>
+              <li>Validate all engine limits, trim settings, and speeds against the aircraft documentation.</li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-mig19" class="pernera-panel">
+            <h3>MiG-19P Farmer - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig19">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig19-1">Set battery, generator, and ground power controls</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-2">Configure fuel pumps, ignition, and engine controls</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-3">Start the first engine and monitor indications</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-4">Start the second engine and confirm stable idle</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-5">Disconnect ground power when generators are online</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-6">Configure radios, navigation, oxygen, and pitot heat</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-7">Set trim, flaps, speedbrakes, and landing gear controls</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-8">Arm systems only after completing the safety checks</button></li>
+            </ul>
+            <div class="engine-management"><h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig19-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig19-landing-1">Confirm fuel state and landing configuration</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-2">Set gear and flaps using the validated sequence</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-3">Maintain the example approach speed until validated</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="engine-table-wrapper"><table class="engine-table">
+              <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
+              <tbody><tr><th scope="row">Idle</th><td>Example - validate</td><td>Minimum stable power</td><td>Monitor both engines</td></tr><tr><th scope="row">Takeoff</th><td>Example - validate</td><td>Approved takeoff setting</td><td>Respect engine temperature limits</td></tr></tbody>
+            </table></div></div>
+            <div class="technical-notes"><h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><ul>
+              <li>Example content only; confirm the MiG-19 variant and module implementation.</li>
+              <li>Validate engine start order, nozzle controls, and operating limits before use.</li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-mig21" class="pernera-panel">
+            <h3>MiG-21bis Fishbed - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig21">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig21-1">Set battery, inverter, and essential electrical power</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-2">Configure fuel, hydraulic, and engine controls for start</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-3">Start the engine using the approved starter sequence</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-4">Confirm generator, hydraulic, and engine indications</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-5">Configure radios, navigation, oxygen, and pitot heat</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-6">Set trim, speedbrakes, flaps, and landing gear controls</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-7">Complete flight control, instrument, and warning checks</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-8">Set the ejection seat and armament safe for taxi</button></li>
+            </ul>
+            <div class="engine-management"><h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig21-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig21-landing-1">Confirm fuel state, runway, and landing configuration</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-2">Set gear and flaps using the validated sequence</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-3">Maintain the example approach speed and monitor energy</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="engine-table-wrapper"><table class="engine-table">
+              <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
+              <tbody><tr><th scope="row">Idle</th><td>Example - validate</td><td>Idle thrust</td><td>Monitor RPM and temperature</td></tr><tr><th scope="row">Takeoff</th><td>Example - validate</td><td>Approved takeoff setting</td><td>Validate afterburner and time limits</td></tr></tbody>
+            </table></div></div>
+            <div class="technical-notes"><h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><ul>
+              <li>Example content only; validate the MiG-21bis module switch logic and engine limits.</li>
+              <li>Do not use the example approach or engine values as flight data until verified.</li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-mig15" class="pernera-panel">
+            <h3>MiG-15bis Fagot - Checklist Cold Start</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="mig15">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig15-1a">Set generator ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-1b">Request ground electrical power</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-2">Turn on all right panel switches except the battery</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-3a">Turn on fuel pumps</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-3b">Turn on ignition</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-3c">Turn on fuel transfer</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-3d">Turn on left panel instrument lighting</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-4a">Set throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-4b">Uncover starter</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-4c">Press starter for 3 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-5">At 600 RPM open fuel valve to 50%</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-6">At 1000 RPM open fuel valve to 100% and wait for 2500 RPM</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-7">Accelerate to 4500-5000 RPM until generator light turns off</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-8a">Disconnect ground electrical power</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-8b">Turn on battery</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-9">Turn on Pitot heater</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-10">Arm cannons until indicator lights turn on</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-11a">Check trim light</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-11b">Set speedbrakes IN</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-12a">Close canopy</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-12b">Pressurize cabin</button></li>
+              <li><button class="check-item" type="button" data-key="mig15-13">Unlock landing gear lever</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="mig15-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="mig15-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="mig15-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="technical-notes">
+              <h4>Technical notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <ul>
+                <li>Do not exceed 700 °C exhaust gas temperature.</li>
+                <li>Do not exceed Mach 0.85.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="pernera-mig29" class="pernera-panel">
+            <h3>MiG-29 Fulcrum - Checklist Cold Start</h3>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="mig29">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig29-1">Ground electric power ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-2">Battery ground supply ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-3">Electric power switches (6 switches) ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-4">Radio, ACFT, GIRO STBY, NAVIGATION, ACS, WEAPON, RECORD, IFF: ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-5">AFCS: OFF</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-6">Wait 40 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-7">Press Magnetic Heading Slave (key J) and Compass Zero (key 9) for ~10 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-8">Run Ekran self-test</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-10">Oxygen OPEN</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-11">Close canopy</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-12">Check canopy pin flush (canopy fully locked)</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-13">Navigation switch → OPER</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-14">Arm ejection seat</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-15">Engine start-up switch → BOTH</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-16">Left & right throttles → IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-17">Press engine start button</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-18">Wait until both engines stabilize at 58-72% idle RPM</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-19">Disconnect ground power</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-20">AFCS ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-21">Do not touch the stick while joystick damper performs self-test</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-22">Wait until AFCS green light is steady</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-23">Set joystick to neutral position</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-24">Pitot heat ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-25">RWR ON</button></li>
+              <li><button class="check-item" type="button" data-key="mig29-26">Taxi lights ON</button></li>
+            </ul>
+            <div class="engine-management">
+              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="mig29-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="mig29-landing-1">Landing configuration example</button></li>
+                <li><button class="check-item" type="button" data-key="mig29-landing-2">Landing speed example</button></li>
+              </ul>
+            </div>
+
+            <div class="engine-management">
+              <h4>Takeoff (Essential)</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="mig29-takeoff">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="mig29-takeoff-1">Brakes set, run up engines to 80-90% RPM</button></li>
+                <li><button class="check-item" type="button" data-key="mig29-takeoff-2">Release brakes and advance to full throttle (no afterburners)</button></li>
+                <li><button class="check-item" type="button" data-key="mig29-takeoff-3">Rotate smoothly at 110 knots (204 km/h)</button></li>
+                <li><button class="check-item" type="button" data-key="mig29-takeoff-4">Aircraft normally lifts at 8° to 10° pitch</button></li>
+                <li><button class="check-item" type="button" data-key="mig29-takeoff-5">Raise landing gear before 300 knots (556 km/h)</button></li>
+                <li><button class="check-item" type="button" data-key="mig29-takeoff-6">Retract flaps before 300 knots (556 km/h)</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="engine-management global-converter-block">
+          <div class="video-accordion unit-converter-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Unit Converter
+            </button>
+
+            <div class="video-accordion-content" hidden>
+              <div class="converter-grid">
+                <div class="converter-item" data-converter="temperature">
+                  <h5>Temperature</h5>
+                  <div class="converter-inputs">
+                    <label>°C<input type="number" step="any" data-unit="c"></label>
+                    <label>°F<input type="number" step="any" data-unit="f"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="pressure">
+                  <h5>Pressure</h5>
+                  <div class="converter-inputs">
+                    <label>inHg<input type="number" step="any" data-unit="inhg"></label>
+                    <label>mmHg<input type="number" step="any" data-unit="mmhg"></label>
+                    <label>hPa<input type="number" step="any" data-unit="hpa"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="speed">
+                  <h5>Speed</h5>
+                  <div class="converter-inputs">
+                    <label>mph<input type="number" step="any" data-unit="mph"></label>
+                    <label>km/h<input type="number" step="any" data-unit="kmh"></label>
+                    <label>knots<input type="number" step="any" data-unit="kts"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="altitude">
+                  <h5>Altitude</h5>
+                  <div class="converter-inputs">
+                    <label>ft<input type="number" step="any" data-unit="ft"></label>
+                    <label>m<input type="number" step="any" data-unit="m"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="fuel">
+                  <h5>Fuel</h5>
+                  <div class="converter-inputs">
+                    <label>gal<input type="number" step="any" data-unit="gal"></label>
+                    <label>L<input type="number" step="any" data-unit="l"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-accordion location-finder-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Airfield and City Finder
+            </button>
+
+            <div class="video-accordion-content" hidden>
+              <div class="location-finder-controls">
+                <div class="location-finder-selectors">
+                  <label>
+                    Map
+                    <select id="map-selector">
+                      <option value="">All maps</option>
+                    </select>
+                  </label>
+                  <label>
+                    Type
+                    <select id="type-selector">
+                      <option value="">All types</option>
+                      <option value="city">Cities</option>
+                      <option value="airfield">Airfields</option>
+                    </select>
+                  </label>
+                  <label>
+                    Search by name
+                    <input type="text" id="location-name-search" placeholder="City or airfield...">
+                  </label>
+                  <label>
+                    Search by MGRS
+                    <input type="text" id="location-mgrs-search" placeholder="E.g. 38TLN480733...">
+                  </label>
+                </div>
+              </div>
+
+              <div class="location-results-container">
+                <div id="location-results-info" class="location-results-info"></div>
+                <ul id="location-results" class="location-results"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/shared-nav.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

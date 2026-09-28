@@ -1,0 +1,52 @@
+<!-- ===========================
+     FILE: threat-database.html
+     =========================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="threats">
+  <div id="site-nav-root"></div>
+
+  <main class="threats-page">
+    <section class="panel threats-panel">
+      <header class="threats-header">
+        <span class="section-kicker">F/A-18C RWR reference</span>
+        <h1>RWR Threat Tables</h1>
+        <p>Radar Warning Receiver data for airborne units, surface radars, surface threats, and naval contacts.</p>
+      </header>
+
+      <aside class="rwr-legend" aria-label="RWR threat table legend">
+        <strong>How to read the tables</strong>
+        <span><b>C</b> Chaff</span>
+        <span><b>F</b> Flares</span>
+        <span><b>E</b> Evade</span>
+        <span><b>02/++</b> Range in nautical miles / altitude above 50,000 ft</span>
+      </aside>
+
+      <div class="threats-layout">
+        <div class="threats-content">
+          <div class="threats-controls">
+            <label class="threat-control">
+              <span>Search threats</span>
+              <input id="threat-search" class="search-input" type="search" placeholder="Search by name, designation, range..." autocomplete="off">
+            </label>
+          </div>
+          <div id="threat-results-count" class="threat-results-count" aria-live="polite"></div>
+          <div id="threat-notes" class="threat-notes" hidden></div>
+          <div id="threat-tables"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/shared-nav.js"></script>
+  <script src="data/rwr-workbook.js"></script>
+  <script src="assets/js/threats.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
