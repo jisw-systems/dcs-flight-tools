@@ -3,13 +3,6 @@ window.siteConfig = window.siteConfig || {
   parentBrand: 'J&I SimWorks Systems',
   logo: 'assets/jisw-logo.png',
   mark: 'assets/jisw-favicon/favicon-32x32.png',
-  favicons: [
-    { rel: 'icon', type: 'image/x-icon', href: 'assets/jisw-favicon/favicon.ico' },
-    { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'assets/jisw-favicon/favicon-16x16.png' },
-    { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'assets/jisw-favicon/favicon-32x32.png' },
-    { rel: 'apple-touch-icon', sizes: '180x180', href: 'assets/jisw-favicon/apple-touch-icon.png' },
-    { rel: 'manifest', href: 'assets/jisw-favicon/site.webmanifest' }
-  ],
   titles: {
     inicio: 'J&I Flight Tools — Home',
     calendar: 'J&I Flight Tools — Calendar',
@@ -33,14 +26,4 @@ window.siteConfig = window.siteConfig || {
     document.title = config.brand;
   }
 
-  if (config.favicons) {
-    config.favicons.forEach(function (favicon) {
-      var iconLink = document.createElement('link');
-      iconLink.rel = favicon.rel;
-      if (favicon.type) iconLink.type = favicon.type;
-      if (favicon.sizes) iconLink.sizes = favicon.sizes;
-      iconLink.href = favicon.href;
-      document.head.appendChild(iconLink);
-    });
-  }
 })();
