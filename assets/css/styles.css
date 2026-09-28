@@ -353,6 +353,9 @@ body[data-page="inicio"] .hero{background:rgba(13,13,15,0.62)}
   justify-content:center;
   margin-bottom:18px;
 }
+.hero-logo-link{display:inline-flex;border-radius:18px;transition:transform .2s ease,filter .2s ease}
+.hero-logo-link:hover,.hero-logo-link:focus-visible{transform:translateY(-2px);filter:drop-shadow(0 4px 12px rgba(179,57,57,0.25))}
+.hero-logo-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .hero-logo{
   width:260px;
   height:142px;
@@ -385,6 +388,10 @@ body[data-page="inicio"] .hero{background:rgba(13,13,15,0.62)}
   text-align:center;
 }
 .btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.hero-home-link{gap:10px;margin-top:18px}
+.hero-home-link span{color:var(--accent);transition:transform .2s ease,color .15s ease}
+.hero-home-link:hover span,.hero-home-link:focus-visible span{color:#fff;transform:translate(3px,-3px)}
+.hero-home-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 
 /* HOME TOOL SHELF */
 .home-main{position:relative;z-index:1;padding:0 18px 28px;background:var(--bg)}
@@ -1058,6 +1065,8 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 
 /* FOOTER small */
 .site-footer{max-width:var(--maxw);margin:18px auto 40px;color:var(--sub);font-size:0.85rem;padding:14px 18px 0;border-top:1px solid rgba(255,255,255,0.06);text-align:center}
+.site-footer__link{color:var(--sub);text-decoration:none;border-bottom:1px solid rgba(179,57,57,0.45);transition:color .2s ease,border-color .2s ease}
+.site-footer__link:hover,.site-footer__link:focus-visible{color:var(--accent);border-color:var(--accent)}
 
 /* BREVITIES SEARCH */
 .brevities-page{padding:86px 18px 28px}

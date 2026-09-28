@@ -38,6 +38,6 @@
   renderSharedNav();
 
   if (!document.querySelector('.site-footer')) {
-    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer">powered by J&amp;I SimWorks Systems</footer>');
+    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer">Part of <a class="site-footer__link" href="https://jisw-systems.github.io/main-site/">J&amp;I SimWorks Systems</a></footer>');
   }
 })();

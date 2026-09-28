@@ -6,6 +6,8 @@ This repository contains a static DCS World web toolkit called J&I Flight Tools.
 
 The project is intentionally lightweight and framework-free: HTML, CSS, vanilla JavaScript and generated JSON assets are used without a build pipeline. It can be opened locally in a browser or served directly through a static web server such as GitHub Pages.
 
+J&I Flight Tools is part of [J&I SimWorks Systems](https://jisw-systems.github.io/main-site/).
+
 The site is organized as a framework-free static application. Public HTML pages stay at the repository root for stable GitHub Pages URLs; shared frontend resources live under `assets/`, generated data lives under `data/`, authoring references live under `docs/`, and data-generation utilities live under `tools/`.
 
 A comprehensive digital kneeboard and reference toolkit for DCS World (Digital Combat Simulator). This web application provides quick-access checklists, procedures, unit converters, and a location finder for various aircraft and maps.
@@ -89,7 +91,7 @@ Convert between common aviation units:
 
 ## Project Structure
 
-dcs-pernera-web/
+dcs-flight-tools/
 ├── index.html              # Landing page
 ├── flight-checklists.html  # Aircraft checklists
 ├── threat-database.html    # Searchable threat reference page
