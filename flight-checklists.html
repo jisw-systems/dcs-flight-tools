@@ -1607,10 +1607,35 @@
             </button>
             <div class="video-accordion-content" hidden>
               <form class="geo-tool-form geo-tool-form--wide" id="offset-point-form">
-                <div class="geo-tool-inputs">
-                  <label for="offset-origin">Origin MGRS
-                    <input id="offset-origin" name="origin" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
+                <label class="geo-tool-format" for="offset-coordinate-format">Coordinate format
+                  <select id="offset-coordinate-format" name="coordinateFormat">
+                    <option value="mgrs">MGRS</option>
+                    <option value="latlon">Lat/Lon (decimal degrees)</option>
+                    <option value="dms">Lat/Lon (DMS)</option>
+                  </select>
+                </label>
+                <div class="geo-tool-inputs" data-coordinate-format-fields="mgrs">
+                  <label for="offset-origin-mgrs">Origin MGRS
+                    <input id="offset-origin-mgrs" name="origin-mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
                   </label>
+                </div>
+                <div class="geo-tool-inputs" data-coordinate-format-fields="latlon" hidden>
+                  <label for="offset-origin-latitude">Origin latitude (decimal degrees)
+                    <input id="offset-origin-latitude" name="origin-latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                  </label>
+                  <label for="offset-origin-longitude">Origin longitude (decimal degrees)
+                    <input id="offset-origin-longitude" name="origin-longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                  </label>
+                </div>
+                <div class="geo-tool-inputs" data-coordinate-format-fields="dms" hidden>
+                  <label for="offset-origin-latitude-dms">Origin latitude (DMS)
+                    <input id="offset-origin-latitude-dms" name="origin-latitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="42° 31' 48.72&quot; N" required>
+                  </label>
+                  <label for="offset-origin-longitude-dms">Origin longitude (DMS)
+                    <input id="offset-origin-longitude-dms" name="origin-longitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="43° 09' 00.44&quot; E" required>
+                  </label>
+                </div>
+                <div class="geo-tool-inputs">
                   <label for="offset-bearing">True bearing (degrees)
                     <input id="offset-bearing" name="bearing" type="number" min="0" max="360" step="any" inputmode="decimal" required>
                   </label>
@@ -1626,9 +1651,30 @@
                   </label>
                 </div>
                 <button class="btn" type="submit">Calculate offset point</button>
-                <output class="geo-tool-result" aria-live="polite"></output>
+                <div class="geo-bearing-result geo-offset-result" role="status" aria-live="polite" hidden>
+                  <div class="geo-bearing-result__metric">
+                    <div>
+                      <span class="geo-bearing-result__label">Destination MGRS</span>
+                      <strong class="geo-bearing-result__value geo-offset-result__value" data-offset-mgrs></strong>
+                    </div>
+                  </div>
+                  <div class="geo-bearing-result__metric">
+                    <div>
+                      <span class="geo-bearing-result__label">Destination Lat/Lon</span>
+                      <strong class="geo-bearing-result__value geo-offset-result__value" data-offset-latlon></strong>
+                    </div>
+                  </div>
+                  <div class="geo-bearing-result__metric geo-offset-result__metric--dms">
+                    <div>
+                      <span class="geo-bearing-result__label">Destination DMS</span>
+                      <span class="geo-offset-result__dms-line">Lat <strong data-offset-lat-dms></strong></span>
+                      <span class="geo-offset-result__dms-line">Lon <strong data-offset-lon-dms></strong></span>
+                    </div>
+                  </div>
+                </div>
+                <output class="geo-tool-result" aria-live="polite" hidden></output>
               </form>
-              <p class="geo-tool-note">The origin MGRS grid square is treated as its center. Bearing is true, clockwise from north.</p>
+              <p class="geo-tool-note">MGRS origins use the center of the grid square. Lat/Lon uses decimal degrees. Bearing is true, clockwise from north.</p>
             </div>
           </div>
 
@@ -1642,6 +1688,7 @@
                     <select id="bearing-coordinate-format" name="coordinateFormat">
                       <option value="mgrs">MGRS</option>
                       <option value="latlon">Lat/Lon (decimal degrees)</option>
+                      <option value="dms">Lat/Lon (DMS)</option>
                     </select>
                   </label>
                   <div class="geo-tool-inputs" data-coordinate-format-fields="mgrs">
@@ -1650,6 +1697,20 @@
                     </label>
                     <label for="bearing-end-mgrs">Destination MGRS
                       <input id="bearing-end-mgrs" name="end-mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN5000012000" required>
+                    </label>
+                  </div>
+                  <div class="geo-tool-inputs" data-coordinate-format-fields="dms" hidden>
+                    <label for="bearing-start-latitude-dms">Start latitude (DMS)
+                      <input id="bearing-start-latitude-dms" name="start-latitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="42° 31' 48.72&quot; N" required>
+                    </label>
+                    <label for="bearing-start-longitude-dms">Start longitude (DMS)
+                      <input id="bearing-start-longitude-dms" name="start-longitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="43° 09' 00.44&quot; E" required>
+                    </label>
+                    <label for="bearing-end-latitude-dms">Destination latitude (DMS)
+                      <input id="bearing-end-latitude-dms" name="end-latitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="42° 31' 48.72&quot; N" required>
+                    </label>
+                    <label for="bearing-end-longitude-dms">Destination longitude (DMS)
+                      <input id="bearing-end-longitude-dms" name="end-longitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="43° 09' 00.44&quot; E" required>
                     </label>
                   </div>
                   <div class="geo-tool-inputs" data-coordinate-format-fields="latlon" hidden>

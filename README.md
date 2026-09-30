@@ -89,8 +89,9 @@ Convert between common aviation units:
 
 #### MGRS and Navigation Tools
 - Convert between MGRS and decimal latitude/longitude coordinates
-- Calculate an offset point from an MGRS origin, true bearing, and distance
-- Calculate the initial true bearing and WGS84 distance between two MGRS or decimal latitude/longitude points
+- Use MGRS, decimal latitude/longitude, or DMS coordinate input for offset and bearing calculations
+- Calculate an offset point from a coordinate origin, true bearing, and distance; show its destination in MGRS, decimal degrees, and DMS
+- Calculate the initial true bearing and WGS84 distance between two MGRS, decimal latitude/longitude, or DMS points
 - MGRS inputs use the center of the represented grid square
 
 **Supported Maps:**
