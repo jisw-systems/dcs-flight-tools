@@ -1210,9 +1210,18 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .tot-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .tot-field{display:grid;align-content:start;gap:7px;color:var(--text);font-size:0.9rem;font-weight:700}
 .tot-field input{width:100%;min-height:44px;padding:10px 12px;border:1px solid rgba(179,57,57,0.35);border-radius:6px;background:var(--panel);color:var(--text);font:inherit;font-weight:400;color-scheme:dark}
+.tot-field select{
+  width:100%;min-height:44px;padding:10px 12px;border:1px solid rgba(179,57,57,0.35);border-radius:6px;background:#1A1C20;color:var(--text);font:inherit;font-weight:400
+}
 .tot-field input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tot-field select:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px
+}
 .tot-field small{color:var(--sub);font-size:0.78rem;font-weight:400;line-height:1.5}
 .tot-departure{max-width:420px;margin-bottom:24px}
+.tot-unit-controls{
+  display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:16px;margin:-8px 0 24px
+}
 .tot-route-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:0 0 14px}
 .tot-route-heading h2{margin:0;color:var(--text);font-size:1.1rem}
 .tot-route-heading p{margin:5px 0 0;color:var(--sub);font-size:0.82rem}
@@ -1237,7 +1246,11 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .tot-table-wrapper{margin-top:18px}
 .tot-table{min-width:760px}
 .tot-note{margin:20px 0 0;color:var(--sub);font-size:0.82rem;line-height:1.6}
-@media (max-width:760px){.tot-fields,.tot-results-grid{grid-template-columns:minmax(0,1fr)}.tot-route-heading{align-items:flex-start;flex-direction:column}.tot-add-leg{width:100%}}
+@media (max-width:760px){
+  .tot-fields,.tot-results-grid,.tot-unit-controls{grid-template-columns:minmax(0,1fr)}
+  .tot-route-heading{align-items:flex-start;flex-direction:column}
+  .tot-add-leg{width:100%}
+}
 .threat-results-count{margin:14px 0;color:var(--sub);font-size:0.82rem}
 .threat-notes{margin:12px 0 18px;padding:13px 15px;border:1px solid rgba(179,57,57,0.2);border-radius:6px;background:rgba(179,57,57,0.045);color:var(--sub);font-size:0.8rem;line-height:1.45}
 .threat-notes strong{display:block;margin-bottom:7px;color:var(--accent);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase}

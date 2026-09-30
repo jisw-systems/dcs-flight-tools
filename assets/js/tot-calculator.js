@@ -3,6 +3,8 @@
   if (!form) return;
 
   var departureInput = document.getElementById('departure-time');
+  var distanceUnitInput = document.getElementById('distance-unit');
+  var speedUnitInput = document.getElementById('speed-unit');
   var routeLegs = document.getElementById('route-legs');
   var legTemplate = document.getElementById('route-leg-template');
   var addLegButton = document.getElementById('add-route-leg');
@@ -11,6 +13,19 @@
   var totalTimeOutput = document.getElementById('total-flight-time');
   var finalArrivalOutput = document.getElementById('final-arrival');
   var resultRows = document.getElementById('route-results-rows');
+  var distanceToNm = { nm: 1, km: 1 / 1.852, mi: 1 / 1.150779448 };
+  var speedToKt = { kt: 1, kmh: 1 / 1.852, mph: 1 / 1.150779448 };
+  var distanceUnitLabels = { nm: 'NM', km: 'km', mi: 'mi' };
+  var speedUnitLabels = { kt: 'kt', kmh: 'km/h', mph: 'mph' };
+
+  function updateUnitLabels() {
+    document.querySelectorAll('.tot-distance-unit-label').forEach(function (label) {
+      label.textContent = distanceUnitLabels[distanceUnitInput.value];
+    });
+    document.querySelectorAll('.tot-speed-unit-label').forEach(function (label) {
+      label.textContent = speedUnitLabels[speedUnitInput.value];
+    });
+  }
 
   function formatDuration(minutes) {
     var roundedMinutes = Math.round(minutes);
@@ -78,6 +93,13 @@
     addRouteLeg(lastDestination || 'Waypoint ' + currentLegs.length, newWaypointName, true);
   });
 
+  [distanceUnitInput, speedUnitInput].forEach(function (unitInput) {
+    unitInput.addEventListener('change', function () {
+      updateUnitLabels();
+      results.hidden = true;
+    });
+  });
+
   routeLegs.addEventListener('input', function (event) {
     var currentLeg = event.target.closest('.tot-leg');
     if (event.target.matches('[data-field="from"]')) currentLeg.dataset.linkedOrigin = 'false';
@@ -114,9 +136,11 @@
 
       if (!from || !to || !Number.isFinite(distance) || distance <= 0 || !Number.isFinite(groundspeed) || groundspeed <= 0) return;
 
-      var legMinutes = distance / groundspeed * 60;
+      var distanceNm = distance * distanceToNm[distanceUnitInput.value];
+      var groundspeedKt = groundspeed * speedToKt[speedUnitInput.value];
+      var legMinutes = distanceNm / groundspeedKt * 60;
       cumulativeMinutes += legMinutes;
-      totalDistance += distance;
+      totalDistance += distanceNm;
       routeRows.push({
         index: index + 1,
         from: from,
@@ -134,14 +158,15 @@
       createResultCell(row, String(routeRow.index).padStart(2, '0'));
       createResultCell(row, routeRow.from);
       createResultCell(row, routeRow.to);
-      createResultCell(row, routeRow.distance.toLocaleString(undefined, { maximumFractionDigits: 1 }) + ' NM');
-      createResultCell(row, routeRow.groundspeed.toLocaleString(undefined, { maximumFractionDigits: 1 }) + ' kt');
+      createResultCell(row, routeRow.distance.toLocaleString(undefined, { maximumFractionDigits: 1 }) + ' ' + distanceUnitLabels[distanceUnitInput.value]);
+      createResultCell(row, routeRow.groundspeed.toLocaleString(undefined, { maximumFractionDigits: 1 }) + ' ' + speedUnitLabels[speedUnitInput.value]);
       createResultCell(row, formatDuration(routeRow.legMinutes));
       createResultCell(row, routeRow.arrivalMinutes === null ? 'Set departure time' : formatMissionTime(routeRow.arrivalMinutes));
       resultRows.appendChild(row);
     });
 
-    totalDistanceOutput.textContent = totalDistance.toLocaleString(undefined, { maximumFractionDigits: 1 }) + ' NM';
+    var displayedDistance = totalDistance / distanceToNm[distanceUnitInput.value];
+    totalDistanceOutput.textContent = displayedDistance.toLocaleString(undefined, { maximumFractionDigits: 1 }) + ' ' + distanceUnitLabels[distanceUnitInput.value];
     totalTimeOutput.textContent = formatDuration(cumulativeMinutes);
     finalArrivalOutput.textContent = departureMinutes === null ? 'Set departure time for ETA' : formatMissionTime(departureMinutes + Math.round(cumulativeMinutes));
     results.hidden = false;

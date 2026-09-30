@@ -61,6 +61,7 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 
 ### Route Timing Calculator
 - Build multi-leg routes with distance and speed per leg
+- Enter distances in nautical miles, kilometres, or miles, and speeds in knots, km/h, or mph
 - Calculate cumulative en-route time and ETA
 - Support departure times and midnight rollover
 - Useful for mission planning and flight timing estimates

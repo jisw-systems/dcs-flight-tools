@@ -28,6 +28,25 @@
           <small>Leave blank to calculate leg and total durations without clock ETAs.</small>
         </label>
 
+        <div class="tot-unit-controls" aria-label="Route units">
+          <label class="tot-field" for="distance-unit">
+            Distance units
+            <select id="distance-unit" name="distance-unit">
+              <option value="nm">Nautical miles (NM)</option>
+              <option value="km">Kilometres (km)</option>
+              <option value="mi">Miles (mi)</option>
+            </select>
+          </label>
+          <label class="tot-field" for="speed-unit">
+            Speed units
+            <select id="speed-unit" name="speed-unit">
+              <option value="kt">Knots (kt)</option>
+              <option value="kmh">Kilometres per hour (km/h)</option>
+              <option value="mph">Miles per hour (mph)</option>
+            </select>
+          </label>
+        </div>
+
         <div class="tot-route-heading">
           <div>
             <h2>Route legs</h2>
@@ -54,11 +73,11 @@
                 <input data-field="to" type="text" autocomplete="off" required>
               </label>
               <label class="tot-field">
-                Leg distance (NM)
+                <span>Leg distance (<span class="tot-distance-unit-label">NM</span>)</span>
                 <input data-field="distance" type="number" min="0.1" step="any" inputmode="decimal" required>
               </label>
               <label class="tot-field">
-                Average groundspeed (kt)
+                <span>Average groundspeed (<span class="tot-speed-unit-label">kt</span>)</span>
                 <input data-field="groundspeed" type="number" min="1" step="any" inputmode="decimal" required>
               </label>
             </div>
