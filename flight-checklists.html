@@ -21,6 +21,24 @@
       <h2>Aircraft Quick Reference</h2>
       <p style="color:var(--sub)">Select an aircraft to view its quick reference: cold start essentials and key operating procedures designed for fast consultation.</p>
 
+      <div class="quick-reference-tabs" role="tablist" aria-label="Quick reference sections">
+        <button class="quick-reference-tab" id="aircraft-tab" type="button" role="tab" aria-selected="true" aria-controls="aircraft-view" tabindex="0" data-quick-reference-tab>
+          <span class="quick-reference-tab__index" aria-hidden="true">01</span>
+          <span class="quick-reference-tab__copy">
+            <span class="quick-reference-tab__title">Aircraft Checklists</span>
+            <span class="quick-reference-tab__meta">FLIGHT REFERENCES</span>
+          </span>
+        </button>
+        <button class="quick-reference-tab quick-reference-tab--tools" id="navigation-tools-tab" type="button" role="tab" aria-selected="false" aria-controls="navigation-tools-view" tabindex="-1" data-quick-reference-tab>
+          <span class="quick-reference-tab__index" aria-hidden="true">02</span>
+          <span class="quick-reference-tab__copy">
+            <span class="quick-reference-tab__title">Navigation Tools</span>
+            <span class="quick-reference-tab__meta">FLIGHT PLANNING</span>
+          </span>
+        </button>
+      </div>
+
+      <div class="quick-reference-tabpanel" id="aircraft-view" role="tabpanel" aria-labelledby="aircraft-tab" data-quick-reference-panel>
       <div class="perneras-layout" style="margin-top:12px">
         <div class="perneras-list">
           <div class="guide-card" id="chuck-guide" aria-live="polite">
@@ -1473,6 +1491,10 @@
           </div>
         </div>
 
+      </div>
+      </div>
+
+      <div class="quick-reference-tabpanel" id="navigation-tools-view" role="tabpanel" aria-labelledby="navigation-tools-tab" data-quick-reference-panel hidden>
         <div class="engine-management global-converter-block">
           <div class="video-accordion unit-converter-accordion">
             <button class="video-accordion-toggle" type="button" aria-expanded="false">
