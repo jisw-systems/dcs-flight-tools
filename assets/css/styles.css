@@ -463,7 +463,7 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .quick-reference-tab:hover{border-color:rgba(179,57,57,0.52);background:linear-gradient(145deg,rgba(179,57,57,0.12),rgba(255,255,255,0.025))}
 .quick-reference-tab--tools{border-color:rgba(179,57,57,0.38);background:linear-gradient(145deg,rgba(179,57,57,0.1),rgba(255,255,255,0.018))}
 .quick-reference-tab[aria-selected="true"]{border-color:rgba(179,57,57,0.76);background:linear-gradient(145deg,rgba(179,57,57,0.25),rgba(179,57,57,0.08));box-shadow:inset 0 -3px var(--accent)}
-.quick-reference-tab__index{flex:none;padding-right:12px;border-right:1px solid rgba(179,57,57,0.38);color:var(--accent);font-family:'Courier New',monospace;font-size:0.95rem;font-weight:700}
+.quick-reference-tab__icon{flex:none;width:28px;height:28px;color:var(--accent)}
 .quick-reference-tab__copy{display:grid;gap:4px;min-width:0}
 .quick-reference-tab__title{color:var(--text);font-size:0.9rem;font-weight:700;line-height:1.25;overflow-wrap:anywhere}
 .quick-reference-tab__meta{color:var(--sub);font-size:0.62rem;font-weight:700;letter-spacing:0.8px;line-height:1.2}
@@ -1344,7 +1344,7 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   .quick-reference-tabs{width:100%;margin:14px 0 12px}
   .quick-reference-tabs{gap:6px}
   .quick-reference-tab{gap:8px;min-height:66px;padding:9px 8px}
-  .quick-reference-tab__index{padding-right:8px;font-size:0.82rem}
+  .quick-reference-tab__icon{width:25px;height:25px}
   .quick-reference-tab__title{font-size:0.76rem}
   .quick-reference-tab__meta{font-size:0.55rem;letter-spacing:0.5px}
   .hero{padding-top:90px}
