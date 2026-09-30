@@ -87,6 +87,12 @@ Convert between common aviation units:
 - Altitude data for airfields
 - Multiple coordinate formats for maximum compatibility
 
+#### MGRS and Navigation Tools
+- Convert between MGRS and decimal latitude/longitude coordinates
+- Calculate an offset point from an MGRS origin, true bearing, and distance
+- Calculate the initial true bearing and WGS84 distance between two MGRS or decimal latitude/longitude points
+- MGRS inputs use the center of the represented grid square
+
 **Supported Maps:**
 - Caucasus
 - MarianaIslands
@@ -115,8 +121,10 @@ dcs-flight-tools/
 │   │   └── styles.css      # Global styles
 │   └── js/
 │       ├── main.js         # Shared frontend logic and tools
+│       ├── coordinate-tools.js # MGRS conversion and navigation calculations
 │       ├── shared-nav.js   # Shared navigation component
 │       ├── site-config.js  # Brand, title, and favicon configuration
+│       ├── vendor/         # Local MGRS and WGS84 geodesic browser libraries
 │       ├── tot-calculator.js # Route timing calculator logic
 │       └── threats.js      # Threat database rendering and filtering
 ├── calendar.html           # Training calendar page
@@ -172,6 +180,7 @@ When adding a page, keep the HTML entry point in the root, load shared resources
 ### Data Processing
 - **Node.js** - Backend tooling
 - **mgrs** (npm) - Coordinate conversion library
+- **GeographicLib** (npm) - WGS84 geodesic calculations for offsets, bearings, and distances
 
 ### Hosting
 - **GitHub Pages** - Static site hosting with Jekyll

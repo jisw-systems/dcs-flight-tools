@@ -1565,6 +1565,129 @@
               </div>
             </div>
           </div>
+
+          <div class="video-accordion coordinate-tool-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              MGRS ↔ Lat/Lon Converter
+            </button>
+            <div class="video-accordion-content" hidden>
+              <div class="geo-tool-grid">
+                <section class="geo-tool-card" aria-labelledby="mgrs-to-latlon-title">
+                  <h4 id="mgrs-to-latlon-title">MGRS to Lat/Lon</h4>
+                  <form class="geo-tool-form" id="mgrs-to-latlon-form">
+                    <label for="mgrs-to-latlon-input">MGRS coordinate</label>
+                    <input id="mgrs-to-latlon-input" name="mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
+                    <button class="btn" type="submit">Convert to Lat/Lon</button>
+                    <output class="geo-tool-result" aria-live="polite"></output>
+                  </form>
+                </section>
+                <section class="geo-tool-card" aria-labelledby="latlon-to-mgrs-title">
+                  <h4 id="latlon-to-mgrs-title">Lat/Lon to MGRS</h4>
+                  <form class="geo-tool-form" id="latlon-to-mgrs-form">
+                    <div class="geo-tool-inputs">
+                      <label for="latlon-latitude">Latitude (decimal degrees)
+                        <input id="latlon-latitude" name="latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                      </label>
+                      <label for="latlon-longitude">Longitude (decimal degrees)
+                        <input id="latlon-longitude" name="longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                      </label>
+                    </div>
+                    <button class="btn" type="submit">Convert to MGRS</button>
+                    <output class="geo-tool-result" aria-live="polite"></output>
+                  </form>
+                </section>
+              </div>
+              <p class="geo-tool-note">MGRS coordinates are converted from the center of their grid square. Output uses 1-meter grid precision.</p>
+            </div>
+          </div>
+
+          <div class="video-accordion coordinate-tool-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Offset Point Calculator
+            </button>
+            <div class="video-accordion-content" hidden>
+              <form class="geo-tool-form geo-tool-form--wide" id="offset-point-form">
+                <div class="geo-tool-inputs">
+                  <label for="offset-origin">Origin MGRS
+                    <input id="offset-origin" name="origin" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
+                  </label>
+                  <label for="offset-bearing">True bearing (degrees)
+                    <input id="offset-bearing" name="bearing" type="number" min="0" max="360" step="any" inputmode="decimal" required>
+                  </label>
+                  <label for="offset-distance">Distance
+                    <input id="offset-distance" name="distance" type="number" min="0" step="any" inputmode="decimal" required>
+                  </label>
+                  <label for="offset-distance-unit">Distance unit
+                    <select id="offset-distance-unit" name="unit">
+                      <option value="nm">Nautical miles (NM)</option>
+                      <option value="km">Kilometres (km)</option>
+                      <option value="m">Metres (m)</option>
+                    </select>
+                  </label>
+                </div>
+                <button class="btn" type="submit">Calculate offset point</button>
+                <output class="geo-tool-result" aria-live="polite"></output>
+              </form>
+              <p class="geo-tool-note">The origin MGRS grid square is treated as its center. Bearing is true, clockwise from north.</p>
+            </div>
+          </div>
+
+          <div class="video-accordion coordinate-tool-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Bearing &amp; Distance Tool
+            </button>
+            <div class="video-accordion-content" hidden>
+              <form class="geo-tool-form geo-tool-form--wide" id="bearing-distance-form">
+                  <label class="geo-tool-format" for="bearing-coordinate-format">Coordinate format
+                    <select id="bearing-coordinate-format" name="coordinateFormat">
+                      <option value="mgrs">MGRS</option>
+                      <option value="latlon">Lat/Lon (decimal degrees)</option>
+                    </select>
+                  </label>
+                  <div class="geo-tool-inputs" data-coordinate-format-fields="mgrs">
+                    <label for="bearing-start-mgrs">Start MGRS
+                      <input id="bearing-start-mgrs" name="start-mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
+                    </label>
+                    <label for="bearing-end-mgrs">Destination MGRS
+                      <input id="bearing-end-mgrs" name="end-mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN5000012000" required>
+                    </label>
+                  </div>
+                  <div class="geo-tool-inputs" data-coordinate-format-fields="latlon" hidden>
+                    <label for="bearing-start-latitude">Start latitude (decimal degrees)
+                      <input id="bearing-start-latitude" name="start-latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                    </label>
+                    <label for="bearing-start-longitude">Start longitude (decimal degrees)
+                      <input id="bearing-start-longitude" name="start-longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                    </label>
+                    <label for="bearing-end-latitude">Destination latitude (decimal degrees)
+                      <input id="bearing-end-latitude" name="end-latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                    </label>
+                    <label for="bearing-end-longitude">Destination longitude (decimal degrees)
+                      <input id="bearing-end-longitude" name="end-longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                    </label>
+                  </div>
+                <button class="btn" type="submit">Calculate bearing and distance</button>
+                  <div class="geo-bearing-result" role="status" aria-live="polite" hidden>
+                    <div class="geo-bearing-result__metric geo-bearing-result__metric--bearing">
+                      <div>
+                        <span class="geo-bearing-result__label">Initial true bearing</span>
+                        <strong class="geo-bearing-result__value" data-bearing-value></strong>
+                      </div>
+                      <span class="geo-bearing-result__direction" data-bearing-direction></span>
+                    </div>
+                    <div class="geo-bearing-result__metric">
+                      <div>
+                        <span class="geo-bearing-result__label">WGS84 distance</span>
+                        <strong class="geo-bearing-result__value" data-distance-value></strong>
+                      </div>
+                      <span class="geo-bearing-result__secondary" data-distance-secondary></span>
+                    </div>
+                  </div>
+                  <output class="geo-tool-result" aria-live="polite" hidden></output>
+              </form>
+              <p class="geo-tool-note">Reports the initial true bearing and WGS84 geodesic distance. MGRS grid squares are treated as their centers.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1572,6 +1695,9 @@
 
   <script src="assets/js/site-config.js"></script>
   <script src="assets/js/shared-nav.js"></script>
+  <script src="assets/js/vendor/mgrs.min.js"></script>
+  <script src="assets/js/vendor/geographiclib-geodesic.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/coordinate-tools.js"></script>
 </body>
 </html>

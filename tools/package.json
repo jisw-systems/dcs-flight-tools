@@ -9,6 +9,7 @@
     "build:locations": "node index.js --write"
   },
   "dependencies": {
+    "geographiclib-geodesic": "^2.2.0",
     "mgrs": "^2.1.0"
   }
 }
