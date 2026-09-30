@@ -36,21 +36,32 @@
         <div class="formation-grid">
           <article class="formation-card">
             <span class="formation-index">01</span>
-            <h3>Echelon Right / Echelon Left</h3>
-            <p><strong>Echelon Right:</strong></p>
+            <h3>Echelon Right</h3>
             <ul class="formation-positions">
               <li><strong>1:</strong> leader</li>
               <li><strong>2:</strong> to the leader's right, slightly behind (30-45 degrees)</li>
               <li><strong>3:</strong> to the right of 2, also behind</li>
               <li><strong>4:</strong> to the right of 3, behind</li>
             </ul>
-            <p><strong>Echelon Left:</strong> same, but toward the left.</p>
             <p class="formation-description">The formation reads as a diagonal line from the leader toward the selected side, with every following aircraft stepped back from the aircraft ahead.</p>
-            <div class="formation-visual formation-visual-echelon" aria-label="Top-down echelon diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
+            <div class="formation-visual formation-visual-echelon-right" aria-label="Top-down echelon right diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
           </article>
 
           <article class="formation-card">
             <span class="formation-index">02</span>
+            <h3>Echelon Left</h3>
+            <ul class="formation-positions">
+              <li><strong>1:</strong> leader</li>
+              <li><strong>2:</strong> to the leader's left, slightly behind (30-45 degrees)</li>
+              <li><strong>3:</strong> to the left of 2, also behind</li>
+              <li><strong>4:</strong> to the left of 3, behind</li>
+            </ul>
+            <p class="formation-description">The formation reads as a diagonal line from the leader toward the left, with every following aircraft stepped back from the aircraft ahead.</p>
+            <div class="formation-visual formation-visual-echelon-left" aria-label="Top-down echelon left diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
+          </article>
+
+          <article class="formation-card">
+            <span class="formation-index">03</span>
             <h3>Line Abreast</h3>
             <ul class="formation-positions">
               <li><strong>1:</strong> leader in the center or slightly ahead</li>
@@ -63,7 +74,7 @@
           </article>
 
           <article class="formation-card">
-            <span class="formation-index">03</span>
+            <span class="formation-index">04</span>
             <h3>Trail</h3>
             <ul class="formation-positions">
               <li><strong>1:</strong> leader</li>
@@ -76,33 +87,45 @@
           </article>
 
           <article class="formation-card">
-            <span class="formation-index">04</span>
-            <h3>Staggered Trail</h3>
+            <span class="formation-index">05</span>
+            <h3>Staggered Trail Right</h3>
             <ul class="formation-positions">
               <li><strong>1:</strong> leader</li>
               <li><strong>2:</strong> behind the leader, offset to the right</li>
               <li><strong>3:</strong> behind 2, offset to the left</li>
               <li><strong>4:</strong> behind 3, offset to the right</li>
             </ul>
-            <p class="formation-description">The line remains longitudinal, but the aircraft alternate from right to left as they move behind the leader.</p>
-            <div class="formation-visual formation-visual-staggered" aria-label="Top-down staggered trail diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
+            <p class="formation-description">The line remains longitudinal, with each following aircraft alternating right and left behind the leader, starting to the right.</p>
+            <div class="formation-visual formation-visual-staggered-right" aria-label="Top-down staggered trail right diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
           </article>
 
           <article class="formation-card">
-            <span class="formation-index">05</span>
+            <span class="formation-index">06</span>
+            <h3>Staggered Trail Left</h3>
+            <ul class="formation-positions">
+              <li><strong>1:</strong> leader</li>
+              <li><strong>2:</strong> behind the leader, offset to the left</li>
+              <li><strong>3:</strong> behind 2, offset to the right</li>
+              <li><strong>4:</strong> behind 3, offset to the left</li>
+            </ul>
+            <p class="formation-description">The line remains longitudinal, with each following aircraft alternating left and right behind the leader, starting to the left.</p>
+            <div class="formation-visual formation-visual-staggered-left" aria-label="Top-down staggered trail left diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
+          </article>
+
+          <article class="formation-card">
+            <span class="formation-index">07</span>
             <h3>Vic / V-Formation</h3>
             <ul class="formation-positions">
               <li><strong>1:</strong> leader at the point</li>
               <li><strong>2:</strong> behind and to the left</li>
               <li><strong>3:</strong> behind and to the right</li>
-              <li><strong>4:</strong> behind the leader or reinforcing one wing</li>
             </ul>
-            <p class="formation-description">The leader is the point of the V, 2 and 3 form the two rear wings, and 4 closes the center or reinforces one side.</p>
-            <div class="formation-visual formation-visual-vic" aria-label="Top-down V formation diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
+            <p class="formation-description">A three-aircraft formation: the leader is at the point of the V, with 2 and 3 forming the two rear wings.</p>
+            <div class="formation-visual formation-visual-vic" aria-label="Top-down three-aircraft V formation diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span></div>
           </article>
 
           <article class="formation-card">
-            <span class="formation-index">06</span>
+            <span class="formation-index">08</span>
             <h3>Diamond</h3>
             <ul class="formation-positions">
               <li><strong>1:</strong> leader at the point</li>
@@ -115,42 +138,21 @@
           </article>
 
           <article class="formation-card">
-            <span class="formation-index">07</span>
-            <h3>Combat Spread</h3>
-            <ul class="formation-positions">
-              <li><strong>1:</strong> leader</li>
-              <li><strong>2:</strong> to the leader's right, 1-2 km separation</li>
-              <li><strong>3:</strong> behind the leader, slightly offset</li>
-              <li><strong>4:</strong> behind 2, slightly offset</li>
-            </ul>
-            <p class="formation-description">The formation opens laterally, with 2 and 1 separated across the front and 3 and 4 offset behind their respective forward positions.</p>
-            <div class="formation-visual formation-visual-combat-spread" aria-label="Top-down combat spread diagram"><span class="marker marker-2">2</span><span class="marker marker-1">1</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
-          </article>
-
-          <article class="formation-card">
-            <span class="formation-index">08</span>
-            <h3>Fluid Four</h3>
-            <ul class="formation-positions">
-              <li><strong>1:</strong> leader</li>
-              <li><strong>2:</strong> leader's wingman (right or left)</li>
-              <li><strong>3:</strong> lead of the second element, behind and lateral</li>
-              <li><strong>4:</strong> wingman of 3</li>
-            </ul>
-            <p class="formation-description">The first pair is 1 and 2; the second pair is 3 and 4, positioned behind and laterally from the first pair.</p>
-            <div class="formation-visual formation-visual-fluid-four" aria-label="Top-down fluid four diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
-          </article>
-
-          <article class="formation-card">
             <span class="formation-index">09</span>
             <h3>Arrowhead <span>(helicopters)</span></h3>
             <ul class="formation-positions">
               <li><strong>1:</strong> leader</li>
-              <li><strong>2:</strong> behind and to the left</li>
-              <li><strong>3:</strong> behind and to the right</li>
-              <li><strong>4:</strong> farther back, centered</li>
+              <li><strong>2:</strong> behind and to the right of the leader</li>
+              <li><strong>3:</strong> behind and to the left of the leader</li>
+              <li><strong>4:</strong> behind the leader on the centerline</li>
+              <li><strong>5:</strong> farther back on the centerline</li>
+              <li><strong>6:</strong> on the far-right flank</li>
+              <li><strong>7:</strong> on the far-left flank</li>
+              <li><strong>8:</strong> on the right flank, inside 6</li>
+              <li><strong>9:</strong> on the left flank, inside 7</li>
             </ul>
-            <p class="formation-description">The helicopter group forms an arrowhead: 1 at the point, 2 and 3 behind on the wings, and 4 centered farther back.</p>
-            <div class="formation-visual formation-visual-arrowhead" aria-label="Top-down arrowhead diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span></div>
+            <p class="formation-description">A nine-aircraft arrowhead: 1 leads at the point, 2 and 3 form the forward shoulders, 4 and 5 hold the centerline, and 6-9 extend the outer flanks.</p>
+            <div class="formation-visual formation-visual-arrowhead" aria-label="Top-down nine-aircraft arrowhead diagram"><span class="marker marker-1">1</span><span class="marker marker-2">2</span><span class="marker marker-3">3</span><span class="marker marker-4">4</span><span class="marker marker-5">5</span><span class="marker marker-6">6</span><span class="marker marker-7">7</span><span class="marker marker-8">8</span><span class="marker marker-9">9</span></div>
           </article>
 
           <article class="formation-card">
