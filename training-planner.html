@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/jisw-favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/jisw-favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/jisw-favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/jisw-favicon/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="training-planner">
+  <div id="site-nav-root"></div>
+
+  <main class="training-planner-page">
+    <section class="panel training-planner-panel" aria-labelledby="training-planner-title">
+      <header class="training-planner-header">
+        <span class="section-kicker">Sortie builder / flexible practice</span>
+        <h1 id="training-planner-title">Training Planner</h1>
+        <p>Choose an aircraft and a skill to practise. Build one focused sortie, then record how it went.</p>
+      </header>
+
+      <div class="training-planner-layout">
+        <form class="training-planner-controls" id="training-plan-form">
+          <div class="training-planner-controls__heading">
+            <span class="section-kicker">Build a session</span>
+            <h2>Plan your sortie</h2>
+          </div>
+
+          <label class="training-control" for="training-aircraft">Aircraft
+            <select id="training-aircraft" name="aircraft">
+              <option>AH-64D Apache</option>
+              <option>BF-109 K4 Kurfürst</option>
+              <option>C-130 Hercules</option>
+              <option>Eurofighter Typhoon</option>
+              <option>F-100D Super Sabre</option>
+              <option>F-14 Tomcat</option>
+              <option>F-4E Phantom II</option>
+              <option>F4U-1D Corsair</option>
+              <option>F-86F Sabre</option>
+              <option value="F/A-18C Hornet" selected>F/A-18C Hornet</option>
+              <option>FW-190 A8 Anton</option>
+              <option>FW-190 D9 Dora</option>
+              <option>Fiat G.91</option>
+              <option>I-16 Ishak</option>
+              <option>Lavochkin LA-7</option>
+              <option>MiG-19P Farmer</option>
+              <option>MiG-15bis Fagot</option>
+              <option>MiG-21bis Fishbed</option>
+              <option>MiG-29 Fulcrum</option>
+              <option>Mi-24P Hind</option>
+              <option>Mosquito FB Mk VI</option>
+              <option>P-47D Thunderbolt</option>
+              <option>Spitfire Mk IX</option>
+              <option>TF-51D / P-51D Mustang</option>
+            </select>
+          </label>
+
+          <label class="training-control" for="training-focus">Training focus
+            <select id="training-focus" name="focus">
+              <option value="handling">Aircraft handling</option>
+              <option value="navigation" selected>Navigation</option>
+              <option value="formation">Formation flying</option>
+              <option value="air-to-air">Air-to-air</option>
+              <option value="air-to-ground">Air-to-ground</option>
+              <option value="communications">Communications</option>
+              <option value="procedures">Start-up and recovery</option>
+            </select>
+          </label>
+
+          <button class="btn training-planner-submit" type="submit">Build session</button>
+        </form>
+
+        <section class="training-session" id="training-session" aria-labelledby="training-session-title" hidden>
+          <header class="training-session-header">
+            <div>
+              <span class="section-kicker">Session brief</span>
+              <h2 id="training-session-title"></h2>
+              <p id="training-session-aircraft"></p>
+            </div>
+          </header>
+
+          <div class="training-session-body">
+            <section class="training-session-checklist" aria-labelledby="training-checklist-title">
+              <div class="training-session-section-heading">
+                <h3 id="training-checklist-title">Practice sequence</h3>
+                <span id="training-progress-text">0 / 0</span>
+              </div>
+              <div class="training-progress-track" id="training-progress" role="progressbar" aria-label="Session task completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <span id="training-progress-fill"></span>
+              </div>
+              <ul class="training-task-list" id="training-task-list"></ul>
+              <button class="btn training-evaluate" id="training-evaluate" type="button">Evaluate session</button>
+            </section>
+
+            <aside class="training-session-reference">
+              <section>
+                <h3>Before takeoff</h3>
+                <p id="training-session-setup"></p>
+              </section>
+              <section>
+                <h3>Completion standard</h3>
+                <p id="training-session-standard"></p>
+              </section>
+            </aside>
+          </div>
+
+          <label class="training-debrief" for="training-debrief-notes">Debrief notes
+            <textarea id="training-debrief-notes" rows="3" placeholder="What went well? What will you repeat or change next time?"></textarea>
+          </label>
+
+          <footer class="training-session-footer">
+            <button class="btn training-reset" id="training-reset" type="button">Reset checklist</button>
+          </footer>
+
+          <section class="training-assessment" id="training-assessment" aria-labelledby="training-assessment-title" aria-live="polite" hidden>
+            <header class="training-assessment-header">
+              <div>
+                <span class="section-kicker">Session assessment</span>
+                <h3 id="training-assessment-title"></h3>
+                <p id="training-assessment-summary"></p>
+              </div>
+              <span class="training-assessment-result" id="training-assessment-result"></span>
+            </header>
+            <div class="training-assessment-lists">
+              <section>
+                <h4>Completed</h4>
+                <ul id="training-completed-list"></ul>
+              </section>
+              <section>
+                <h4>Repeat</h4>
+                <ul id="training-repeat-list"></ul>
+              </section>
+            </div>
+            <footer class="training-assessment-footer">
+              <button class="btn" id="training-download-assessment" type="button">Download assessment (.md)</button>
+              <span id="training-assessment-status" role="status">This assessment is not saved automatically. Download a copy to keep it.</span>
+            </footer>
+          </section>
+        </section>
+      </div>
+
+      <p class="training-planner-calendar-link">Following the six-week syllabus? <a href="calendar.html">Open the training calendar <span aria-hidden="true">↗</span></a></p>
+      <p class="training-planner-note">This planner is a practice guide, not a substitute for the selected aircraft's manual and in-game checklist. Sessions are not saved automatically; download the assessment to keep a record.</p>
+    </section>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/shared-nav.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/training-planner.js"></script>
+</body>
+</html>

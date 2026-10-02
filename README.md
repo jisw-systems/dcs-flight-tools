@@ -1,6 +1,6 @@
 # J&I Flight Tools
 
-This repository contains the current static DCS World web toolkit for J&I Flight Tools. It is designed as a digital kneeboard and quick-reference toolkit for aircraft cold starts, checklists, radio brevities, training calendars, communications phrases, and a location finder based on DCS map data and airfield metadata.
+This repository contains the current static DCS World web toolkit for J&I Flight Tools. It is designed as a digital kneeboard and quick-reference toolkit for aircraft cold starts, checklists, radio brevities, training planning, communications phrases, and a location finder based on DCS map data and airfield metadata.
 
 The project is intentionally lightweight and framework-free: HTML, CSS, vanilla JavaScript and generated JSON assets are used without a build pipeline. It can be opened locally in a browser or served directly through a static web server such as GitHub Pages.
 
@@ -21,6 +21,13 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 
 ## Features
 
+### Training Planner
+- Build a focused practice sortie by aircraft and training objective
+- Follow an objective-based practice checklist and completion standard
+- Evaluate the session as Completed or Repeat, with completed and pending tasks listed
+- Download the assessment and debrief notes as a Markdown report; progress is not saved automatically
+- Keep the six-week training calendar available as a separate reference
+
 ### Aircraft Checklists (Perneras)
 - **24 Aircraft** with detailed cold start procedures and essential operations
 - Step-by-step interactive checklists with progress tracking
@@ -29,7 +36,6 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 - Alphabetically organized for quick access
 
 **Supported Aircraft:**
-- AH-64D Apache
 - BF-109 K4 Kurfürst
 - C-130 Hercules
 - Eurofighter Typhoon
@@ -114,6 +120,7 @@ Convert between common aviation units:
 
 dcs-flight-tools/
 ├── index.html              # Landing page and module overview
+├── training-planner.html   # Flexible, objective-based sortie planner
 ├── flight-checklists.html  # Aircraft checklists
 ├── threat-database.html    # Searchable threat reference page
 ├── tot-calculator.html     # Multi-leg route timing and ETA calculator
@@ -123,12 +130,13 @@ dcs-flight-tools/
 │   └── js/
 │       ├── main.js         # Shared frontend logic and tools
 │       ├── coordinate-tools.js # MGRS conversion and navigation calculations
+│       ├── training-planner.js # Session generation and local progress storage
 │       ├── shared-nav.js   # Shared navigation component
 │       ├── site-config.js  # Brand, title, and favicon configuration
 │       ├── vendor/         # Local MGRS and WGS84 geodesic browser libraries
 │       ├── tot-calculator.js # Route timing calculator logic
 │       └── threats.js      # Threat database rendering and filtering
-├── calendar.html           # Training calendar page
+├── calendar.html           # Six-week training programme reference
 ├── comms.html              # Communications page
 ├── brevities.html          # Radio communications reference
 ├── data/

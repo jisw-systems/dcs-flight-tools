@@ -6,6 +6,7 @@ window.siteConfig = window.siteConfig || {
   titles: {
     inicio: 'J&I Flight Tools — Home',
     calendar: 'J&I Flight Tools — Calendar',
+    'training-planner': 'J&I Flight Tools — Training Planner',
     'flight-checklists': 'J&I Flight Tools — Flight Checklists',
     threats: 'J&I Flight Tools — Threat Database',
     comms: 'J&I Flight Tools — Comms',
