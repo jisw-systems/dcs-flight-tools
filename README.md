@@ -66,6 +66,10 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 - Support departure times and midnight rollover
 - Useful for mission planning and flight timing estimates
 
+### Formation Reference
+- Explore official and attack formations with interactive SVG diagrams or plain-text position lists
+- Expand each formation for its explanation, advantages, limitations, and typical use
+
 ### Global Toolbox
 
 #### Unit Converter
@@ -123,6 +127,7 @@ dcs-flight-tools/
 │   └── js/
 │       ├── main.js         # Shared frontend logic and tools
 │       ├── coordinate-tools.js # MGRS conversion and navigation calculations
+│       ├── formations.js   # Interactive SVG/plain-text formation diagrams
 │       ├── shared-nav.js   # Shared navigation component
 │       ├── site-config.js  # Brand, title, and favicon configuration
 │       ├── vendor/         # Local MGRS and WGS84 geodesic browser libraries

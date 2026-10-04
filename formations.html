@@ -26,6 +26,15 @@
         <a href="#attack-formations">Attack formations</a>
       </nav>
 
+      <div class="formation-explorer-controls">
+        <span class="section-kicker">Diagram display</span>
+        <div class="formation-view-toggle" role="group" aria-label="Formation diagram format">
+          <button type="button" data-formation-view="svg" aria-pressed="true">SVG</button>
+          <button type="button" data-formation-view="text" aria-pressed="false">Plain Text</button>
+        </div>
+        <p>Open “Show more lines” on any formation for advantages, limitations, and typical use.</p>
+      </div>
+
       <section class="formation-section" id="official-formations">
         <div class="formation-section-heading">
           <span class="section-kicker">Positions 1-10</span>
@@ -172,7 +181,7 @@
 
       <section class="formation-section" id="attack-formations">
         <div class="formation-section-heading">
-          <span class="section-kicker">Positions 11-15</span>
+          <span class="section-kicker">Positions 11-14</span>
           <h2>Attack Formations</h2>
           <p>Attack formation name, exact aircraft position, and top-down reference.</p>
         </div>
@@ -238,5 +247,6 @@
   <script src="assets/js/site-config.js"></script>
   <script src="assets/js/shared-nav.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/formations.js"></script>
 </body>
 </html>
