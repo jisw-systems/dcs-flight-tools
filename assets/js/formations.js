@@ -113,11 +113,23 @@ document.addEventListener('DOMContentLoaded', function () {
     var background = makeSvgElement('rect', { class: 'formation-svg__background', x: 0, y: 0, width: 1000, height: 300 });
     var grid = makeSvgElement('g', { class: 'formation-svg__grid', 'aria-hidden': 'true' });
 
-    for (var x = 100; x < 1000; x += 100) {
-      grid.appendChild(makeSvgElement('line', { x1: x, y1: 0, x2: x, y2: 300 }));
+    for (var x = 50; x < 1000; x += 50) {
+      grid.appendChild(makeSvgElement('line', {
+        class: x % 200 === 0 ? 'is-major' : '',
+        x1: x,
+        y1: 0,
+        x2: x,
+        y2: 300
+      }));
     }
-    for (var y = 60; y < 300; y += 60) {
-      grid.appendChild(makeSvgElement('line', { x1: 0, y1: y, x2: 1000, y2: y }));
+    for (var y = 30; y < 300; y += 30) {
+      grid.appendChild(makeSvgElement('line', {
+        class: y % 120 === 0 ? 'is-major' : '',
+        x1: 0,
+        y1: y,
+        x2: 1000,
+        y2: y
+      }));
     }
     var heading = makeSvgElement('text', { class: 'formation-svg__heading', x: 500, y: 24, 'text-anchor': 'middle' });
     heading.textContent = 'FLIGHT DIRECTION';

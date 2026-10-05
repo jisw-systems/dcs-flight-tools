@@ -825,13 +825,14 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .formation-positions li{margin:3px 0}
 .formation-description{margin-top:14px!important;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06);color:var(--text)!important;font-size:0.86rem!important;line-height:1.55!important}
 .formation-ascii{min-height:58px;margin:16px 0 0;padding:12px;overflow:auto;border:1px solid rgba(255,255,255,0.06);border-radius:4px;background:rgba(0,0,0,0.2);color:var(--accent);font:0.8rem/1.45 'Courier New',monospace;white-space:pre}
-.formation-visual{position:relative;height:112px;margin:16px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,0.08);border-radius:5px;background:radial-gradient(circle at center,rgba(179,57,57,0.08),transparent 62%),linear-gradient(rgba(255,255,255,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.035) 1px,transparent 1px);background-size:auto,18px 18px,18px 18px}
-.formation-visual::after{position:absolute;inset:12px;border:1px solid rgba(240,138,114,0.12);border-radius:50%;content:"";pointer-events:none}
+.formation-visual{position:relative;height:112px;margin:16px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,0.09);border-radius:6px;background:radial-gradient(ellipse at center,rgba(179,57,57,0.09),transparent 68%),linear-gradient(145deg,#171b20,#101317)}
+.formation-visual::after{position:absolute;inset:8px;border:1px solid rgba(255,255,255,0.045);border-radius:3px;content:"";pointer-events:none}
 .formation-visual[hidden],.formation-positions[hidden]{display:none}
 .formation-svg{position:relative;z-index:1;display:block;width:100%;height:100%}
-.formation-svg__background{fill:rgba(7,11,16,.42)}
-.formation-svg__grid line{stroke:rgba(180,199,212,.09);stroke-width:1}
-.formation-svg__heading{fill:rgba(196,196,196,.58);font:700 12px 'Courier New',monospace;letter-spacing:2px}
+.formation-svg__background{fill:rgba(7,11,16,.16)}
+.formation-svg__grid line{stroke:rgba(180,199,212,.045);stroke-width:1}
+.formation-svg__grid line.is-major{stroke:rgba(180,199,212,.09)}
+.formation-svg__heading{fill:rgba(196,196,196,.48);font:700 12px 'Courier New',monospace;letter-spacing:2px}
 .formation-svg__aircraft{fill:#aebbc4;stroke:#10161c;stroke-width:2;stroke-linejoin:round}
 .formation-svg__aircraft.is-leader{fill:var(--accent);stroke:#f1a29a;stroke-width:2.5}
 .formation-svg__number{fill:var(--text);font:700 22px 'Courier New',monospace;paint-order:stroke;stroke:#10161c;stroke-width:4px;stroke-linejoin:round}
