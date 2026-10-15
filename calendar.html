@@ -24,183 +24,248 @@
           <h1>Change the era. Keep flying.</h1>
           <p>A simple weekly rhythm to mix up your flying, from WWII aircraft to modern jets.</p>
         </div>
-        <div class="calendar-cycle" aria-label="Four weeks of rotating eras">
+        <button class="calendar-cycle" id="calendar-jump-active" type="button" aria-label="Jump to the active week">
           <span class="calendar-cycle-number" aria-hidden="true">04</span>
           <span class="calendar-cycle-label" aria-hidden="true">WEEKLY<br>ROTATION</span>
           <span class="calendar-active-week" id="calendar-active-week" aria-live="polite">Week 1</span>
+          <span class="calendar-jump-hint" aria-hidden="true">View this week <span>↓</span></span>
           <span class="calendar-cycle-track" aria-hidden="true">
             <span></span><span></span><span></span><span></span>
           </span>
-        </div>
+        </button>
       </header>
 
-      <div class="table-wrapper">
-        <!-- COMPLETE TABLE -->
-        <table class="kneeboard-table calendar-table" aria-label="4-week training calendar">
-          <thead>
-            <tr>
-              <th>Week</th>
-              <th>Era / Theme</th>
-              <th>Available aircraft</th>
-              <th>Day 1 (Training)</th>
-              <th>Day 2 (Activity)</th>
-              <th>Common range training</th>
-            </tr>
-          </thead>
+      <section class="calendar-rotation" aria-label="Weekly era rotation">
+        <article class="calendar-week" data-week="1" data-era="WWII">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">01 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 1</span>
+              <h2>WWII</h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>P‑51D Mustang</li>
+                <li>Spitfire LF Mk IX</li>
+                <li>Bf‑109 K‑4</li>
+                <li>Fw‑190 A8 / D9</li>
+                <li>F‑4U Corsair</li>
+                <li>Mosquito FB Mk VI</li>
+                <li>Lavochkin La‑7</li>
+                <li>Polikarpov I‑16</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>WWII circuits</li>
+                <li>Close formation (vic / finger‑four)</li>
+                <li>GPS-denied navigation</li>
+                <li>General ground attack</li>
+                <li>Energy management</li>
+                <li>Visual rejoin</li>
+                <li>Basic WWII comms</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: 4YA WWII Channel</li>
+                <li>Briefing Room</li>
+              </ul>
+            </section>
+          </div>
+        </article>
 
-          <tbody>
+        <article class="calendar-week" data-week="2" data-era="Cold War (50–80)">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">02 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 2</span>
+              <h2>Cold War <span>(50–80)</span></h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>F‑86F Sabre</li>
+                <li>MiG‑15bis</li>
+                <li>F‑100D Super Sabre</li>
+                <li>F‑104 Starfighter</li>
+                <li>G‑91 Gina</li>
+                <li>F‑5E Tiger II</li>
+                <li>F‑4E Phantom II</li>
+                <li>MiG‑21bis</li>
+                <li>A‑4E Skyhawk (mod)</li>
+                <li>Mirage F1</li>
+                <li>L‑39 Albatros</li>
+                <li>C‑101 Aviojet</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Comms GCI (Ground Control Interception)</li>
+                <li>Vectored interception</li>
+                <li>Basic tacform</li>
+                <li>GPS-denied navigation</li>
+                <li>Classic ground attack (bombs / rockets)</li>
+                <li>Tactical rejoin</li>
+                <li>Cold War procedures</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: Heatblur Cold War</li>
+                <li>Air defense with human GCI</li>
+                <li>Briefing Room</li>
+              </ul>
+            </section>
+          </div>
+        </article>
 
-            <!-- Week 1 -->
-            <tr>
-              <td>1</td>
-              <td>WWII</td>
-              <td>
-                <ul class="aircraft-list">
-                  <li>P‑51D Mustang</li>
-                  <li>Spitfire LF Mk IX</li>
-                  <li>Bf‑109 K‑4</li>
-                  <li>Fw‑190 A8 / D9</li>
-                  <li>F‑4U Corsair</li>
-                  <li>Mosquito FB Mk VI</li>
-                  <li>Lavochkin La‑7</li>
-                  <li>Polikarpov I‑16</li>
-                </ul>
-              </td>
-              <td>
-                • WWII circuits<br>
-                • Close formation (vic / finger‑four)<br>
-                • GPS-denied navigation<br>
-                • General ground attack<br>
-                • Energy management<br>
-                • Visual rejoin<br>
-                • Basic WWII comms
-              </td>
-              <td>
-                • Server: 4YA WWII Channel<br>
-                • Briefing Room
-              </td>
-              <td class="common-training" rowspan="4">
-                • Add waypoints before departure<br>
-                • Complete cold start<br>
-                • Taxi and ATC communications<br>
-                • Basic formation (finger‑four / echelon / route)<br>
-                • Navigation to the range<br>
-                • Entry into the pattern<br>
-                • Ground attack (CCIP / CCRP / Rockets / Guns)<br>
-                • Package escort<br>
-                • Exit from the range pattern<br>
-                • Rejoin at the holding point<br>
-                • Holding and separation<br>
-                • Navigation back to base<br>
-                • Landing pattern (CASE I / standard)<br>
-                • Comms and brevities throughout the exercise
-              </td>
-            </tr>
+        <article class="calendar-week" data-week="3" data-era="Late Cold War">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">03 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 3</span>
+              <h2>Late Cold War</h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>F‑14A/B Tomcat</li>
+                <li>Mirage F1</li>
+                <li>MiG‑29A/G</li>
+                <li>Su‑25 Frogfoot</li>
+                <li>Su‑25T Frogfoot</li>
+                <li>Su‑27 Flanker</li>
+                <li>Su‑33 Flanker‑D</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>INS alignment</li>
+                <li>Tactical A/A comms</li>
+                <li>Commit / terminate / egress</li>
+                <li>CASE I</li>
+                <li>2‑vs‑2 BVR with AWACS</li>
+                <li>Advanced Cold War procedures</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: 4YA Nevada Cold War</li>
+                <li>Server: Foothold</li>
+                <li>2‑vs‑2 BVR with AWACS</li>
+                <li>Briefing Room</li>
+              </ul>
+            </section>
+          </div>
+        </article>
 
-            <!-- Week 2 -->
-            <tr>
-              <td>2</td>
-              <td>Cold War (50–80)</td>
-              <td>
-                <ul class="aircraft-list">
-                  <li>F‑86F Sabre</li>
-                  <li>MiG‑15bis</li>
-                  <li>F‑100D Super Sabre</li>
-                  <li>F‑104 Starfighter</li>
-                  <li>G‑91 Gina</li>
-                  <li>F‑5E Tiger II</li>
-                  <li>F‑4E Phantom II</li>
-                  <li>MiG‑21bis</li>
-                  <li>A‑4E Skyhawk (mod)</li>
-                  <li>Mirage F1</li>
-                  <li>L‑39 Albatros</li>
-                  <li>C‑101 Aviojet</li>
-                </ul>
-              </td>
-              <td>
-                • Comms GCI (Ground Control Interception)<br>
-                • Vectored interception<br>
-                • Basic tacform<br>
-                • GPS-denied navigation<br>
-                • Classic ground attack (bombs / rockets)<br>
-                • Tactical rejoin<br>
-                • Cold War procedures
-              </td>
-              <td>
-                • Server: Heatblur Cold War<br>
-                • Air defense with human GCI<br>
-                • Briefing Room
-              </td>
-            </tr>
+        <article class="calendar-week" data-week="4" data-era="Modern">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">04 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 4</span>
+              <h2>Modern</h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>F‑18C Hornet</li>
+                <li>F‑16C Viper</li>
+                <li>Eurofighter Typhoon</li>
+                <li>C‑130 Hercules</li>
+                <li>JF‑17 Thunder</li>
+                <li>F‑15E Strike Eagle</li>
+                <li>A‑10C II</li>
+                <li>AV‑8B Harrier</li>
+                <li>MiG‑29S</li>
+                <li>J‑11A</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Advanced comms</li>
+                <li>Datalink (Link‑16)</li>
+                <li>Basic SEAD/DEAD</li>
+                <li>Fox‑3 tactics</li>
+                <li>Modern tacform</li>
+                <li>Datalink rejoin</li>
+                <li>Modern procedures</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: Foothold</li>
+                <li>SEAD + STRIKE + CAS</li>
+                <li>Briefing Room</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+      </section>
 
-            <!-- Week 3 -->
-            <tr>
-              <td>3</td>
-              <td>Late Cold War</td>
-              <td>
-                <ul class="aircraft-list">
-                  <li>F‑14A/B Tomcat</li>
-                  <li>Mirage F1</li>
-                  <li>MiG‑29A/G</li>
-                  <li>Su‑25 Frogfoot</li>
-                  <li>Su‑25T Frogfoot</li>
-                  <li>Su‑27 Flanker</li>
-                  <li>Su‑33 Flanker‑D</li>
-                </ul>
-              </td>
-              <td>
-                • INS alignment<br>
-                • Tactical A/A comms<br>
-                • Commit / terminate / egress<br>
-                • CASE I<br>
-                • 2‑vs‑2 BVR with AWACS<br>
-                • Advanced Cold War procedures
-              </td>
-              <td>
-                • Server: 4YA Nevada Cold War<br>
-                • Server: Foothold<br>
-                • 2‑vs‑2 BVR with AWACS
-                • Briefing Room
-              </td>
-            </tr>
-
-            <!-- Week 4 -->
-            <tr>
-              <td>4</td>
-              <td>Modern</td>
-              <td>
-                <ul class="aircraft-list">
-                  <li>F‑18C Hornet</li>
-                  <li>F‑16C Viper</li>
-                  <li>Eurofighter Typhoon</li>
-                  <li>C‑130 Hercules</li>
-                  <li>JF‑17 Thunder</li>
-                  <li>F‑15E Strike Eagle</li>
-                  <li>A‑10C II</li>
-                  <li>AV‑8B Harrier</li>
-                  <li>MiG‑29S</li>
-                  <li>J‑11A</li>
-                </ul>
-              </td>
-              <td>
-                • Advanced comms<br>
-                • Datalink (Link‑16)<br>
-                • Basic SEAD/DEAD<br>
-                • Fox‑3 tactics<br>
-                • Modern tacform<br>
-                • Datalink rejoin<br>
-                • Modern procedures
-              </td>
-              <td>
-                • Server: Foothold<br>
-                • SEAD + STRIKE + CAS<br>
-                • Briefing Room
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
+      <section class="calendar-common" aria-labelledby="calendar-common-title">
+        <header class="calendar-common-header">
+          <span class="calendar-common-icon" aria-hidden="true">↗</span>
+          <div>
+            <span class="calendar-kicker">Whatever era you fly</span>
+            <h2 id="calendar-common-title">The shared sortie</h2>
+          </div>
+          <p>Keep this common range flow in every week’s rotation.</p>
+        </header>
+        <div class="calendar-common-phases">
+          <section class="calendar-common-phase">
+            <h3>01 / Prepare</h3>
+            <ol>
+              <li>Add waypoints before departure</li>
+              <li>Complete cold start</li>
+              <li>Taxi and ATC communications</li>
+              <li>Basic formation (finger‑four / echelon / route)</li>
+            </ol>
+          </section>
+          <section class="calendar-common-phase">
+            <h3>02 / Work the range</h3>
+            <ol start="5">
+              <li>Navigation to the range</li>
+              <li>Entry into the pattern</li>
+              <li>Ground attack (CCIP / CCRP / Rockets / Guns)</li>
+              <li>Package escort</li>
+              <li>Exit from the range pattern</li>
+            </ol>
+          </section>
+          <section class="calendar-common-phase">
+            <h3>03 / Recover</h3>
+            <ol start="10">
+              <li>Rejoin at the holding point</li>
+              <li>Holding and separation</li>
+              <li>Navigation back to base</li>
+              <li>Landing pattern (CASE I / standard)</li>
+              <li>Comms and brevities throughout the exercise</li>
+            </ol>
+          </section>
+        </div>
+      </section>
     </section>
   </main>
 
@@ -216,18 +281,33 @@
       const totalWeeks = 4;
       const activeWeek = Math.max(1, Math.min(totalWeeks, Math.floor(diffDays / 7) + 1));
 
-      const rows = document.querySelectorAll('.kneeboard-table tbody tr');
-      rows.forEach(function (row, index) {
+      const weeks = document.querySelectorAll('.calendar-week');
+      weeks.forEach(function (week, index) {
         const weekNumber = index + 1;
+        week.id = 'calendar-week-' + weekNumber;
+        week.tabIndex = -1;
         if (weekNumber === activeWeek) {
-          row.classList.add('week-active');
+          week.classList.add('is-active');
+          week.setAttribute('aria-current', 'week');
         }
       });
 
-      const activeRow = rows[activeWeek - 1];
-      const activeEra = activeRow.cells[1].textContent.trim();
+      const activeEra = weeks[activeWeek - 1].dataset.era;
       document.getElementById('calendar-active-week').textContent =
         'Week ' + activeWeek + ' · ' + activeEra;
+      const jumpButton = document.getElementById('calendar-jump-active');
+      jumpButton.setAttribute(
+        'aria-label',
+        'Jump to active week ' + activeWeek + ', ' + activeEra
+      );
+      jumpButton.addEventListener('click', function () {
+        const activeCard = weeks[activeWeek - 1];
+        activeCard.focus({preventScroll: true});
+        activeCard.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'center'
+        });
+      });
 
       const weekMarkers = document.querySelectorAll('.calendar-cycle-track span');
       weekMarkers[activeWeek - 1].classList.add('is-active');
