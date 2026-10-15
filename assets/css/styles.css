@@ -478,6 +478,93 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   color:var(--text);
   font-size:1.15rem;
 }
+.calendar-hero{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:18px;
+  padding:22px 24px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.07);
+  border-left:3px solid var(--accent);
+  border-radius:5px;
+  background:linear-gradient(110deg,rgba(179,57,57,0.12),rgba(255,255,255,0.025) 58%,rgba(255,255,255,0.01));
+}
+.calendar-kicker{
+  display:block;
+  margin-bottom:7px;
+  color:#e9a0a0;
+  font-size:0.67rem;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+.calendar-hero h1{
+  margin:0;
+  color:var(--text);
+  font-size:clamp(1.5rem,3vw,2.15rem);
+  letter-spacing:-0.8px;
+  line-height:1.15;
+}
+.calendar-hero p{
+  margin:9px 0 0;
+  color:var(--sub);
+  font-size:0.88rem;
+}
+.calendar-cycle{
+  display:grid;
+  grid-template-columns:auto auto;
+  align-items:center;
+  column-gap:10px;
+  flex:none;
+  min-width:142px;
+  padding-left:22px;
+  border-left:1px solid rgba(255,255,255,0.12);
+}
+.calendar-cycle-number{
+  grid-row:span 2;
+  color:var(--text);
+  font-family:'Courier New',monospace;
+  font-size:2.2rem;
+  font-weight:700;
+  letter-spacing:-2px;
+  line-height:1;
+}
+.calendar-cycle-label{
+  color:var(--sub);
+  font-size:0.58rem;
+  font-weight:700;
+  letter-spacing:1px;
+  line-height:1.35;
+}
+.calendar-active-week{
+  grid-column:1 / -1;
+  margin-top:7px;
+  color:var(--text);
+  font-size:0.72rem;
+  font-weight:700;
+  letter-spacing:0.2px;
+  white-space:nowrap;
+}
+.calendar-cycle-track{
+  display:grid;
+  grid-column:1 / -1;
+  grid-template-columns:repeat(4,1fr);
+  gap:4px;
+  margin-top:10px;
+}
+.calendar-cycle-track span{
+  height:3px;
+  border-radius:2px;
+  background:rgba(179,57,57,0.35);
+  transition:background 180ms ease,box-shadow 180ms ease;
+}
+.calendar-cycle-track span.is-active{
+  background:var(--accent);
+  box-shadow:0 0 8px rgba(179,57,57,0.55);
+}
 
 /* TABLE */
 .table-wrapper{overflow:auto;border-radius:6px}
@@ -1370,6 +1457,13 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   .kneeboard-table{min-width:900px}
 }
 @media (max-width:760px){
+  .calendar-hero{align-items:flex-start;gap:16px;padding:18px 16px}
+  .calendar-hero h1{max-width:420px;font-size:1.5rem}
+  .calendar-hero p{max-width:420px;font-size:0.8rem}
+  .calendar-cycle{grid-template-columns:auto;min-width:0;padding-left:14px;text-align:center}
+  .calendar-cycle-number{grid-row:auto;font-size:1.8rem}
+  .calendar-cycle-label{font-size:0.52rem}
+  .calendar-cycle-track{gap:3px;margin-top:8px}
   .quick-reference-tabs{width:100%;margin:14px 0 12px}
   .quick-reference-tabs{gap:6px}
   .quick-reference-tab{gap:8px;min-height:66px;padding:9px 8px}

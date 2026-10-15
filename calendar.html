@@ -17,12 +17,26 @@
   <div id="site-nav-root"></div>
 
   <main style="padding-top:86px">
-    <section class="panel">
-      <h2>Training Calendar (6 weeks)</h2>
+    <section class="panel calendar-panel">
+      <header class="calendar-hero">
+        <div class="calendar-hero-copy">
+          <span class="calendar-kicker">Four-week flight rotation</span>
+          <h1>Change the era. Keep flying.</h1>
+          <p>A simple weekly rhythm to mix up your flying, from WWII aircraft to modern jets.</p>
+        </div>
+        <div class="calendar-cycle" aria-label="Four weeks of rotating eras">
+          <span class="calendar-cycle-number" aria-hidden="true">04</span>
+          <span class="calendar-cycle-label" aria-hidden="true">WEEKLY<br>ROTATION</span>
+          <span class="calendar-active-week" id="calendar-active-week" aria-live="polite">Week 1</span>
+          <span class="calendar-cycle-track" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+        </div>
+      </header>
 
-      <div class="table-wrapper" style="margin-top:12px">
+      <div class="table-wrapper">
         <!-- COMPLETE TABLE -->
-        <table class="kneeboard-table calendar-table" aria-label="6-week training calendar">
+        <table class="kneeboard-table calendar-table" aria-label="4-week training calendar">
           <thead>
             <tr>
               <th>Week</th>
@@ -65,7 +79,7 @@
                 • Server: 4YA WWII Channel<br>
                 • Briefing Room
               </td>
-              <td class="common-training" rowspan="6">
+              <td class="common-training" rowspan="4">
                 • Add waypoints before departure<br>
                 • Complete cold start<br>
                 • Taxi and ATC communications<br>
@@ -184,55 +198,6 @@
               </td>
             </tr>
 
-            <!-- Week 5 -->
-            <tr>
-              <td>5</td>
-              <td>Mixed (modern + classic)</td>
-              <td>
-                <ul class="aircraft-list">
-                  <li>F‑18 + F‑5</li>
-                  <li>F‑14 + A‑4</li>
-                  <li>F‑16 + Mirage F1</li>
-                  <li>JF‑17 + MiG‑21</li>
-                </ul>
-              </td>
-              <td>
-                • Cross-era comms<br>
-                • Aggressor / package roles<br>
-                • Mixed tactical formation<br>
-                • Combined attack (A/A + A/G)<br>
-                • Mixed procedures<br>
-                • Mixed rejoin (visual + datalink)
-              </td>
-              <td>
-                • Server: 4YA Nevada Mixed Era<br>
-                • Red Flag (aggressors vs package)<br>
-                • Briefing Room - "Aggressor Training"
-              </td>
-            </tr>
-
-            <!-- Week 6 -->
-            <tr>
-              <td>6</td>
-              <td>Solo A/A</td>
-              <td>
-                Any aircraft
-              </td>
-              <td>
-                • Picture / bogey dope<br>
-                • Commit / terminate<br>
-                • 1‑vs‑1, 2‑vs‑1, 2‑vs‑2<br>
-                • Fox‑1 / Fox‑2 / Fox‑3<br>
-                • Tactical rejoin<br>
-                • Pure A/A procedures
-              </td>
-              <td>
-                • Server: Foothold (northern area) / 4YA A/A Only<br>
-                • CAP + interception<br>
-                • Briefing Room - "Air Defense Network"
-              </td>
-            </tr>
-
           </tbody>
         </table>
       </div>
@@ -248,7 +213,7 @@
       const today = new Date();
       const msPerDay = 1000 * 60 * 60 * 24;
       const diffDays = Math.floor((today - trainingStartDate) / msPerDay);
-      const totalWeeks = 6;
+      const totalWeeks = 4;
       const activeWeek = Math.max(1, Math.min(totalWeeks, Math.floor(diffDays / 7) + 1));
 
       const rows = document.querySelectorAll('.kneeboard-table tbody tr');
@@ -258,6 +223,14 @@
           row.classList.add('week-active');
         }
       });
+
+      const activeRow = rows[activeWeek - 1];
+      const activeEra = activeRow.cells[1].textContent.trim();
+      document.getElementById('calendar-active-week').textContent =
+        'Week ' + activeWeek + ' · ' + activeEra;
+
+      const weekMarkers = document.querySelectorAll('.calendar-cycle-track span');
+      weekMarkers[activeWeek - 1].classList.add('is-active');
     })();
   </script>
 </body>
