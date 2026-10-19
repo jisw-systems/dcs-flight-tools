@@ -514,13 +514,12 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   font-size:0.88rem;
 }
 .calendar-cycle{
-  display:grid;
-  grid-template-columns:auto auto;
-  align-items:center;
-  column-gap:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
   flex:none;
-  min-width:142px;
-  padding:0 0 0 22px;
+  min-width:172px;
+  padding:2px 0 2px 22px;
   border:0;
   border-left:1px solid rgba(255,255,255,0.12);
   appearance:none;
@@ -546,7 +545,6 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   outline-offset:5px;
 }
 .calendar-cycle-number{
-  grid-row:span 2;
   color:var(--text);
   font-family:'Courier New',monospace;
   font-size:2.2rem;
@@ -555,23 +553,22 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   line-height:1;
 }
 .calendar-cycle-label{
-  color:var(--sub);
-  font-size:0.58rem;
+  color:#e9a0a0;
+  font-size:0.62rem;
   font-weight:700;
-  letter-spacing:1px;
-  line-height:1.35;
+  letter-spacing:1.1px;
+  line-height:1.2;
 }
 .calendar-active-week{
-  grid-column:1 / -1;
-  margin-top:7px;
+  margin-top:5px;
   color:var(--text);
-  font-size:0.72rem;
+  font-size:1.7rem;
   font-weight:700;
-  letter-spacing:0.2px;
-  white-space:nowrap;
+  font-family:'Courier New',monospace;
+  letter-spacing:-0.3px;
+  line-height:1.1;
 }
 .calendar-jump-hint{
-  grid-column:1 / -1;
   margin-top:4px;
   color:#e9a0a0;
   font-size:0.58rem;
@@ -591,8 +588,8 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 }
 .calendar-cycle-track{
   display:grid;
-  grid-column:1 / -1;
   grid-template-columns:repeat(4,1fr);
+  width:100%;
   gap:4px;
   margin-top:10px;
 }
@@ -1652,9 +1649,9 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   .calendar-hero{align-items:flex-start;gap:16px;padding:18px 16px}
   .calendar-hero h1{max-width:420px;font-size:1.5rem}
   .calendar-hero p{max-width:420px;font-size:0.8rem}
-  .calendar-cycle{grid-template-columns:auto;min-width:0;padding-left:14px;text-align:center}
-  .calendar-cycle-number{grid-row:auto;font-size:1.8rem}
+  .calendar-cycle{align-items:center;min-width:118px;padding-left:14px;text-align:center}
   .calendar-cycle-label{font-size:0.52rem}
+  .calendar-active-week{font-size:1.35rem}
   .calendar-cycle-track{gap:3px;margin-top:8px}
   .calendar-rotation{grid-template-columns:minmax(0,1fr);gap:11px}
   .calendar-week{padding:16px}
@@ -1700,7 +1697,7 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
     .calendar-hero h1{font-size:1.25rem}
     .calendar-hero p{font-size:0.75rem}
     .calendar-cycle{gap:6px;padding-left:10px}
-    .calendar-active-week{font-size:0.62rem}
+    .calendar-active-week{font-size:1.2rem}
     .calendar-week{padding:14px 12px}
     .calendar-week-header{gap:9px}
     .calendar-week-number{font-size:1.1rem}

@@ -25,9 +25,10 @@
           <p>A simple weekly rhythm to mix up your flying, from WWII aircraft to modern jets.</p>
         </div>
         <button class="calendar-cycle" id="calendar-jump-active" type="button" aria-label="Jump to the active week">
-          <span class="calendar-cycle-number" aria-hidden="true">04</span>
-          <span class="calendar-cycle-label" aria-hidden="true">WEEKLY<br>ROTATION</span>
-          <span class="calendar-active-week" id="calendar-active-week" aria-live="polite">Week 1</span>
+          <span class="calendar-cycle-label">ACTIVE THIS WEEK</span>
+          <span class="calendar-active-week" id="calendar-active-week-era" aria-live="polite">
+            WWII
+          </span>
           <span class="calendar-jump-hint" aria-hidden="true">View this week <span>↓</span></span>
           <span class="calendar-cycle-track" aria-hidden="true">
             <span></span><span></span><span></span><span></span>
@@ -298,8 +299,7 @@
       });
 
       const activeEra = weeks[activeWeek - 1].dataset.era;
-      document.getElementById('calendar-active-week').textContent =
-        'Week ' + activeWeek + ' · ' + activeEra;
+      document.getElementById('calendar-active-week-era').textContent = activeEra;
       const jumpButton = document.getElementById('calendar-jump-active');
       jumpButton.setAttribute(
         'aria-label',
