@@ -278,12 +278,13 @@
     <script src="assets/js/main.js"></script>
   <script>
     (function () {
-      const trainingStartDate = new Date('2026-09-14T00:00:00');
+      const trainingStartDate = new Date('2026-10-19T00:00:00');
       const today = new Date();
       const msPerDay = 1000 * 60 * 60 * 24;
       const diffDays = Math.floor((today - trainingStartDate) / msPerDay);
       const totalWeeks = 4;
-      const activeWeek = Math.max(1, Math.min(totalWeeks, Math.floor(diffDays / 7) + 1));
+      const elapsedWeeks = Math.max(0, Math.floor(diffDays / 7));
+      const activeWeek = (elapsedWeeks % totalWeeks) + 1;
 
       const weeks = document.querySelectorAll('.calendar-week');
       weeks.forEach(function (week, index) {
