@@ -3,8 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var searchInput = document.getElementById('threat-search');
   var resultsCount = document.getElementById('threat-results-count');
   var tablesRoot = document.getElementById('threat-tables');
+  var stickyHeader = document.createElement('div');
+  var stickyTable = document.createElement('table');
+  var stickyFrame = 0;
 
   if (!database || !searchInput || !resultsCount || !tablesRoot) return;
+
+  stickyHeader.className = 'threat-sticky-header';
+  stickyHeader.setAttribute('aria-hidden', 'true');
+  stickyTable.className = 'threat-table threat-sticky-table';
+  stickyHeader.appendChild(stickyTable);
+  document.documentElement.appendChild(stickyHeader);
 
   function createCell(value) {
     var cell = document.createElement('td');
@@ -94,7 +103,64 @@ document.addEventListener('DOMContentLoaded', function () {
       item.element.hidden = !Array.from(rows).some(function (row) { return !row.hidden; });
     });
     resultsCount.textContent = visibleRows + (visibleRows === 1 ? ' entry' : ' entries') + ' shown';
+    scheduleStickyHeaderUpdate();
   }
+
+  function updateStickyHeader() {
+    var stickyTop = 0;
+    var activeTable = null;
+
+    renderedSections.some(function (item) {
+      if (item.element.hidden) return false;
+      var tableWrapper = item.element.querySelector('.threat-table-wrapper');
+      var table = tableWrapper.querySelector('.threat-table');
+      var headerRow = table.tHead.rows[0];
+      var wrapperRect = tableWrapper.getBoundingClientRect();
+      var headerRect = headerRow.getBoundingClientRect();
+      if (headerRect.top < stickyTop && wrapperRect.bottom > stickyTop + headerRect.height) {
+        activeTable = { wrapper: tableWrapper, table: table, headerRow: headerRow };
+        return true;
+      }
+      return false;
+    });
+
+    if (!activeTable) {
+      stickyHeader.classList.remove('is-visible');
+      stickyTable.replaceChildren();
+      return;
+    }
+
+    var wrapper = activeTable.wrapper;
+    var wrapperRect = wrapper.getBoundingClientRect();
+    var tableRect = activeTable.table.getBoundingClientRect();
+    var clonedRow = activeTable.headerRow.cloneNode(true);
+    Array.from(clonedRow.cells).forEach(function (cell, index) {
+      cell.style.width = activeTable.headerRow.cells[index].getBoundingClientRect().width + 'px';
+      cell.style.position = 'static';
+    });
+    var stickyHead = document.createElement('thead');
+    stickyHead.appendChild(clonedRow);
+    stickyTable.replaceChildren(stickyHead);
+    stickyHeader.style.left = wrapperRect.left + wrapper.clientLeft + 'px';
+    stickyHeader.style.width = wrapper.clientWidth + 'px';
+    stickyTable.style.width = tableRect.width + 'px';
+    stickyTable.style.transform = 'translateX(' + -wrapper.scrollLeft + 'px)';
+    stickyHeader.classList.add('is-visible');
+  }
+
+  function scheduleStickyHeaderUpdate() {
+    if (stickyFrame) return;
+    stickyFrame = window.requestAnimationFrame(function () {
+      stickyFrame = 0;
+      updateStickyHeader();
+    });
+  }
+
+  window.addEventListener('scroll', scheduleStickyHeaderUpdate, { passive: true });
+  window.addEventListener('resize', scheduleStickyHeaderUpdate);
+  tablesRoot.querySelectorAll('.threat-table-wrapper').forEach(function (wrapper) {
+    wrapper.addEventListener('scroll', scheduleStickyHeaderUpdate, { passive: true });
+  });
 
   searchInput.addEventListener('input', filterTables);
   tablesRoot.querySelectorAll('.threat-column-filter').forEach(function (input) {
