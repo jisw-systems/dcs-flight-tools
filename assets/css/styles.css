@@ -1980,9 +1980,11 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   }
   .brevities-table .brevity-term-button{flex-direction:row-reverse;justify-content:space-between;color:#E8A0A0;font-size:0.82rem;letter-spacing:0.5px}
   .brevities-table .brevity-description-button{justify-content:space-between;align-items:flex-start;color:var(--text);font-size:0.84rem;line-height:1.5}
-  .brevities-table .brevity-example-row{display:block;border:1px solid rgba(255,255,255,0.08);border-top:0;background:#141715}
-  .brevities-table .brevity-example-row td{display:block;width:auto;padding:10px 12px 12px}
-  .brevities-table .brevity-radio-tape{max-width:none}
+  .brevities-table .brevity-example-row{display:grid;grid-template-columns:minmax(0,1fr);min-width:0;border:1px solid rgba(255,255,255,0.08);border-top:0;background:#141715}
+  .brevities-table .brevity-example-row td{display:block;width:100%;min-width:0;max-width:100%;padding:10px 12px 12px;box-sizing:border-box}
+  .brevities-table .brevity-example-row td:first-child{width:100%;white-space:normal}
+  .brevities-table .brevity-radio-tape{width:100%;max-width:none;box-sizing:border-box}
+  .brevities-table .brevity-radio-call{overflow-wrap:anywhere}
   .brevities-page{padding:76px 12px 22px}
   .brevities-panel{padding:20px 14px}
   .threats-page{padding:76px 12px 22px}
