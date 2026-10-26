@@ -450,13 +450,21 @@ body[data-page="inicio"] .hero{background:rgba(13,13,15,0.62)}
 .btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
 .hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:18px}
 .hero-actions .btn{gap:10px}
-.hero-home-link span{color:var(--accent);transition:transform .2s ease,color .15s ease}
-.hero-home-link:hover span,.hero-home-link:focus-visible span{color:#fff;transform:translate(3px,-3px)}
+.hero-action-icon{width:17px;height:17px;flex:none;color:var(--accent)}
+.hero-action-arrow{color:var(--accent);transition:transform .2s ease,color .15s ease}
+.hero-actions .btn:hover .hero-action-arrow,.hero-actions .btn:focus-visible .hero-action-arrow{color:#fff;transform:translate(3px,-3px)}
 .hero-home-link:focus-visible,.hero-contact-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .hero-contact-link{border-color:var(--accent);background:linear-gradient(135deg,#b33939,#8f2929);box-shadow:0 5px 18px rgba(179,57,57,0.2)}
 .hero-contact-link:hover{background:linear-gradient(135deg,#ca4b4b,#a33333);box-shadow:0 7px 22px rgba(179,57,57,0.3)}
-.hero-contact-link span{transition:transform .2s ease}
-.hero-contact-link:hover span,.hero-contact-link:focus-visible span{transform:translate(3px,-3px)}
+.hero-contact-link .hero-action-icon{color:#fff}
+@media (hover:none), (pointer:coarse){
+  .hero-home-link:hover{background:transparent;color:var(--text);transform:none}
+  .hero-home-link:hover .hero-action-icon,.hero-actions .hero-home-link:hover .hero-action-arrow{color:var(--accent);transform:none}
+  .hero-actions .hero-contact-link:hover{background:linear-gradient(135deg,#b33939,#8f2929);box-shadow:0 5px 18px rgba(179,57,57,0.2);transform:none}
+  .hero-actions .hero-contact-link:hover .hero-action-arrow{color:var(--accent);transform:none}
+  .hero-home-link:active{background:rgba(255,255,255,0.08)}
+  .hero-contact-link:active{filter:brightness(0.9)}
+}
 
 /* HOME TOOL SHELF */
 .home-main{position:relative;z-index:1;padding:0 18px 28px;background:var(--bg)}
