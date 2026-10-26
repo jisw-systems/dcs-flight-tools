@@ -448,10 +448,15 @@ body[data-page="inicio"] .hero{background:rgba(13,13,15,0.62)}
   text-align:center;
 }
 .btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
-.hero-home-link{gap:10px;margin-top:18px}
+.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:18px}
+.hero-actions .btn{gap:10px}
 .hero-home-link span{color:var(--accent);transition:transform .2s ease,color .15s ease}
 .hero-home-link:hover span,.hero-home-link:focus-visible span{color:#fff;transform:translate(3px,-3px)}
-.hero-home-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.hero-home-link:focus-visible,.hero-contact-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.hero-contact-link{border-color:var(--accent);background:linear-gradient(135deg,#b33939,#8f2929);box-shadow:0 5px 18px rgba(179,57,57,0.2)}
+.hero-contact-link:hover{background:linear-gradient(135deg,#ca4b4b,#a33333);box-shadow:0 7px 22px rgba(179,57,57,0.3)}
+.hero-contact-link span{transition:transform .2s ease}
+.hero-contact-link:hover span,.hero-contact-link:focus-visible span{transform:translate(3px,-3px)}
 
 /* HOME TOOL SHELF */
 .home-main{position:relative;z-index:1;padding:0 18px 28px;background:var(--bg)}
@@ -1801,7 +1806,7 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   .tool-grid{grid-template-columns:1fr}
   .tool-card{min-height:220px;padding:20px}
   .tool-card-title{margin-top:18px}
-  .hero .cta{flex-direction:column;align-items:center}
+  .hero-actions{flex-direction:column;align-items:center}
   .btn{width:100%;max-width:320px;min-width:0}
   .kneeboard-table{min-width:700px}
   .top-nav{padding:8px 12px}
