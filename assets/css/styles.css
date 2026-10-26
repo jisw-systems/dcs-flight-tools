@@ -89,13 +89,37 @@ body[data-page="inicio"].page-return{
   place-items:center;
   background:var(--bg);
   overscroll-behavior:none;
-  animation:splash-exit 500ms ease 3300ms forwards;
+  animation:splash-exit 450ms ease 1350ms forwards;
+}
+.splash-screen::before,
+.splash-screen::after{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  content:"";
+}
+.splash-screen::before{
+  background:
+    radial-gradient(ellipse at center,rgba(179,57,57,0.1),transparent 42%),
+    linear-gradient(rgba(196,196,196,0.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(196,196,196,0.045) 1px,transparent 1px);
+  background-size:auto,56px 56px,56px 56px;
+  mask-image:radial-gradient(ellipse at center,#000 0%,rgba(0,0,0,0.75) 55%,transparent 100%);
+}
+.splash-screen::after{
+  inset:-1px 0 auto;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(179,57,57,0.7),transparent);
+  box-shadow:0 0 12px rgba(179,57,57,0.45);
+  animation:splash-sweep 1500ms ease-in-out both;
 }
 .splash-content{
+  position:relative;
+  z-index:1;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:10px;
+  gap:16px;
   animation:splash-arrive 900ms cubic-bezier(.22,1,.36,1) both;
 }
 .splash-mark{
@@ -130,25 +154,41 @@ body[data-page="inicio"].page-return{
   bottom:0;
   border-width:0 2px 2px 0;
 }
-.splash-title{
-  color:var(--text);
-  font-size:1.35rem;
-  font-weight:700;
-  letter-spacing:0.6px;
-  animation:splash-text 650ms ease 750ms both;
-}
 .splash-kicker{
   color:var(--accent);
-  font-size:0.78rem;
+  font-size:1.05rem;
   font-weight:700;
-  letter-spacing:2px;
+  letter-spacing:0.22em;
   text-transform:uppercase;
-  animation:splash-text 550ms ease 600ms both;
+  animation:splash-welcome 700ms cubic-bezier(.22,1,.36,1) 450ms both;
 }
-.splash-message{
-  color:var(--sub);
-  font-size:0.88rem;
-  animation:splash-text 650ms ease 900ms both;
+.splash-kicker::before,
+.splash-kicker::after{
+  display:inline-block;
+  width:26px;
+  height:1px;
+  margin:0 14px 0.3em;
+  background:linear-gradient(90deg,transparent,var(--accent));
+  content:"";
+  vertical-align:middle;
+  animation:splash-rule 700ms cubic-bezier(.22,1,.36,1) 450ms both;
+}
+.splash-kicker::after{background:linear-gradient(90deg,var(--accent),transparent)}
+.splash-progress{
+  width:132px;
+  height:2px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.1);
+}
+.splash-progress span{
+  display:block;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,var(--accent),#e9a0a0);
+  box-shadow:0 0 8px rgba(179,57,57,0.75);
+  transform:scaleX(0);
+  transform-origin:left;
+  animation:splash-progress 1250ms cubic-bezier(.22,1,.36,1) 100ms forwards;
 }
 @keyframes splash-arrive{
   from{opacity:0}
@@ -166,6 +206,22 @@ body[data-page="inicio"].page-return{
   from{opacity:0;transform:translateY(8px)}
   to{opacity:1;transform:translateY(0)}
 }
+@keyframes splash-welcome{
+  from{opacity:0;transform:translateY(12px);letter-spacing:0.42em}
+  to{opacity:1;transform:translateY(0);letter-spacing:0.22em}
+}
+@keyframes splash-rule{
+  from{opacity:0;transform:scaleX(0)}
+  to{opacity:1;transform:scaleX(1)}
+}
+@keyframes splash-progress{
+  to{transform:scaleX(1)}
+}
+@keyframes splash-sweep{
+  from{transform:translateY(0);opacity:0}
+  15%{opacity:0.8}
+  to{transform:translateY(100vh);opacity:0}
+}
 @keyframes splash-exit{
   to{opacity:0;visibility:hidden}
 }
@@ -175,10 +231,14 @@ body[data-page="inicio"].page-return{
   .splash-mark,
   .splash-corner,
   .splash-kicker,
-  .splash-title,
-  .splash-message{
+  .splash-kicker::before,
+  .splash-kicker::after,
+  .splash-progress span,
+  .splash-screen::after{
     animation:none;
   }
+  .splash-progress span{transform:scaleX(1)}
+  .splash-screen::after{opacity:0}
   .splash-screen{opacity:1;visibility:visible}
   .tool-card,.tool-card::after,.tool-card-link span{transition:none}
 }

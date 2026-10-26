@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var splashScreen = document.getElementById('splash-screen');
   if (splashScreen) {
-    var splashDelay = reducedMotion ? 100 : 3800;
+    var splashDelay = reducedMotion ? 100 : 1800;
     window.setTimeout(function () {
       document.documentElement.classList.remove('splash-active');
       document.body.classList.remove('splash-active');
