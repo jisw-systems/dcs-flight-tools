@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.addEventListener('click', function (e) {
-      if (window.innerWidth < 760 && !navLinks.contains(e.target) && e.target !== menuToggle) {
+      if (window.innerWidth < 760 && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
         closeMenu();
       }
     });

@@ -73,7 +73,7 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 ### Privacy and use
 - See [Legal & Privacy](legal.html) for browser storage, GitHub Pages hosting logs, external video embeds, and the simulator-only use disclaimer.
 - Checklist progress is saved in browser local storage only after the visitor opts in; YouTube videos are plain links and connect only when followed.
-- Use **Refresh page if updates are missing** in the footer to revalidate the current page and its local assets before reloading, without clearing saved checklist progress.
+- Use the refresh icon in the top navigation to revalidate the current page and its local assets before reloading, without clearing saved checklist progress. On mobile, it is inside the navigation menu.
 
 ### [Navigation Tools](navigation-tools.html)
 

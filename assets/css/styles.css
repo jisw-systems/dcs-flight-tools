@@ -303,6 +303,44 @@ body[data-page="inicio"].page-return{
   border-radius:4px;
 }
 .nav-links a:hover{color:var(--accent);background:rgba(179,57,57,0.06)}
+.site-nav__refresh{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:34px;
+  padding:6px 9px;
+  border:1px solid rgba(179,57,57,0.34);
+  border-radius:5px;
+  background:linear-gradient(135deg,rgba(179,57,57,0.12),rgba(255,255,255,0.025));
+  color:var(--sub);
+  font:inherit;
+  font-size:0.82rem;
+  cursor:pointer;
+  transition:border-color .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease;
+}
+.site-nav__refresh:hover,.site-nav__refresh:focus-visible{
+  border-color:rgba(179,57,57,0.7);
+  background:rgba(179,57,57,0.14);
+  color:var(--text);
+  box-shadow:0 0 0 2px rgba(179,57,57,0.1);
+}
+.site-nav__refresh:focus-visible{outline:2px solid rgba(205,157,76,0.65);outline-offset:2px}
+.site-nav__refresh:disabled{opacity:0.75;cursor:wait}
+.site-nav__refresh-icon{width:19px;height:19px;flex:0 0 19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.site-nav__refresh.is-checking .site-nav__refresh-icon{animation:site-nav-refresh-spin 1s linear infinite}
+@keyframes site-nav-refresh-spin{to{transform:rotate(360deg)}}
+.site-nav__refresh-label{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
 
 /* HERO */
 .home-dynamic-grid{
@@ -1062,7 +1100,7 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .pernera-content{flex:3 1 560px;max-width:100%;background:linear-gradient(180deg,var(--panel-2),#111);padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.02);overflow-wrap:anywhere}
 .pernera-panel{display:none;overflow-wrap:anywhere}
 .pernera-panel.active{display:block}
-.pernera-panel h3{
+.pernera-panel > h3{
   position:relative;
   display:flex;
   flex-wrap:wrap;
@@ -1083,7 +1121,7 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   letter-spacing:0.01em;
   overflow-wrap:anywhere;
 }
-.pernera-panel h3::before{
+.pernera-panel > h3::before{
   position:absolute;
   top:12px;
   left:16px;
@@ -1306,7 +1344,33 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .table tbody td:nth-child(2){color:var(--text)}
 
 .engine-management{margin-top:16px;padding-top:12px;border-top:1px solid rgba(179,57,57,0.25)}
-.engine-management h4{margin:0 0 8px 0;font-size:0.95rem;color:var(--accent)}
+.pernera-panel h4{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin:0 0 10px;
+  padding:9px 11px;
+  border:1px solid rgba(255,255,255,0.055);
+  border-left:2px solid rgba(179,57,57,0.72);
+  border-radius:4px;
+  background:linear-gradient(100deg,rgba(179,57,57,0.105),rgba(255,255,255,0.018) 72%);
+  color:#e4caca;
+  font-size:0.93rem;
+  font-weight:650;
+  letter-spacing:0.015em;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+}
+.pernera-panel h4::before{
+  content:"";
+  flex:0 0 6px;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#d49a70;
+  box-shadow:0 0 8px rgba(212,154,112,0.3);
+}
+.engine-management h4{margin:0 0 10px;font-size:0.93rem;color:#e4caca}
 
 .engine-table-wrapper{overflow-x:auto;border-radius:6px}
 .engine-table{width:100%;border-collapse:collapse;min-width:520px;font-size:0.9rem}
@@ -1575,9 +1639,6 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .site-footer{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;max-width:var(--maxw);margin:18px auto 40px;color:var(--sub);font-size:0.85rem;padding:14px 18px 0;border-top:1px solid rgba(255,255,255,0.06);text-align:center}
 .site-footer__link{color:var(--sub);text-decoration:none;border-bottom:1px solid rgba(179,57,57,0.45);transition:color .2s ease,border-color .2s ease}
 .site-footer__link:hover,.site-footer__link:focus-visible{color:var(--accent);border-color:var(--accent)}
-.site-footer__refresh{padding:0;border:0;border-bottom:1px dashed rgba(179,57,57,0.55);background:none;color:var(--sub);font:inherit;cursor:pointer;transition:color .2s ease,border-color .2s ease}
-.site-footer__refresh:hover,.site-footer__refresh:focus-visible{border-color:var(--accent);color:var(--accent)}
-
 /* LEGAL AND PRIVACY */
 .legal-page{padding:86px 18px 28px}
 .legal-panel{max-width:var(--maxw);margin:18px auto 0;padding:28px}
@@ -1935,6 +1996,8 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   }
   .nav-links.open{display:flex}
   .nav-links a{padding:10px 12px}
+  .site-nav__refresh{justify-content:flex-start;width:100%;padding:10px 12px}
+  .site-nav__refresh-label{position:static;width:auto;height:auto;padding:0;margin:0;overflow:visible;clip:auto;white-space:nowrap}
   .perneras-layout{flex-direction:column}
   .perneras-list{width:100%;flex-basis:auto}
   .aircraft-selector{margin-top:12px;padding:10px}

@@ -21,6 +21,10 @@
       '    <a href="brevities.html">Brevities</a>',
       '    <a href="formations.html">Formations</a>',
       '    <a href="tot-calculator.html">TOT Calculator</a>',
+      '    <button class="site-nav__refresh" type="button" aria-label="Refresh page and resources" title="Refresh page and resources">',
+      '      <svg class="site-nav__refresh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 11a8 8 0 0 0-14.9-4M5 3v4h4M4 13a8 8 0 0 0 14.9 4M19 21v-4h-4"/></svg>',
+      '      <span class="site-nav__refresh-label" role="status" aria-live="polite">Refresh</span>',
+      '    </button>',
       '  </div>',
       '</nav>'
     ].join('');
@@ -40,14 +44,22 @@
   renderSharedNav();
 
   if (!document.querySelector('.site-footer')) {
-    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer"><span>Part of <a class="site-footer__link" href="https://jisw-systems.github.io/main-site/">J&amp;I SimWorks Systems</a></span><a class="site-footer__link" href="legal.html">Legal &amp; Privacy</a><button class="site-footer__refresh" type="button">Refresh page if updates are missing</button></footer>');
+    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer"><span>Part of <a class="site-footer__link" href="https://jisw-systems.github.io/main-site/">J&amp;I SimWorks Systems</a></span><a class="site-footer__link" href="legal.html">Legal &amp; Privacy</a></footer>');
   }
 
-  var refreshButton = document.querySelector('.site-footer__refresh');
+  var refreshButton = document.querySelector('.site-nav__refresh');
   if (refreshButton) {
     refreshButton.addEventListener('click', function () {
       refreshButton.disabled = true;
-      refreshButton.textContent = 'Checking for updates...';
+      refreshButton.classList.add('is-checking');
+      refreshButton.setAttribute('aria-label', 'Checking for updates');
+      refreshButton.querySelector('.site-nav__refresh-label').textContent = 'Checking...';
+      var navLinks = document.getElementById('site-menu');
+      var menuToggle = document.querySelector('.menu-toggle');
+      if (window.innerWidth < 760 && navLinks && menuToggle) {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
       var resources = [
         window.location.href,
         new URL('data/dcs_locations.json', window.location.href).href
@@ -69,7 +81,10 @@
       }).catch(function (error) {
         console.error('Unable to refresh the page and its assets.', error);
         refreshButton.disabled = false;
-        refreshButton.textContent = 'Refresh failed - try again';
+        refreshButton.classList.remove('is-checking');
+        refreshButton.setAttribute('aria-label', 'Refresh failed. Try again');
+        refreshButton.title = 'Refresh failed. Try again';
+        refreshButton.querySelector('.site-nav__refresh-label').textContent = 'Retry';
       });
     });
   }
