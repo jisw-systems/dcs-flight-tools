@@ -3,6 +3,33 @@
    =========================== */
 document.addEventListener('DOMContentLoaded', function () {
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.engine-management .engine-table').forEach(function (table) {
+    var headerRow = table.querySelector('thead tr:last-child');
+    if (!headerRow) return;
+
+    var labels = Array.from(headerRow.cells).map(function (cell) {
+      return cell.textContent.replace(/\s+/g, ' ').trim();
+    });
+    var labelsReady = labels.length > 0;
+
+    table.querySelectorAll('tbody tr').forEach(function (row) {
+      Array.from(row.cells).forEach(function (cell, index) {
+        if (cell.tagName !== 'TD') return;
+        if (!labels[index]) {
+          labelsReady = false;
+          return;
+        }
+        cell.dataset.label = labels[index];
+      });
+    });
+
+    if (labelsReady) {
+      table.dataset.mobileLabels = 'ready';
+      var wrapper = table.closest('.engine-table-wrapper');
+      if (wrapper) wrapper.dataset.mobileLabels = 'ready';
+    }
+  });
+
   var checklistStorageConsentKey = 'dcs-checklist-storage-consent';
   var checklistStorageConsent = false;
   var checklistStorageAvailable = true;
