@@ -270,12 +270,11 @@ body[data-page="inicio"].page-return{
   text-decoration:none;
 }
 .brand-logo{
-  width:28px;
-  height:28px;
+  width:auto;
+  height:40px;
+  max-width:110px;
+  flex:0 0 auto;
   object-fit:contain;
-  border-radius:6px;
-  border:1px solid rgba(255,255,255,0.08);
-  background:rgba(255,255,255,0.02);
 }
 .menu-toggle{
   display:none;

@@ -2,7 +2,7 @@ window.siteConfig = window.siteConfig || {
   brand: 'J&I Flight Tools',
   parentBrand: 'J&I SimWorks Systems',
   logo: 'assets/jisw-logo.png',
-  mark: 'assets/jisw-favicon/favicon-32x32.png',
+  mark: 'assets/jisw-logo.png',
   titles: {
     inicio: 'J&I Flight Tools — Home',
     calendar: 'J&I Flight Tools — Calendar',
