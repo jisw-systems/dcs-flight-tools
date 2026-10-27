@@ -1397,11 +1397,30 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
 }
 .technical-notes h4{
-  margin:0 0 8px 0;
-  font-size:0.9rem;
-  font-weight:600;
-  color:var(--sub);
-  letter-spacing:0.2px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin:0 0 9px;
+  padding:0 0 8px;
+  border:0;
+  border-bottom:1px solid rgba(179,57,57,0.28);
+  border-radius:0;
+  background:none;
+  color:#e4caca;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.06em;
+  line-height:1.35;
+  text-transform:uppercase;
+}
+.technical-notes h4::before{display:none}
+.technical-notes h4 .wip-badge{
+  margin:0;
+  padding:3px 7px;
+  font-size:0.62rem;
+  letter-spacing:0.05em;
+  line-height:1.2;
 }
 .technical-notes ul{
   margin:0;
