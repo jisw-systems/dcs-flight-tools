@@ -40,6 +40,37 @@
   renderSharedNav();
 
   if (!document.querySelector('.site-footer')) {
-    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer"><span>Part of <a class="site-footer__link" href="https://jisw-systems.github.io/main-site/">J&amp;I SimWorks Systems</a></span><a class="site-footer__link" href="legal.html">Legal &amp; Privacy</a></footer>');
+    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer"><span>Part of <a class="site-footer__link" href="https://jisw-systems.github.io/main-site/">J&amp;I SimWorks Systems</a></span><a class="site-footer__link" href="legal.html">Legal &amp; Privacy</a><button class="site-footer__refresh" type="button">Refresh page if updates are missing</button></footer>');
+  }
+
+  var refreshButton = document.querySelector('.site-footer__refresh');
+  if (refreshButton) {
+    refreshButton.addEventListener('click', function () {
+      refreshButton.disabled = true;
+      refreshButton.textContent = 'Checking for updates...';
+      var resources = [
+        window.location.href,
+        new URL('data/dcs_locations.json', window.location.href).href
+      ];
+      document.querySelectorAll('link[rel~="stylesheet"][href], script[src], img[src], source[src]').forEach(function (resource) {
+        var attribute = resource.tagName === 'LINK' ? 'href' : 'src';
+        var url = new URL(resource.getAttribute(attribute), window.location.href);
+        if (url.origin === window.location.origin) resources.push(url.href);
+      });
+
+      Promise.all(Array.from(new Set(resources)).map(function (resourceUrl) {
+        return fetch(resourceUrl, { cache: 'reload' }).then(function (response) {
+          if (!response.ok) throw new Error('Refresh request failed: ' + response.status);
+        });
+      })).then(function () {
+        var pageUrl = new URL(window.location.href);
+        pageUrl.searchParams.set('_refresh', Date.now().toString());
+        window.location.replace(pageUrl.href);
+      }).catch(function (error) {
+        console.error('Unable to refresh the page and its assets.', error);
+        refreshButton.disabled = false;
+        refreshButton.textContent = 'Refresh failed - try again';
+      });
+    });
   }
 })();
