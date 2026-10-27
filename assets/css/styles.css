@@ -1268,6 +1268,7 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 
 .engine-management{margin-top:16px;padding-top:12px;border-top:1px solid rgba(179,57,57,0.25)}
 .engine-management h4{margin:0 0 8px 0;font-size:0.95rem;color:var(--accent)}
+.checklist-source-note{margin:12px 0 0;color:var(--muted);font-size:0.76rem;line-height:1.5}
 .engine-table-wrapper{overflow-x:auto;border-radius:6px}
 .engine-table{width:100%;border-collapse:collapse;min-width:520px;font-size:0.9rem}
 .engine-table th,.engine-table td{padding:8px 10px;border:1px solid rgba(255,255,255,0.05);text-align:left;vertical-align:top;white-space:normal;word-break:normal}

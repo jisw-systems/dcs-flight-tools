@@ -1020,17 +1020,6 @@
               <li><button class="check-item" type="button" data-key="fa18-26">Parking brake RELEASE</button></li>
             </ul>
             <div class="engine-management">
-              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
-              <div class="checklist-toolbar">
-                <button class="toggle-all-checklist" type="button" data-panel="fa18-landing">Mark/unmark all</button>
-              </div>
-              <ul class="checklist">
-                <li><button class="check-item" type="button" data-key="fa18-landing-1">Landing configuration example</button></li>
-                <li><button class="check-item" type="button" data-key="fa18-landing-2">Landing speed example</button></li>
-              </ul>
-            </div>
-
-            <div class="engine-management">
               <h4>Shore Takeoff (Essential)</h4>
               <div class="checklist-toolbar">
                 <button class="toggle-all-checklist" type="button" data-panel="fa18-shore">Mark/unmark all</button>
@@ -1097,6 +1086,30 @@
                 <li><button class="check-item" type="button" data-key="fa18-carrier-33">Set ALTITUDE switch to BARO at 3000 feet</button></li>
               </ul>
             </div>
+            <div class="engine-management">
+              <h4>Shore landing configuration</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="fa18-landing-shore">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="fa18-landing-shore-1">Set HOOK BYPASS to FIELD</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-landing-shore-2">Set ANTI-SKID ON (UP) and LANDING LIGHTS ON</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-landing-shore-3">Set ALTITUDE switch to RDR</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-landing-shore-4">At 250 knots, set LANDING GEAR DOWN and FLAPS FULL</button></li>
+              </ul>
+            </div>
+            <div class="engine-management">
+              <h4>Carrier landing configuration</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="fa18-landing-carrier">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="fa18-landing-carrier-1">Set ANTI-SKID OFF, arrestor HOOK DOWN, HOOK BYPASS CARRIER, and LANDING LIGHTS ON</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-landing-carrier-2">Set ALTITUDE switch to RDR</button></li>
+                <li><button class="check-item" type="button" data-key="fa18-landing-carrier-3">At 250 knots, set LANDING GEAR DOWN and FLAPS FULL</button></li>
+              </ul>
+            </div>
+            <p class="checklist-source-note">Configuration references: DCS F/A-18C Hornet Guide, Part 6 - Landing (pp. 128-131, 136-138). No landing-specific speedbrake setting is stated in these sections.</p>
             <div class="video-accordion">
               <button class="video-accordion-toggle" type="button" aria-expanded="false">
                 Recommended videos
@@ -1156,18 +1169,6 @@
               <li><button class="check-item" type="button" data-key="f14-18">Master Reset</button></li>
               <li><button class="check-item" type="button" data-key="f14-19">Flaps as needed</button></li>
             </ul>
-            <div class="engine-management">
-              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
-              <div class="checklist-toolbar">
-                <button class="toggle-all-checklist" type="button" data-panel="f14-landing">Mark/unmark all</button>
-              </div>
-              <ul class="checklist">
-                <li><button class="check-item" type="button" data-key="f14-landing-1">Landing configuration example</button></li>
-                <li><button class="check-item" type="button" data-key="f14-landing-2">Landing speed example</button></li>
-              </ul>
-            </div>
-
-
           <div class="engine-management">
             <h4>Shore Takeoff (Essential)</h4>
             <div class="checklist-toolbar">
@@ -1234,6 +1235,37 @@
               <li><button class="check-item" type="button" data-key="f14-carrier-29">After 7 nautical miles cleared to climb above 500 feet</button></li>
             </ul>
           </div>
+          <div class="engine-management">
+            <h4>Shore landing configuration</h4>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f14-landing-shore">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f14-landing-shore-1">Set ANTI-SKID/SPOILER BK to BOTH (UP), LANDING LIGHTS ON, and HOOK BYPASS to FIELD (FWD)</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-shore-2">At the initial point, set wing sweep to MANUAL and adjust wings to 68°</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-shore-3">Select HUD LDG mode</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-shore-4">At 280 knots, set wing sweep to AUTO and confirm 20°</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-shore-5">At 250 knots, set LANDING GEAR DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-shore-6">At 225 knots, set FLAPS DOWN and enable DLC</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-shore-7">At the break, extend the speedbrake</button></li>
+            </ul>
+          </div>
+          <div class="engine-management">
+            <h4>Carrier landing configuration</h4>
+            <div class="checklist-toolbar">
+              <button class="toggle-all-checklist" type="button" data-panel="f14-landing-carrier">Mark/unmark all</button>
+            </div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f14-landing-carrier-1">Set ANTI-SKID/SPOILER BK OFF (MIDDLE), LANDING LIGHTS ON, HOOK BYPASS to CARRIER (AFT), and HOOK DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-carrier-2">At the initial point, set wing sweep to MANUAL and adjust wings to 68°</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-carrier-3">Select HUD LDG mode</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-carrier-4">At 280 knots, set wing sweep to AUTO and confirm 20°</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-carrier-5">At 250 knots, set LANDING GEAR DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-carrier-6">At 225 knots, set FLAPS DOWN and enable DLC</button></li>
+              <li><button class="check-item" type="button" data-key="f14-landing-carrier-7">At the break, extend the speedbrake</button></li>
+            </ul>
+          </div>
+          <p class="checklist-source-note">Configuration references: DCS F-14B Tomcat Guide, Part 6 - Landing (pp. 200-202, 210-214).</p>
         </div>
 
         <div id="pernera-f4e" class="pernera-panel">
