@@ -1,0 +1,322 @@
+<!-- ===========================
+    FILE: calendar.html
+     =========================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/jisw-favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/jisw-favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/jisw-favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/jisw-favicon/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="calendar">
+  <div id="site-nav-root"></div>
+
+  <main style="padding-top:86px">
+    <section class="panel calendar-panel">
+      <header class="calendar-hero page-heading">
+        <div class="calendar-hero-copy">
+          <span class="page-heading-kicker">Four-week flight rotation</span>
+          <h1>Change the era. Keep flying.</h1>
+          <p>A simple weekly rhythm to mix up your flying, from WWII aircraft to modern jets.</p>
+        </div>
+        <button class="calendar-cycle" id="calendar-jump-active" type="button" aria-label="Jump to the active week">
+          <span class="calendar-cycle-label">ACTIVE THIS WEEK</span>
+          <span class="calendar-active-week" id="calendar-active-week-era" aria-live="polite">
+            WWII
+          </span>
+          <span class="calendar-jump-hint" aria-hidden="true">View this week <span>↓</span></span>
+          <span class="calendar-cycle-track" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+        </button>
+      </header>
+
+      <section class="calendar-rotation" aria-label="Weekly era rotation">
+        <article class="calendar-week" data-week="1" data-era="WWII">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">01 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 1</span>
+              <h2>WWII</h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>P‑51D Mustang</li>
+                <li>Spitfire LF Mk IX</li>
+                <li>Bf‑109 K‑4</li>
+                <li>Fw‑190 A8 / D9</li>
+                <li>F‑4U Corsair</li>
+                <li>Mosquito FB Mk VI</li>
+                <li>Lavochkin La‑7</li>
+                <li>Polikarpov I‑16</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>WWII circuits</li>
+                <li>Close formation (vic / finger‑four)</li>
+                <li>GPS-denied navigation</li>
+                <li>General ground attack</li>
+                <li>Energy management</li>
+                <li>Visual rejoin</li>
+                <li>Basic WWII comms</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: 4YA WWII Channel</li>
+                <li>Briefing Room</li>
+                <li>Campaign missions</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="calendar-week" data-week="2" data-era="Cold War (50–80)">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">02 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 2</span>
+              <h2>Cold War <span>(50–80)</span></h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>F‑86F Sabre</li>
+                <li>MiG‑15bis</li>
+                <li>F‑100D Super Sabre</li>
+                <li>F‑104 Starfighter</li>
+                <li>G‑91 Gina</li>
+                <li>F‑5E Tiger II</li>
+                <li>F‑4E Phantom II</li>
+                <li>MiG‑21bis</li>
+                <li>A‑4E Skyhawk (mod)</li>
+                <li>Mirage F1</li>
+                <li>L‑39 Albatros</li>
+                <li>C‑101 Aviojet</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Comms GCI (Ground Control Interception)</li>
+                <li>Vectored interception</li>
+                <li>Basic tacform</li>
+                <li>GPS-denied navigation</li>
+                <li>Classic ground attack (bombs / rockets)</li>
+                <li>Tactical rejoin</li>
+                <li>Cold War procedures</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: Heatblur Cold War</li>
+                <li>Air defense with human GCI</li>
+                <li>Briefing Room</li>
+                <li>Campaign missions</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="calendar-week" data-week="3" data-era="Late Cold War">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">03 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 3</span>
+              <h2>Late Cold War</h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>F‑14A/B Tomcat</li>
+                <li>Mirage F1</li>
+                <li>MiG‑29A/G</li>
+                <li>Su‑25 Frogfoot</li>
+                <li>Su‑25T Frogfoot</li>
+                <li>Su‑27 Flanker</li>
+                <li>Su‑33 Flanker‑D</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>INS alignment</li>
+                <li>Tactical A/A comms</li>
+                <li>Commit / terminate / egress</li>
+                <li>CASE I</li>
+                <li>2‑vs‑2 BVR with AWACS</li>
+                <li>Advanced Cold War procedures</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: 4YA Nevada Cold War</li>
+                <li>Server: Foothold</li>
+                <li>2‑vs‑2 BVR with AWACS</li>
+                <li>Briefing Room</li>
+                <li>Campaign missions</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="calendar-week" data-week="4" data-era="Modern">
+          <header class="calendar-week-header">
+            <span class="calendar-week-number">04 <span>/ 04</span></span>
+            <div>
+              <span class="calendar-week-overline">Week 4</span>
+              <h2>Modern</h2>
+            </div>
+            <span class="calendar-week-status">Active</span>
+          </header>
+          <div class="calendar-week-content">
+            <section class="calendar-week-section">
+              <h3>Available aircraft</h3>
+              <ul class="calendar-aircraft-list">
+                <li>F‑18C Hornet</li>
+                <li>F‑16C Viper</li>
+                <li>Eurofighter Typhoon</li>
+                <li>C‑130 Hercules</li>
+                <li>JF‑17 Thunder</li>
+                <li>F‑15E Strike Eagle</li>
+                <li>A‑10C II</li>
+                <li>AV‑8B Harrier</li>
+                <li>MiG‑29S</li>
+                <li>J‑11A</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 1 <span>Training</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Advanced comms</li>
+                <li>Datalink (Link‑16)</li>
+                <li>Basic SEAD/DEAD</li>
+                <li>Fox‑3 tactics</li>
+                <li>Modern tacform</li>
+                <li>Datalink rejoin</li>
+                <li>Modern procedures</li>
+              </ul>
+            </section>
+            <section class="calendar-week-section">
+              <h3>Day 2 <span>Activity</span></h3>
+              <ul class="calendar-detail-list">
+                <li>Server: Foothold</li>
+                <li>SEAD + STRIKE + CAS</li>
+                <li>Briefing Room</li>
+                <li>Campaign missions</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <section class="calendar-common" aria-labelledby="calendar-common-title">
+        <header class="calendar-common-header">
+          <span class="calendar-common-icon" aria-hidden="true">↗</span>
+          <div>
+            <span class="calendar-kicker">Whatever era you fly</span>
+            <h2 id="calendar-common-title">The shared sortie</h2>
+          </div>
+          <p>Keep this common range flow in every week’s rotation.</p>
+        </header>
+        <div class="calendar-common-phases">
+          <section class="calendar-common-phase">
+            <h3>01 / Prepare</h3>
+            <ol>
+              <li>Add waypoints before departure</li>
+              <li>Complete cold start</li>
+              <li>Taxi and ATC communications</li>
+              <li>Basic formation (finger‑four / echelon / route)</li>
+            </ol>
+          </section>
+          <section class="calendar-common-phase">
+            <h3>02 / Work the range</h3>
+            <ol start="5">
+              <li>Navigation to the range</li>
+              <li>Entry into the pattern</li>
+              <li>Ground attack (CCIP / CCRP / Rockets / Guns)</li>
+              <li>Package escort</li>
+              <li>Exit from the range pattern</li>
+            </ol>
+          </section>
+          <section class="calendar-common-phase">
+            <h3>03 / Recover</h3>
+            <ol start="10">
+              <li>Rejoin at the holding point</li>
+              <li>Holding and separation</li>
+              <li>Navigation back to base</li>
+              <li>Landing pattern (CASE I / standard)</li>
+              <li>Comms and brevities throughout the exercise</li>
+            </ol>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/shared-nav.js"></script>
+    <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const trainingStartDate = new Date('2026-10-19T00:00:00');
+      const today = new Date();
+      const msPerDay = 1000 * 60 * 60 * 24;
+      const diffDays = Math.floor((today - trainingStartDate) / msPerDay);
+      const totalWeeks = 4;
+      const elapsedWeeks = Math.max(0, Math.floor(diffDays / 7));
+      const activeWeek = (elapsedWeeks % totalWeeks) + 1;
+
+      const weeks = document.querySelectorAll('.calendar-week');
+      weeks.forEach(function (week, index) {
+        const weekNumber = index + 1;
+        week.id = 'calendar-week-' + weekNumber;
+        week.tabIndex = -1;
+        if (weekNumber === activeWeek) {
+          week.classList.add('is-active');
+          week.setAttribute('aria-current', 'week');
+        }
+      });
+
+      const activeEra = weeks[activeWeek - 1].dataset.era;
+      document.getElementById('calendar-active-week-era').textContent = activeEra;
+      const jumpButton = document.getElementById('calendar-jump-active');
+      jumpButton.setAttribute(
+        'aria-label',
+        'Jump to active week ' + activeWeek + ', ' + activeEra
+      );
+      jumpButton.addEventListener('click', function () {
+        const activeCard = weeks[activeWeek - 1];
+        activeCard.focus({preventScroll: true});
+        activeCard.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'center'
+        });
+      });
+
+      const weekMarkers = document.querySelectorAll('.calendar-cycle-track span');
+      weekMarkers[activeWeek - 1].classList.add('is-active');
+    })();
+  </script>
+</body>
+</html>

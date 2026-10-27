@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/jisw-favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/jisw-favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/jisw-favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/jisw-favicon/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="navigation-tools">
+  <div id="site-nav-root"></div>
+
+  <main class="navigation-tools-page">
+    <section class="panel navigation-tools-panel">
+      <header class="navigation-tools-heading page-heading">
+        <span class="page-heading-kicker">Flight planning</span>
+        <h1>Navigation Tools</h1>
+        <p>Coordinate converters, location search, and route-planning calculations for DCS World.</p>
+      </header>
+
+        <div class="engine-management global-converter-block">
+          <div class="video-accordion unit-converter-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Unit Converter
+            </button>
+
+            <div class="video-accordion-content" hidden>
+              <div class="converter-grid">
+                <div class="converter-item" data-converter="temperature">
+                  <h5>Temperature</h5>
+                  <div class="converter-inputs">
+                    <label>°C<input type="number" step="any" data-unit="c"></label>
+                    <label>°F<input type="number" step="any" data-unit="f"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="pressure">
+                  <h5>Pressure</h5>
+                  <div class="converter-inputs">
+                    <label>inHg<input type="number" step="any" data-unit="inhg"></label>
+                    <label>mmHg<input type="number" step="any" data-unit="mmhg"></label>
+                    <label>hPa<input type="number" step="any" data-unit="hpa"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="speed">
+                  <h5>Speed</h5>
+                  <div class="converter-inputs">
+                    <label>mph<input type="number" step="any" data-unit="mph"></label>
+                    <label>km/h<input type="number" step="any" data-unit="kmh"></label>
+                    <label>knots<input type="number" step="any" data-unit="kts"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="altitude">
+                  <h5>Altitude</h5>
+                  <div class="converter-inputs">
+                    <label>ft<input type="number" step="any" data-unit="ft"></label>
+                    <label>m<input type="number" step="any" data-unit="m"></label>
+                  </div>
+                </div>
+
+                <div class="converter-item" data-converter="fuel">
+                  <h5>Fuel</h5>
+                  <div class="converter-inputs">
+                    <label>gal<input type="number" step="any" data-unit="gal"></label>
+                    <label>L<input type="number" step="any" data-unit="l"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-accordion location-finder-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Airfield and City Finder
+            </button>
+
+            <div class="video-accordion-content" hidden>
+              <div class="location-finder-controls">
+                <div class="location-finder-selectors">
+                  <label>
+                    Map
+                    <select id="map-selector">
+                      <option value="">All maps</option>
+                    </select>
+                  </label>
+                  <label>
+                    Type
+                    <select id="type-selector">
+                      <option value="">All types</option>
+                      <option value="city">Cities</option>
+                      <option value="airfield">Airfields</option>
+                    </select>
+                  </label>
+                  <label>
+                    Search by name
+                    <input type="text" id="location-name-search" placeholder="City or airfield...">
+                  </label>
+                  <label>
+                    Search by MGRS
+                    <input type="text" id="location-mgrs-search" placeholder="E.g. 38TLN480733...">
+                  </label>
+                </div>
+              </div>
+
+              <div class="location-results-container">
+                <div id="location-results-info" class="location-results-info"></div>
+                <ul id="location-results" class="location-results"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-accordion coordinate-tool-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              MGRS ↔ Lat/Lon Converter
+            </button>
+            <div class="video-accordion-content" hidden>
+              <div class="geo-tool-grid">
+                <section class="geo-tool-card" aria-labelledby="mgrs-to-latlon-title">
+                  <h4 id="mgrs-to-latlon-title">MGRS to Lat/Lon</h4>
+                  <form class="geo-tool-form" id="mgrs-to-latlon-form">
+                    <label for="mgrs-to-latlon-input">MGRS coordinate</label>
+                    <input id="mgrs-to-latlon-input" name="mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
+                    <button class="btn" type="submit">Convert to Lat/Lon</button>
+                    <output class="geo-tool-result" aria-live="polite"></output>
+                  </form>
+                </section>
+                <section class="geo-tool-card" aria-labelledby="latlon-to-mgrs-title">
+                  <h4 id="latlon-to-mgrs-title">Lat/Lon to MGRS</h4>
+                  <form class="geo-tool-form" id="latlon-to-mgrs-form">
+                    <div class="geo-tool-inputs">
+                      <label for="latlon-latitude">Latitude (decimal degrees)
+                        <input id="latlon-latitude" name="latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                      </label>
+                      <label for="latlon-longitude">Longitude (decimal degrees)
+                        <input id="latlon-longitude" name="longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                      </label>
+                    </div>
+                    <button class="btn" type="submit">Convert to MGRS</button>
+                    <output class="geo-tool-result" aria-live="polite"></output>
+                  </form>
+                </section>
+              </div>
+              <p class="geo-tool-note">MGRS coordinates are converted from the center of their grid square. Output uses 1-meter grid precision.</p>
+            </div>
+          </div>
+
+          <div class="video-accordion coordinate-tool-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Offset Point Calculator
+            </button>
+            <div class="video-accordion-content" hidden>
+              <form class="geo-tool-form geo-tool-form--wide" id="offset-point-form">
+                <label class="geo-tool-format" for="offset-coordinate-format">Coordinate format
+                  <select id="offset-coordinate-format" name="coordinateFormat">
+                    <option value="mgrs">MGRS</option>
+                    <option value="latlon">Lat/Lon (decimal degrees)</option>
+                    <option value="dms">Lat/Lon (DMS)</option>
+                  </select>
+                </label>
+                <div class="geo-tool-inputs" data-coordinate-format-fields="mgrs">
+                  <label for="offset-origin-mgrs">Origin MGRS
+                    <input id="offset-origin-mgrs" name="origin-mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
+                  </label>
+                </div>
+                <div class="geo-tool-inputs" data-coordinate-format-fields="latlon" hidden>
+                  <label for="offset-origin-latitude">Origin latitude (decimal degrees)
+                    <input id="offset-origin-latitude" name="origin-latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                  </label>
+                  <label for="offset-origin-longitude">Origin longitude (decimal degrees)
+                    <input id="offset-origin-longitude" name="origin-longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                  </label>
+                </div>
+                <div class="geo-tool-inputs" data-coordinate-format-fields="dms" hidden>
+                  <label for="offset-origin-latitude-dms">Origin latitude (DMS)
+                    <input id="offset-origin-latitude-dms" name="origin-latitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="42° 31' 48.72&quot; N" required>
+                  </label>
+                  <label for="offset-origin-longitude-dms">Origin longitude (DMS)
+                    <input id="offset-origin-longitude-dms" name="origin-longitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="43° 09' 00.44&quot; E" required>
+                  </label>
+                </div>
+                <div class="geo-tool-inputs">
+                  <label for="offset-bearing">True bearing (degrees)
+                    <input id="offset-bearing" name="bearing" type="number" min="0" max="360" step="any" inputmode="decimal" required>
+                  </label>
+                  <label for="offset-distance">Distance
+                    <input id="offset-distance" name="distance" type="number" min="0" step="any" inputmode="decimal" required>
+                  </label>
+                  <label for="offset-distance-unit">Distance unit
+                    <select id="offset-distance-unit" name="unit">
+                      <option value="nm">Nautical miles (NM)</option>
+                      <option value="km">Kilometres (km)</option>
+                      <option value="m">Metres (m)</option>
+                    </select>
+                  </label>
+                </div>
+                <button class="btn" type="submit">Calculate offset point</button>
+                <div class="geo-bearing-result geo-offset-result" role="status" aria-live="polite" hidden>
+                  <div class="geo-bearing-result__metric">
+                    <div>
+                      <span class="geo-bearing-result__label">Destination MGRS</span>
+                      <strong class="geo-bearing-result__value geo-offset-result__value" data-offset-mgrs></strong>
+                    </div>
+                  </div>
+                  <div class="geo-bearing-result__metric">
+                    <div>
+                      <span class="geo-bearing-result__label">Destination Lat/Lon</span>
+                      <strong class="geo-bearing-result__value geo-offset-result__value" data-offset-latlon></strong>
+                    </div>
+                  </div>
+                  <div class="geo-bearing-result__metric geo-offset-result__metric--dms">
+                    <div>
+                      <span class="geo-bearing-result__label">Destination DMS</span>
+                      <span class="geo-offset-result__dms-line">Lat <strong data-offset-lat-dms></strong></span>
+                      <span class="geo-offset-result__dms-line">Lon <strong data-offset-lon-dms></strong></span>
+                    </div>
+                  </div>
+                </div>
+                <output class="geo-tool-result" aria-live="polite" hidden></output>
+              </form>
+              <p class="geo-tool-note">MGRS origins use the center of the grid square. Lat/Lon uses decimal degrees. Bearing is true, clockwise from north.</p>
+            </div>
+          </div>
+
+          <div class="video-accordion coordinate-tool-accordion">
+            <button class="video-accordion-toggle" type="button" aria-expanded="false">
+              Bearing &amp; Distance Tool
+            </button>
+            <div class="video-accordion-content" hidden>
+              <form class="geo-tool-form geo-tool-form--wide" id="bearing-distance-form">
+                  <label class="geo-tool-format" for="bearing-coordinate-format">Coordinate format
+                    <select id="bearing-coordinate-format" name="coordinateFormat">
+                      <option value="mgrs">MGRS</option>
+                      <option value="latlon">Lat/Lon (decimal degrees)</option>
+                      <option value="dms">Lat/Lon (DMS)</option>
+                    </select>
+                  </label>
+                  <div class="geo-tool-inputs" data-coordinate-format-fields="mgrs">
+                    <label for="bearing-start-mgrs">Start MGRS
+                      <input id="bearing-start-mgrs" name="start-mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN4807310304" required>
+                    </label>
+                    <label for="bearing-end-mgrs">Destination MGRS
+                      <input id="bearing-end-mgrs" name="end-mgrs" type="text" autocomplete="off" spellcheck="false" placeholder="38TLN5000012000" required>
+                    </label>
+                  </div>
+                  <div class="geo-tool-inputs" data-coordinate-format-fields="dms" hidden>
+                    <label for="bearing-start-latitude-dms">Start latitude (DMS)
+                      <input id="bearing-start-latitude-dms" name="start-latitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="42° 31' 48.72&quot; N" required>
+                    </label>
+                    <label for="bearing-start-longitude-dms">Start longitude (DMS)
+                      <input id="bearing-start-longitude-dms" name="start-longitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="43° 09' 00.44&quot; E" required>
+                    </label>
+                    <label for="bearing-end-latitude-dms">Destination latitude (DMS)
+                      <input id="bearing-end-latitude-dms" name="end-latitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="42° 31' 48.72&quot; N" required>
+                    </label>
+                    <label for="bearing-end-longitude-dms">Destination longitude (DMS)
+                      <input id="bearing-end-longitude-dms" name="end-longitude-dms" type="text" autocomplete="off" spellcheck="false" placeholder="43° 09' 00.44&quot; E" required>
+                    </label>
+                  </div>
+                  <div class="geo-tool-inputs" data-coordinate-format-fields="latlon" hidden>
+                    <label for="bearing-start-latitude">Start latitude (decimal degrees)
+                      <input id="bearing-start-latitude" name="start-latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                    </label>
+                    <label for="bearing-start-longitude">Start longitude (decimal degrees)
+                      <input id="bearing-start-longitude" name="start-longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                    </label>
+                    <label for="bearing-end-latitude">Destination latitude (decimal degrees)
+                      <input id="bearing-end-latitude" name="end-latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required>
+                    </label>
+                    <label for="bearing-end-longitude">Destination longitude (decimal degrees)
+                      <input id="bearing-end-longitude" name="end-longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required>
+                    </label>
+                  </div>
+                <button class="btn" type="submit">Calculate bearing and distance</button>
+                  <div class="geo-bearing-result" role="status" aria-live="polite" hidden>
+                    <div class="geo-bearing-result__metric geo-bearing-result__metric--bearing">
+                      <div>
+                        <span class="geo-bearing-result__label">Initial true bearing</span>
+                        <strong class="geo-bearing-result__value" data-bearing-value></strong>
+                      </div>
+                      <span class="geo-bearing-result__direction" data-bearing-direction></span>
+                    </div>
+                    <div class="geo-bearing-result__metric">
+                      <div>
+                        <span class="geo-bearing-result__label">WGS84 distance</span>
+                        <strong class="geo-bearing-result__value" data-distance-value></strong>
+                      </div>
+                      <span class="geo-bearing-result__secondary" data-distance-secondary></span>
+                    </div>
+                  </div>
+                  <output class="geo-tool-result" aria-live="polite" hidden></output>
+              </form>
+              <p class="geo-tool-note">Reports the initial true bearing and WGS84 geodesic distance. MGRS grid squares are treated as their centers.</p>
+            </div>
+          </div>
+        </div>
+
+    </section>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/shared-nav.js"></script>
+  <script src="assets/js/vendor/mgrs.min.js"></script>
+  <script src="assets/js/vendor/geographiclib-geodesic.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/coordinate-tools.js"></script>
+</body>
+</html>
