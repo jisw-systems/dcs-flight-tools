@@ -56,30 +56,45 @@
             <div class="aircraft-selector-list">
               <div id="perneras-empty" class="perneras-empty" hidden>No aircraft found.</div>
               <ul class="aircraft-selector-options">
-            <li><button data-plane="apache" disabled title="Work in progress: unavailable until validation is complete">AH-64D Apache <span class="wip-badge">WIP</span></button></li>
+              <li><button data-plane="a10c">A-10C Warthog <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="apache">AH-64D Apache <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="ajs37">AJS-37 Viggen <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="av8b">AV-8B Harrier <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="bf109">BF-109 K4 Kurfürst</button></li>
+            <li><button data-plane="c101">C-101CC Aviojet <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="c130" disabled title="Work in progress: unavailable until validation is complete">C-130 Hercules <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="eurofighter" disabled title="Work in progress: unavailable until validation is complete">Eurofighter Typhoon <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="f100d">F-100D Super Sabre</button></li>
             <li><button data-plane="f14">F-14 Tomcat</button></li>
+            <li><button data-plane="f15e">F-15E Strike Eagle <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="f16c">F-16C Viper <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="f4e">F-4E Phantom II</button></li>
             <li><button data-plane="f4u1d">F4U-1D Corsair</button></li>
+            <li><button data-plane="f5e">F-5E Tiger II <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="f86f">F-86F Sabre</button></li>
             <li><button data-plane="fa18">F/A-18C Hornet</button></li>
             <li><button data-plane="fw190a8">FW-190 A8 Anton</button></li>
             <li><button data-plane="fw190d9">FW-190 D9 Dora</button></li>
             <li><button data-plane="g91" disabled title="Work in progress: unavailable until validation is complete">Fiat G.91 <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="i16">I-16 Ishak</button></li>
+            <li><button data-plane="jf17">JF-17 Thunder <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="ka50">Ka-50 Black Shark <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="la7">Lavochkin LA-7</button></li>
+            <li><button data-plane="l39">L-39ZA Albatros <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="mig19" disabled title="Work in progress: unavailable until validation is complete">MiG-19P Farmer <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="mig15">MiG-15bis Fagot</button></li>
             <li><button data-plane="mig21" disabled title="Work in progress: unavailable until validation is complete">MiG-21bis Fishbed <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="mig29">MiG-29 Fulcrum</button></li>
-            <li><button data-plane="mi24p" disabled title="Work in progress: unavailable until validation is complete">Mi-24P Hind <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="mi24p">Mi-24P Hind</button></li>
+            <li><button data-plane="mi8">Mi-8MTV2 Hip <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="mirage2000">Mirage 2000C <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="miragef1">Mirage F1 <span class="wip-badge">WIP</span></button></li>
             <li><button data-plane="mosquito">Mosquito FB Mk VI</button></li>
             <li><button data-plane="p47">P-47D Thunderbolt</button></li>
             <li><button data-plane="spitfire">Spitfire Mk IX</button></li>
             <li><button data-plane="tf51">TF-51D / P-51D Mustang</button></li>
+            <li><button data-plane="uh1h">UH-1H Huey <span class="wip-badge">WIP</span></button></li>
+            <li><button data-plane="yak52">Yak-52 <span class="wip-badge">WIP</span></button></li>
               </ul>
             </div>
           </section>
@@ -806,7 +821,7 @@
           </div>
 
           <div id="pernera-mi24p" class="pernera-panel">
-            <h3>Mi-24P Hind - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h3>Mi-24P Hind - Checklist</h3>
             <div class="checklist-toolbar">
               <button class="toggle-all-checklist" type="button" data-panel="mi24p">Mark/unmark all</button>
             </div>
@@ -853,6 +868,41 @@
               <li><button class="check-item" type="button" data-key="mi24p-39">Turn on the autopilot roll channel (ROLL).</button></li>
               <li><button class="check-item" type="button" data-key="mi24p-40">Turn on the autopilot attitude channel (PITCH).</button></li>
             </ul>
+            <div class="engine-management">
+              <h4>Taxi &amp; Takeoff (Essential)</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="mi24p-takeoff">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-1">Check engine and transmission pressures and temperatures are within limits; verify flight instruments are set</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-2">On a paved runway, set Engine Dust Protector System OFF; leave it ON in dusty conditions</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-3">Check takeoff weight and available power; do not exceed the EPR takeoff-power mark during the hover check</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-4">Perform a hover power check and stabilize in a 3 m hover before taxiing, if using the hover-taxi method</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-5">For ground taxi, release the parking brake, gently move the cyclic forward and raise collective; reduce collective once moving</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-6">Steer on the ground with anti-torque pedals; keep taxi speed below 20 km/h using cyclic and wheel brakes</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-7">When lined up, confirm main rotor RPM is at least 93%</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-8">Push the cyclic slightly forward to build horizontal speed</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-9">At 20–30 km/h, increase collective while monitoring EPR, then gently pull back on the cyclic to lift off</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-10">Climb gradually; aim for 50 km/h by 10 m altitude and continue accelerating toward 120 km/h in the climb</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-11">At 70 km/h and at least 15 m altitude, retract the landing gear</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-takeoff-12">Reduce collective to cruise power; turn off the Dust Protection switches if not already off</button></li>
+              </ul>
+            </div>
+            <div class="engine-management">
+              <h4>Landing (Essential)</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="mi24p-landing">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="mi24p-landing-1">Begin descent from about 500 m toward a clear reference point</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-landing-2">At about 120 km/h, use collective and cyclic to maintain a 3–5 m/s descent; as speed drops below 50 km/h, keep descent rate below 4 m/s to reduce VRS risk</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-landing-3">At 100 m AGL, reduce speed toward 70 km/h and adjust collective to maintain a straight path to the reference point</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-landing-4">Extend the landing gear and turn the Engine Dust Protector System ON</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-landing-5">Approach the reference point and establish a stable hover at about 3 m</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-landing-6">Use the cyclic to decelerate to a full stop; add collective to cushion the loss of translational lift</button></li>
+                <li><button class="check-item" type="button" data-key="mi24p-landing-7">Once stable in the 3 m hover, lower collective slowly to land</button></li>
+              </ul>
+            </div>
             <div class="technical-notes">
               <h4>Technical Notes</h4>
               <ul>
@@ -1314,13 +1364,57 @@
               <li><button class="check-item" type="button" data-key="f4e-27">Close canopy</button></li>
             </ul>
             <div class="engine-management">
-              <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
+              <h4>Takeoff (Essential)</h4>
+              <div class="checklist-toolbar">
+                <button class="toggle-all-checklist" type="button" data-panel="f4e-takeoff">Mark/unmark all</button>
+              </div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-1">Obtain takeoff clearance from tower</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-2">Set yaw, roll, and pitch stability augmentation switches ON; confirm PITCH AUG OFF light is out</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-3">Set flaps/slats OUT &amp; DOWN; confirm SLATS OUT and FLAPS DN</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-4">Retract speed brakes; confirm SPEEDBRAKE OUT light is out, then set switch to NEUTRAL</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-5">Set pitch trim to 3 units nose down</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-6">Set Taxi/Landing Light switch OFF</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-7">Line up on the runway; set anti-skid ON and confirm ANTI-SKID INOPERATIVE light is out</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-8">Set pitot heat ON before takeoff; do not leave it on longer than one minute</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-9">Set IFF to NORMAL; check circuit breakers IN and warning lights OUT</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-10">Hold wheel brakes and advance throttles to 85% RPM</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-11">Check engine parameters: EGT 220–420 °C, fuel flow 800–1400 lb/hr, nozzles 1/4 open, oil pressure 30–40 psi</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-12">Release brakes; advance to MIL power and check engine gauges</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-13">Advance throttles to afterburner</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-14">Disengage nose gear steering before accelerating through 70 knots</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-15">At 80 knots, pull aft on the stick and maintain 10–12° pitch</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-16">After a positive rate of climb, raise the landing gear; confirm it is up and locked before 250 knots</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-17">At 180 knots, set flaps/slats to NORM; confirm SLATS IN and FLAPS UP</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-takeoff-18">Climb out of afterburner and accelerate toward 350 knots, maintaining 10–12° pitch</button></li>
+              </ul>
+            </div>
+            <div class="engine-management">
+              <h4>Landing (Essential)</h4>
               <div class="checklist-toolbar">
                 <button class="toggle-all-checklist" type="button" data-panel="f4e-landing">Mark/unmark all</button>
               </div>
               <ul class="checklist">
-                <li><button class="check-item" type="button" data-key="f4e-landing-1">Landing configuration example</button></li>
-                <li><button class="check-item" type="button" data-key="f4e-landing-2">Landing speed example</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-1">Confirm yaw, roll, and pitch stability augmentation switches are ON</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-2">Set communication antenna selector UPR</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-3">Set Taxi/Landing Light switch to LDG LT</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-4">Set optical sight to STANDBY or CAGE; set radar altimeter low-altitude warning as desired</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-5">Set anti-skid ON and confirm ANTI-SKID INOPERATIVE light is out</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-6">Join the landing runway at about 1,500 ft AGL and 300 knots, or as local procedures require</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-7">Break over the touchdown point; reduce power, use speed brakes if needed, and keep the turn level at about 3–4 G</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-8">On downwind, fly 200–220 knots at 1,500 ft AGL; do not exceed 250 knots</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-9">Avoid buffet and slow to a safe gear-extension speed</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-10">Lower landing gear</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-11">Set flaps/slats OUT &amp; DOWN; confirm SLATS OUT and FLAPS DN</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-12">Keep at least 180 knots before the base turn</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-13">Start the base turn when the wingtip is about 45° from the runway edge; trim for 19.2 units AoA (on-speed indexer)</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-14">Through the final turn, use throttle to control descent and maintain 19.2 units AoA; roll out at about 300 ft AGL and 1 nm from touchdown</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-15">On short final, align the sight glass center with the runway threshold for a 3° glide path</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-16">Maintain 19.2 units AoA to touchdown; use throttle to control glide path. Reference speed: about 142 knots at 33,000 lb, plus 2 knots per 1,000 lb above that weight</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-17">Flare gently at 20 ft and touch down; reduce power to IDLE and deploy the drag chute</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-18">Use aft stick to decelerate; use rudder/ailerons for directional control to 70 knots, then differential braking</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-19">Below 70 knots, tap wheel brakes to a full stop; use nose gear steering only if needed, with rudder near neutral</button></li>
+                <li><button class="check-item" type="button" data-key="f4e-landing-20">Jettison the drag chute when able, but not on the runway or a taxiway; taxi to parking and shut down</button></li>
               </ul>
             </div>
 
@@ -1502,22 +1596,63 @@
               <button class="toggle-all-checklist" type="button" data-panel="apache">Mark/unmark all</button>
             </div>
             <ul class="checklist">
-              <li><button class="check-item" type="button" data-key="apache-1">Set battery and essential electrical power ON</button></li>
-              <li><button class="check-item" type="button" data-key="apache-2">Set APU control to STBY and start APU</button></li>
-              <li><button class="check-item" type="button" data-key="apache-3">Confirm APU and utility hydraulic indications</button></li>
-              <li><button class="check-item" type="button" data-key="apache-4">Start the left and right engines using the approved sequence</button></li>
-              <li><button class="check-item" type="button" data-key="apache-5">Set generators and flight essential buses ON</button></li>
-              <li><button class="check-item" type="button" data-key="apache-6">Configure flight instruments, radios, and navigation</button></li>
-              <li><button class="check-item" type="button" data-key="apache-7">Run flight control and flight augmentation checks</button></li>
-              <li><button class="check-item" type="button" data-key="apache-8">Set rotor and weapon systems safe for taxi</button></li>
+              <li><button class="check-item" type="button" data-key="apache-1">Insert ignition key and set MSTR IGN to BATT</button></li>
+              <li><button class="check-item" type="button" data-key="apache-1b">Set NVS OFF, then ICS to VOX</button></li>
+              <li><button class="check-item" type="button" data-key="apache-1c">Close the cockpit door</button></li>
+              <li><button class="check-item" type="button" data-key="apache-2">Start the APU</button></li>
+              <li><button class="check-item" type="button" data-key="apache-2b">Confirm APU ON and APU start advisories extinguished</button></li>
+              <li><button class="check-item" type="button" data-key="apache-3">Verify mission and PERF data</button></li>
+              <li><button class="check-item" type="button" data-key="apache-3b">Complete required DMS setup</button></li>
+              <li><button class="check-item" type="button" data-key="apache-3c">Complete IHADSS boresight before engine start</button></li>
+              <li><button class="check-item" type="button" data-key="apache-4">Set anti-collision light for day/night</button></li>
+              <li><button class="check-item" type="button" data-key="apache-4b">Set rotor brake OFF and collective fully down</button></li>
+              <li><button class="check-item" type="button" data-key="apache-4c">Set both power levers OFF and confirm APU running</button></li>
+              <li><button class="check-item" type="button" data-key="apache-5">Start No. 1 engine and confirm NG, oil pressure, and TGT rise</button></li>
+              <li><button class="check-item" type="button" data-key="apache-5b">Move No. 1 power lever to IDLE; monitor until stabilized</button></li>
+              <li><button class="check-item" type="button" data-key="apache-6">Start No. 2 engine and confirm start indications</button></li>
+              <li><button class="check-item" type="button" data-key="apache-6b">Move No. 2 power lever to IDLE; monitor until stabilized</button></li>
+              <li><button class="check-item" type="button" data-key="apache-7">Confirm NR above 50% and inspect ENG/ENG SYS pages</button></li>
+              <li><button class="check-item" type="button" data-key="apache-7b">Confirm engine oil pressures below 70 psi and NGB temperatures above 20°C</button></li>
+              <li><button class="check-item" type="button" data-key="apache-7c">Keep torque below 30% while advancing levers</button></li>
+              <li><button class="check-item" type="button" data-key="apache-8">Slowly move both power levers to FLY</button></li>
+              <li><button class="check-item" type="button" data-key="apache-8b">Confirm about 86% NG and 101% NP/NR; verify LOW ROTOR RPM advisory is absent</button></li>
+              <li><button class="check-item" type="button" data-key="apache-8c">Confirm torque about 18%</button></li>
+              <li><button class="check-item" type="button" data-key="apache-9">Shut down the APU</button></li>
+              <li><button class="check-item" type="button" data-key="apache-9b">Uncage the SAI</button></li>
+              <li><button class="check-item" type="button" data-key="apache-9c">Set CMWS power/test ON and CMWS/NAV to CMWS</button></li>
+              <li><button class="check-item" type="button" data-key="apache-10">Abort if TGT may exceed 851°C before 63% NG, start indications fail to rise within 45 seconds at IDLE, or ENG START disappears before 52% NG</button></li>
             </ul>
+            <div class="engine-management">
+              <h4>Taxi &amp; Takeoff (Essential)</h4>
+              <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="apache-takeoff">Mark/unmark all</button></div>
+              <ul class="checklist">
+                <li><button class="check-item" type="button" data-key="apache-takeoff-1">Release parking brake; once rolling, unlock tailwheel except for an in-place turn</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-1b">Confirm tailwheel unlock indication</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-2">Taxi at about 5–6 kt using 27–30% torque</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-2b">Lock the tailwheel before stopping</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-3">Line up and straighten the tailwheel</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-3b">Lock the tailwheel</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-4">Establish a 5-ft hover</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-4b">Select Transition symbology</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-5">Accelerate toward 90 kt</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-5b">Use about 10% above hover power or enough for at least 500 ft/min climb</button></li>
+                <li><button class="check-item" type="button" data-key="apache-takeoff-6">Accelerate through VSSE before climbing</button></li>
+              </ul>
+            </div>
             <div class="engine-management">
               <h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
               <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="apache-landing">Mark/unmark all</button></div>
               <ul class="checklist">
-                <li><button class="check-item" type="button" data-key="apache-landing-1">Confirm landing area and approach path clear</button></li>
-                <li><button class="check-item" type="button" data-key="apache-landing-2">Set approach configuration and stabilize the descent</button></li>
-                <li><button class="check-item" type="button" data-key="apache-landing-3">Touch down within the planned landing area and maintain rotor control</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-1">Select a clear landing area and approach path</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-1b">Plan the approach so the landing area remains visible</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-2">Set the line-of-sight reticle on the touchdown point</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-2b">Reduce collective to about 20% below cruise torque; target 500 ft/min descent</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-3">Before descending below obstacles or 50 ft, decide whether to continue or abort</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-4">Below obstacles or 50 ft, align with pedals</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-4b">Select Hover symbology and stop in a 5-ft hover</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-5">Settle from the hover</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-5b">For a rolling landing, maintain at least ETL (typically 16–24 kt) or VSDE to touchdown</button></li>
+                <li><button class="check-item" type="button" data-key="apache-landing-6">After a rolling touchdown, use aerodynamic braking only with at least 30% torque dual-engine or 60% single-engine</button></li>
               </ul>
             </div>
             <div class="engine-management">
@@ -1636,10 +1771,22 @@
               <li><button class="check-item" type="button" data-key="mig19-7">Set trim, flaps, speedbrakes, and landing gear controls</button></li>
               <li><button class="check-item" type="button" data-key="mig19-8">Arm systems only after completing the safety checks</button></li>
             </ul>
+            <div class="engine-management"><h4>Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig19-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig19-takeoff-1">Remove chocks; set stabilizer HYDRAULIC and confirm ARU takeoff/landing light; flaps 15°, airbrakes retracted</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-takeoff-2">Taxi below 30 km/h; use rudder and wheel-brake lever for turns</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-takeoff-3">Line up; set pitch/aileron trim neutral, pitot heat ON, nosewheel brake control CONNECTED, and unlock gear lever</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-takeoff-4">Hold brakes and run engines to 10,000 RPM; when stable release brakes and set NOMINAL power, then MIL or afterburner as runway permits</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-takeoff-5">At 200 km/h pull the stick back about two-thirds; nosewheel lift is near 230 km/h and rotation near 280 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-takeoff-6">At 15 m, raise gear; set gear lever NEUTRAL when retracted, then retract flaps at 100 m</button></li>
+            </ul></div>
             <div class="engine-management"><h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig19-landing">Mark/unmark all</button></div><ul class="checklist">
-              <li><button class="check-item" type="button" data-key="mig19-landing-1">Confirm fuel state and landing configuration</button></li>
-              <li><button class="check-item" type="button" data-key="mig19-landing-2">Set gear and flaps using the validated sequence</button></li>
-              <li><button class="check-item" type="button" data-key="mig19-landing-3">Maintain the example approach speed until validated</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-1">Plan for 1,500 L or less fuel; in emergency, jettison external tanks above 2,500 L and add 15 km/h to approach speed. Set anti-skid ON, nosewheel brake control CONNECTED, extend airbrakes, and slow to 500 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-2">Enter the circuit at 500 m; below 500 km/h, lower gear and confirm green lights and downlock pins, then set the gear lever NEUTRAL</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-3">At or below 400 km/h, select takeoff flaps then landing flaps; confirm ARU landing indication</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-4">Turn final above 380 km/h; recover by 250 m and reduce to 300–310 km/h for final</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-5">At 7–8 m, flare gently; idle the throttle and touch down on the main wheels at about 235 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-6">After nosewheel touchdown, retract flaps and deploy the drag chute; begin braking at 200 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="mig19-landing-7">Jettison the chute when slowed; disconnect nosewheel brake control for taxi</button></li>
             </ul></div>
             <div class="engine-management"><h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="engine-table-wrapper"><table class="engine-table">
               <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
@@ -1664,10 +1811,22 @@
               <li><button class="check-item" type="button" data-key="mig21-7">Complete flight control, instrument, and warning checks</button></li>
               <li><button class="check-item" type="button" data-key="mig21-8">Set the ejection seat and armament safe for taxi</button></li>
             </ul>
+            <div class="engine-management"><h4>Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig21-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mig21-takeoff-1">Taxi light ON; nosewheel brake OFF; confirm main-air pressure above 10 kg/cm²</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-takeoff-2">Taxi straight at 40–60 km/h, reduce to about 15–20 km/h for turns; steer with rudder and wheel brake</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-takeoff-3">Line up; taxi light OFF, flaps 25°, trim NEUTRAL, nosewheel brake ON, SAU modes OFF, gear lock UNLOCKED</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-takeoff-4">Hold brakes and select maximum afterburner; confirm AFB and NOZZLE OPEN lights, then release brakes and steer with rudder</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-takeoff-5">At 250 km/h raise nose to 4–5° pitch or 10° AoA; rotate around 250–300 km/h and expect liftoff around 350–360 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-takeoff-6">Above 10 m retract gear and set lever NEUTRAL; above 100 m retract flaps and confirm indications</button></li>
+            </ul></div>
             <div class="engine-management"><h4>Landing (Essential) <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mig21-landing">Mark/unmark all</button></div><ul class="checklist">
-              <li><button class="check-item" type="button" data-key="mig21-landing-1">Confirm fuel state, runway, and landing configuration</button></li>
-              <li><button class="check-item" type="button" data-key="mig21-landing-2">Set gear and flaps using the validated sequence</button></li>
-              <li><button class="check-item" type="button" data-key="mig21-landing-3">Maintain the example approach speed and monitor energy</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-1">Set landing light ON; set nosewheel brake ON and confirm main-air pressure above 10 kg/cm²</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-2">Descend at 600–700 km/h and 10 m/s; level at 1,000 m AGL / 600 km/h, then lower gear at 500 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-3">At 600 m AGL and below 500 km/h, select takeoff flaps 25° and confirm FLAPS OUT</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-4">At the outer marker, about 4 km from threshold, 300 m AGL and 380 km/h, select landing flaps 45°</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-5">On final maintain 83–87% N1 and do not slow below 340 km/h; cross the touchdown point at about 2 m AGL, idle throttle and touch down gently</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-6">After main-wheel touchdown hold about 5° nose-up; below 320 km/h deploy the drag chute and brake gradually</button></li>
+              <li><button class="check-item" type="button" data-key="mig21-landing-7">At 15–20 km/h jettison the chute and set nosewheel brake OFF</button></li>
             </ul></div>
             <div class="engine-management"><h4>Engine Management <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4><div class="engine-table-wrapper"><table class="engine-table">
               <thead><tr><th>Profile</th><th>RPM</th><th>Power</th><th>Notes</th></tr></thead>
@@ -1785,6 +1944,640 @@
                 <li><button class="check-item" type="button" data-key="mig29-takeoff-6">Retract flaps before 300 knots (556 km/h)</button></li>
               </ul>
             </div>
+          </div>
+
+          <div id="pernera-a10c" class="pernera-panel">
+            <h3>A-10C Warthog - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="a10c">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="a10c-1">Battery ON and inverter STBY</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-1b">AC generators PWR and oxygen ON</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-1c">Main and wing boost pumps ON</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-2">Close and lock the canopy</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-3">Start APU and wait for 100% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-3b">Set APU Generator ON</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-4">Start the left engine: throttle OFF to IDLE; monitor oil pressure, ITT, and RPM</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-5">Repeat the start sequence for the right engine</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-6">Set APU Generator OFF/RESET</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-6b">Set APU OFF</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-7">Power CDU/EGI and allow about 4 minutes for alignment</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-8">Complete IFFCC preflight BIT</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-8b">Set IFFCC and SAS ON; set takeoff trim</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-8c">Load the DTS if required</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="a10c-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-1">Set anti-skid and nosewheel steering ON</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-1b">Taxi at 15–25 kt using rudder steering</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-2">Set takeoff trim and flaps MVR (7°)</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-2b">Retract speedbrakes</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-3">Hold brakes and apply MAX throttle</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-3b">Release brakes</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-4">Disengage nosewheel steering at 70 kt</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-5">Rotate at about 135 kt</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-6">After liftoff raise landing gear and flaps</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-takeoff-6b">Climb at about 10 units AoA</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="a10c-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="a10c-landing-1">Enter the 360° pattern at about 2,000 ft AGL and 250–300 kt</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-landing-1b">Fly downwind at 200–250 kt</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-landing-2">On base, descend to about 1,500 ft and 150 kt</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-landing-3">Before final, set airbrakes to 40%</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-landing-3b">Lower landing gear and extend flaps fully</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-landing-4">Maintain about 500 ft/min descent on final</button></li>
+              <li><button class="check-item" type="button" data-key="a10c-landing-5">Let the aircraft settle onto the runway; the guide specifies no flare</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-ajs37" class="pernera-panel">
+            <h3>AJS-37 Viggen - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="ajs37">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="ajs37-1">Insert mission data cartridge</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-1b">Set main power and low-pressure fuel valve ON</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-2">Set radar BER/standby and test warning lights</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-2b">Set AFK OFF and gear DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-3">Set throttle GROUND IDLE and generator ON</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-3b">Set yaw correction 0 and stow thrust reverser</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-4">Verify ADI</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-4b">Set HUD down for takeoff</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-5">Hold START for 2 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-5b">Expect STARTSYS within 5 seconds and ignition within 30 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-6">Abort if start EGT exceeds 400°C or idle EGT exceeds 350°C</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-6b">At idle check 55–65% N2 and EPR about 1.0</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-7">Transfer cartridge flight data into CK37 and confirm completion</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="ajs37-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-1">Taxi with rudder and toe brakes; verify CK37 runway heading (mismatch over 15° may trigger NAV SYST caution)</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-2">On runway set SPAK ON and Master Mode NAV</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-2b">Hold brakes and advance to max power without afterburner</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-3">Check EGT does not exceed 590°C plus outside temperature</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-3b">Release brakes and select Zone 2 or Zone 3 afterburner as runway requires</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-4">Rotate at about 270 km/h when the time/distance line reaches the outer markers</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-5">Hold flight-path vector at the long-pole extremity (about 13° nose-up)</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-6">Raise gear above 500 m AGL and before 600 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-takeoff-6b">Return to military power and raise HUD</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="ajs37-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="ajs37-landing-1">Set landing-base/runway data and QFE</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-landing-1b">Set gear DOWN, landing lights ON, HUD down, and select radar-altimeter source</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-landing-2">Reduce to 550 km/h; select LANDNING P/O at 5–10 km and align the flight-path vector with the runway</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-landing-3">Keep AoA at or below 12° and airspeed at or above 260 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-landing-4">At touchdown set throttle IDLE and hold about 16° AoA for aerodynamic braking</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-landing-5">Lower nose around 160 km/h and brake evenly</button></li>
+              <li><button class="check-item" type="button" data-key="ajs37-landing-5b">Use reverse only for road-base landing; never use afterburner while reversing</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-av8b" class="pernera-panel">
+            <h3>AV-8B Harrier - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="av8b">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="av8b-1">Close and lock canopy</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-1b">Set LIDS NORM, oxygen and SAS ON, and Q-feel ON</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-1c">Set anti-skid for ground operations</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-2">Battery BATT, main generator GEN; verify at least 24.5 V</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-3">Configure engine controls and pumps; set throttle OFF</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-3b">Set fuel shutoff ON and DECS ON</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-4">Select ENG ST; as RPM rises, move throttle to GROUND IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-4b">Confirm start switch resets before 15% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-5">At idle check 28.4–29% RPM, JPT at or below 545°C, and hydraulic/brake accumulator pressure 3,000 ± 200 psi</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-6">Set nozzles to 10° after start</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-6b">Perform INS alignment if not pre-aligned</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Conventional Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="av8b-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-1">Taxi in V/STOL mode with flaps CRUISE and nozzles at 10°</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-1b">Steer using NWS and rudder</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-2">For CTO, confirm STO STOP CLEAR, nozzles 10°, and flaps AUTO</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-2b">Set takeoff trim 2° nose-down and anti-skid ON</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-3">Hold brakes and advance throttle</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-3b">Rotate gently at about 135 kt</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-4">After liftoff raise landing gear</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-4b">Set nozzles to 0° and turn water injection OFF</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-takeoff-5">Observe CTO crosswind limit 20 kt and wheel/tire limit 180 KGS</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Ship Short Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="av8b-ship-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-1">For the guide's Tarawa tutorial setup, position behind a deck distance marker with at least 460 ft available; confirm gross weight below 25,250 lb</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-2">Select V/STOL mode and VREST STO; set STO STOP 60° and nozzles 10°</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-2b">Set flaps STOL, stabilator trim neutral, anti-skid OFF, and NWS DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-3">Water injection OFF for the guide example; select TAKEOFF (UP) if required for a heavy payload</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-4">Hold brakes and advance throttle without reaching the FULL limit icon</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-4b">Release brakes</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-5">At the deck Nozzle Rotation Line, move nozzles to the STO stop (60°); keep wings level and align Witch's Hat with Pitch Carets</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-6">After liftoff raise landing gear and set nozzles to 25°</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-takeoff-6b">Above 120 kt set flaps AUTO, nozzles 0°, and water injection OFF</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Conventional Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="av8b-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="av8b-landing-1">Overfly runway at about 800 ft AGL and 350 kt</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-landing-1b">Make a level 4-G break while capturing 10 AoA</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-landing-2">Exit break at 250 kt and descend to 600 ft</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-landing-2b">Lower landing gear and set flaps AUTO</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-landing-3">Maintain 10–12 AoA to 200 ft on final</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-landing-4">At 30–50 ft, place Witch’s Hat about 2° above the horizon and control descent with throttle</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-landing-5">Touch down at the threshold</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Field Vertical Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="av8b-vtol-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="av8b-vtol-landing-1">Confirm gross weight does not exceed 20,500 lb</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-vtol-landing-2">Set gear DOWN and STOL flaps</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-vtol-landing-2b">Set nozzles to 60° for approach</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-vtol-landing-3">At the Key (325 ft AGL), set nozzles to 82° and slow toward 50 kt</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-vtol-landing-4">Establish hover; keep descent at or below 300–400 ft/min and account for ground effect near 20 ft</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Ship Vertical Landing — Case I (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="av8b-ship-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-1">Confirm gross weight ≤20,500 lb</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-1b">Select V/STOL mode and VREST VL</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-2">Set radar altimeter and gear DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-2b">Set STO STOP CLEAR, nozzles 60°, flaps STOL, and water injection LANDING (DOWN)</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-2c">Set anti-skid OFF and NWS DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-3">Enter final at about 300–325 ft; as speed passes 130–140 kt, level at 150 ft and set nozzles to 82°</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-4">Maintain about ½–¾ nm astern; cross abeam of landing spot at 100–120 ft and translate laterally with rudder while level</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-5">Monitor sink rate, JPT, and RPM; keep descent ≤300–400 ft/min and account for ground effect at 20 ft</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-6">On deck set throttle IDLE and use brakes</button></li>
+              <li><button class="check-item" type="button" data-key="av8b-ship-landing-6b">Move nozzles fully aft; observe crosswind limit 15 kt day / 10 kt night</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-c101" class="pernera-panel">
+            <h3>C-101CC Aviojet - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="c101">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="c101-1">Set parking brake; throttle STOP, ignition OFF, and starter NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="c101-1b">Connect GPU</button></li>
+              <li><button class="check-item" type="button" data-key="c101-2">Battery ON, bus tie ON, and inverter NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="c101-2b">Confirm at least 28 V</button></li>
+              <li><button class="check-item" type="button" data-key="c101-3">Set engine computer AUTO; configure fuel pumps and fuel shutoff OPEN</button></li>
+              <li><button class="check-item" type="button" data-key="c101-4">Hold ignition START for 2 seconds, then release</button></li>
+              <li><button class="check-item" type="button" data-key="c101-4b">At about 10% N2 move throttle STOP to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="c101-5">Confirm N1 rises before N2 exceeds 20%; monitor oil pressure and ITT for redlines</button></li>
+              <li><button class="check-item" type="button" data-key="c101-6">Check fuel flow about 200 lb/hr, hydraulics 3,000 psi; stabilized idle 29–33% N1 and 58–71% N2</button></li>
+              <li><button class="check-item" type="button" data-key="c101-7">Disconnect GPU; reset then set generator ON</button></li>
+              <li><button class="check-item" type="button" data-key="c101-7b">Close and lock canopy; allow AHRS alignment</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="c101-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="c101-takeoff-1">Release parking brake and set anti-skid ON</button></li>
+              <li><button class="check-item" type="button" data-key="c101-takeoff-1b">Hold toe brakes and check at 50% N1</button></li>
+              <li><button class="check-item" type="button" data-key="c101-takeoff-2">Confirm airbrakes IN and flaps TAKEOFF</button></li>
+              <li><button class="check-item" type="button" data-key="c101-takeoff-2b">Set aileron trim 0°, elevator trim −1.5°, and ignition CONTINUOUS</button></li>
+              <li><button class="check-item" type="button" data-key="c101-takeoff-3">Apply maximum takeoff power below engine redlines</button></li>
+              <li><button class="check-item" type="button" data-key="c101-takeoff-4">At 4,800 kg reference weight rotate at 100–105 kt; expect nosewheel liftoff around 110–115 kt</button></li>
+              <li><button class="check-item" type="button" data-key="c101-takeoff-5">After positive climb raise gear at or below 120 kt</button></li>
+              <li><button class="check-item" type="button" data-key="c101-takeoff-5b">Retract flaps below 125 kt</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="c101-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="c101-landing-1">Set ignition CONTINUOUS and anti-skid ON</button></li>
+              <li><button class="check-item" type="button" data-key="c101-landing-1b">Set radio altimeter ON</button></li>
+              <li><button class="check-item" type="button" data-key="c101-landing-2">Deploy speedbrake on crosswind</button></li>
+              <li><button class="check-item" type="button" data-key="c101-landing-2b">Lower gear on downwind below 200 kt</button></li>
+              <li><button class="check-item" type="button" data-key="c101-landing-3">On base below 150 kt, lower flaps; verify on-speed AoA (green doughnut)</button></li>
+              <li><button class="check-item" type="button" data-key="c101-landing-4">Final approach 115–120 kt; flare at 110 kt over the threshold and touch down on main wheels at about 95 kt</button></li>
+              <li><button class="check-item" type="button" data-key="c101-landing-5">Hold nosewheel off until it settles</button></li>
+              <li><button class="check-item" type="button" data-key="c101-landing-5b">Brake and maintain directional control with rudder and differential braking</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-f15e" class="pernera-panel">
+            <h3>F-15E Strike Eagle - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f15e">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f15e-1">Set throttles OFF; roll ratio and inlet ramps AUTO</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-1b">Set yaw, roll, and pitch CAS ON</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-2">Set ECS AUTO with bleed source BOTH</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-2b">Set oxygen ON and dilute NORM</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-3">Set generators ON, emergency generator AUTO, and engine controls ON</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-3b">Enable JFS and pull handle</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-4">Start right engine first: at 26% RPM move throttle OFF to IDLE; monitor FTIT and oil pressure</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-5">After right engine stabilizes at 72% RPM, start left engine the same way</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-6">Keep FTIT below 800°C and oil pressure 15–95 psi during light-off; confirm stabilized readings</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-7">Close and lock canopy</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-7b">Align INS per mission worksheet (GC about 4 min; stored heading about 40 sec only if aircraft has not moved)</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f15e-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-1">Parking brake OFF; anti-skid NORMAL; taxi light TAXI</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-1b">Steer with rudder and toe brakes</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-2">Taxi at or below 20 kt and at or below 10 kt in turns</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-3">Line up; taxi/landing light OFF, flaps DOWN, speedbrake retracted, takeoff trim light ON</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-3b">Set probe heat/anti-ice as required</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-4">Advance to 82% RPM and check indications</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-4b">Release brakes and select MIL or MAX</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-5">At rotation speed smoothly establish about 10° pitch; the guide gives no fixed rotation speed</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-6">After liftoff raise landing gear</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-takeoff-6b">Raise flaps</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f15e-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f15e-landing-1">Overfly runway at 1,600 ft AGL and at least 300 kt</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-1b">Break to downwind about 1.5 nm from runway at 250 kt</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-2">Extend gear and flaps</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-2b">Set landing light LANDING and anti-skid NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-3">On base slow to 20–22 AoA units</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-3b">On final use pitch to control AoA and power to control glide path</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-4">Extend speedbrake; flare over the overrun without leveling off</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-4b">Idle throttles and target touchdown at threshold</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-5">After touchdown hold about 12° pitch</button></li>
+              <li><button class="check-item" type="button" data-key="f15e-landing-5b">Use toe brakes when nosewheel is down and speed below 90 kt</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-f16c" class="pernera-panel">
+            <h3>F-16C Viper - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f16c">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f16c-1">Set MAIN PWR to BATT and verify FLCS RLY, then set MAIN PWR to MAIN</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-1b">Do not leave either position selected over 5 minutes without engine/external power</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-2">Set parking brake; close and lock canopy</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-2b">Set ENGINE FEED and AIR SOURCE NORM; throttle OFF</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-3">Select JFS START2; at JFS idle wait for 20–25% engine RPM</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-3b">Move throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-4">Confirm light-off within 10 seconds and stable 62–80% RPM, FTIT ≤650°C, oil pressure ≥15 psi, fuel flow 700–1700 pph, nozzle >94%, hydraulics 2,850–3,250 psi</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-5">Confirm JFS shuts down near 55% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-5b">Switch JFS OFF if it does not shut down</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-6">Configure navigation and complete required post-start checks</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f16c-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-1">Set parking brake/anti-skid to ANTI-SKID and taxi light ON</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-1b">Engage NWS and verify indication</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-2">Taxi below 25 kt and at or below 10 kt in turns</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-3">Line up; taxi light OFF, position lights STEADY, probe heat ON, speedbrakes retracted</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-3b">Select CAT I or CAT III for load/mission</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-4">Hold brakes and run to 90% RPM; check oil pressure 25–65 psi, FTIT ≤935°C, hydraulics 2,850–3,250 psi, and HYD/OIL PRESS warning out</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-5">Use MIL for light load or afterburner for heavy load/short runway</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-5b">Release brakes and disengage NWS at 70 kt</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-6">Weight-based takeoff speeds: 128 kt at 20,000 lb, 142 at 24,000, 156 at 28,000, 168 at 32,000, 178 at 36,000, 188 at 40,000, 198 at 44,000; rotate 10 kt below on MIL or 15 kt below on afterburner to 8–12° pitch</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-7">After positive climb raise landing gear</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-takeoff-7b">Retract flaps below 300 kt</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Visual Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f16c-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f16c-landing-1">Set radar altimeter ON; initial approach at 1,500 ft AGL and 300 kt</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-1b">Break over touchdown point at about 80% RPM, speedbrakes out, 70° bank/3–4 G</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-2">Downwind 1,500 ft AGL and 200–220 kt; gear down, landing light ON</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-2b">Use throttle (not pitch trim) to establish 11° AoA</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-3">Maintain 11° AoA through base and final</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-3b">Roll out about 1 nm and 300 ft AGL</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-4">On short final aim the HUD flight-path marker 300–500 ft down the runway</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-4b">Flare without leveling off; idle at touchdown, maximum 13° AoA</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-5">Aerobrake at about 13° nose-up until 100 kt; lower nosewheel</button></li>
+              <li><button class="check-item" type="button" data-key="f16c-landing-5b">Fully extend speedbrakes and brake; re-engage NWS below 30 kt</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-f5e" class="pernera-panel">
+            <h3>F-5E Tiger II - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f5e">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f5e-1">Battery, both generators, and both booster pumps ON</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-1b">Request ground air</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-2">Motor left engine; at ≥10% RPM press start button</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-2b">Set throttle IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-3">Within 35 seconds verify left idle: 49–52% RPM, EGT ≥140°C, nozzle 60–79%, fuel flow about 400 pph, oil 5–20 psi, utility hydraulics 2,800–3,200 psi</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-4">Repeat the ground-air motoring and start sequence for the right engine</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-4b">Verify right-engine idle and hydraulic indications</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-5">Retract airbrakes; set flap mode THUMB and flap switch AUTO</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-5b">Set takeoff elevator trim: 6 clean, 7 tanks/gun ammo/missiles, 8 with bombs/rockets, 9 with bombs/rockets/containers</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-6">Set pitot heat ON and engine anti-ice as required</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f5e-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-1">Landing/taxi lights ON; remove chocks</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-1b">Initiate taxi at 65–70% RPM with NWS engaged</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-2">Taxi at about 55–60% RPM (10–15 kt); steer with rudder pedals and use toe brakes</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-3">Line up; lights OFF, flaps AUTO, airbrakes retracted, rudder centered</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-3b">Set takeoff trim and extend nose strut</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-4">Hold brakes to 95% RPM, then release brakes</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-4b">Advance throttle to afterburner</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-takeoff-5">Rotate at the weight/configuration table speed (about 143–145 kt at 15,000 lb; about 185–190 kt at 23,000 lb and above); establish positive climb</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Visual Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="f5e-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="f5e-landing-1">Start 3 nm out at 1,500 ft and 300 kt</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-1b">Reverse course at those parameters</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-2">Set flaps AUTO and lower gear</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-2b">Confirm green downlock lights</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-3">At 1,500 ft decelerate to 165 kt; descend at 1,000 ft/min toward landing course</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-4">Set final speed using Vapp = 145 + 5 kt if gun ammo remains + (fuel quantity − 1,000)/200 kt</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-5">On final reduce descent to 400 ft/min and trim for on-speed AoA</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-5b">Flare at 20 ft and target 135 kt touchdown</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-6">Lower nosewheel and deploy drag chute</button></li>
+              <li><button class="check-item" type="button" data-key="f5e-landing-6b">Brake to stop</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-jf17" class="pernera-panel">
+            <h3>JF-17 Thunder - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="jf17">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="jf17-1">Battery and AC/DC generators ON; COM power, WMMC1/2, and intercom ON</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-1b">Set displays and NAV master mode</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-2">Parking brake PARK; set fuel pump START PUMP and ENG CTRL ON</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-2b">Set start selector START</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-3">Uncage throttle from STOP and let it move to IDLE; do not advance it during start</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-4">Hold GROUND START about 4 seconds; monitor N2 and expect light-off near 10% N2</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-5">At idle confirm about 70% N2 and T4 below 500°C</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-5b">Set ECS NORM</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-6">Enter true heading for FAST INS alignment</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-6b">When countdown completes in about 30–40 seconds set INS NAV</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="jf17-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-1">Parking brake DISENGAGED/NORM; taxi light ON and position lights FLASH</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-1b">Engage NWS and verify indication</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-2">Line up and disengage NWS</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-2b">Set afterburner switch ON, verify FCS mode, taxi light OFF, and trim axes to neutral lights</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-3">Hold brakes and run to 80% RPM; confirm no OUT lights</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-4">Release brakes; use 90% RPM for light load or afterburner for heavy load</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-5">Above 41 kt wheel speed automatic takeoff trim begins; at 120 kt set about 10° pitch</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-5b">Rotate near 140 kt</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-6">Raise gear at 30 ft and retract below 300 kt</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-takeoff-6b">Set position lights STEADY after takeoff</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Visual Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="jf17-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="jf17-landing-1">Slow with throttle/speedbrakes</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-landing-1b">Below 300 kt extend TEF flaps and gear; set landing light ON</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-landing-2">Maintain about 10° AoA with flight-path marker inside HUD E-bracket</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-landing-3">Flare at about 3 ft and land on main wheels</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-landing-3b">Maintain 10° AoA for aerobraking and set throttle IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-landing-4">Apply wheel brakes below 145 kt</button></li>
+              <li><button class="check-item" type="button" data-key="jf17-landing-5">If installed, deploy drag chute at 135 kt and jettison below 20 kt</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-ka50" class="pernera-panel">
+            <h3>Ka-50 Black Shark - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="ka50">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="ka50-1">Batteries 1/2 ON and inverter AUTO</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-1b">Power required radios/systems and complete accelerated INU alignment (about 3–4 minutes)</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-2">Rotor brake OFF; throttles AUTO</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-2b">Fuel pumps ON, fuel shutoff valves OPEN, EEG switches ON</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-3">Select START and APU; press START for 2–3 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-4">Allow APU to start (normally 20–30 seconds)</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-4b">Confirm EGT about 600°C and below 720°C, oil pressure normal</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-5">Warm APU for 1 minute</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-5b">Select LEFT and start for 2–3 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-6">At 20% gas-generator RPM open left fuel shutoff; monitor until starter disengages at 60–65%</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-6b">Repeat start sequence for right engine</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-7">Verify rotor speed 95–100%</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-7b">Shut down APU and close its fuel valve</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="ka50-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="ka50-takeoff-1">Release wheel brake</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-takeoff-1b">Move with gentle forward cyclic and collective, then reduce collective; steer with pedals</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-takeoff-2">Keep taxi speed below 20 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-takeoff-3">Check engine/instrument indications and perform hover power check</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-takeoff-3b">Establish a 5–10 m hover</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-takeoff-4">Accelerate with forward cyclic and climb at 100–120 km/h</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Visual Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="ka50-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="ka50-landing-1">Begin descent from about 400 m toward a reference point</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-landing-1b">Target 100–120 km/h and 3–5 m/s descent</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-landing-2">Lower landing gear</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-landing-2b">Turn dust-protection switch ON</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-landing-3">Arrest forward speed in a 10 m hover</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-landing-3b">Add collective to cushion loss of translational lift</button></li>
+              <li><button class="check-item" type="button" data-key="ka50-landing-4">Reduce collective gently to land; avoid VRS, particularly below 70 km/h with descent at or above 300 ft/min</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-l39" class="pernera-panel">
+            <h3>L-39ZA Albatros - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="l39">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="l39-1">Set circuit breakers ON and battery ACB ON</button></li>
+              <li><button class="check-item" type="button" data-key="l39-1b">Verify at least 24 V</button></li>
+              <li><button class="check-item" type="button" data-key="l39-2">Parking brake ON; oxygen valve OPEN and diluter NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="l39-2b">Set fuel shutoff OPEN</button></li>
+              <li><button class="check-item" type="button" data-key="l39-3">Engine ACB ON; start TURBO/APU</button></li>
+              <li><button class="check-item" type="button" data-key="l39-3b">Confirm TURBINE STARTER caution within 25 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="l39-4">Set engine start mode START; press ENGINE STARTER for 3 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="l39-5">After 3–6 seconds move throttle OFF to IDLE; verify idle within 50 seconds: N1 56%, N2 30%, EGT ≤600°C, oil pressure >2 kg/cm²</button></li>
+              <li><button class="check-item" type="button" data-key="l39-6">Confirm APU/starter disconnects at 41.5–44.5% HPC</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="l39-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="l39-takeoff-1">Release parking brake</button></li>
+              <li><button class="check-item" type="button" data-key="l39-takeoff-1b">Set flaps TAKEOFF (25°)</button></li>
+              <li><button class="check-item" type="button" data-key="l39-takeoff-2">Taxi using throttle, brake lever, and rudder; limit straight taxi to 15 km/h with stores or 30 km/h without, turns to 10 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="l39-takeoff-3">Line up; flaps TAKEOFF, airbrakes retracted, elevator/aileron trim neutral</button></li>
+              <li><button class="check-item" type="button" data-key="l39-takeoff-4">Apply full takeoff power and release brakes</button></li>
+              <li><button class="check-item" type="button" data-key="l39-takeoff-4b">Raise nosewheel at 150 km/h and rotate at 190–200 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="l39-takeoff-5">Raise gear at 15 m / 220 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="l39-takeoff-5b">Retract flaps above 250 km/h and climb toward 350 km/h</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Visual Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="l39-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="l39-landing-1">Initial: 500 m and at least 450 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="l39-landing-1b">Downwind: 500 m and below 300 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="l39-landing-2">On downwind lower gear and set flaps 25°; keep airbrakes retracted</button></li>
+              <li><button class="check-item" type="button" data-key="l39-landing-3">Base: 400 m / 280 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="l39-landing-3b">Final turn: 250 m / 260 km/h and flaps LANDING (44°)</button></li>
+              <li><button class="check-item" type="button" data-key="l39-landing-4">Maintain at least 230 km/h on final; touch down at about 180 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="l39-landing-5">Flare gently; set throttle IDLE after touchdown and brake gently</button></li>
+              <li><button class="check-item" type="button" data-key="l39-landing-5b">After clearing runway, retract flaps and set taxi light</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-mi8" class="pernera-panel">
+            <h3>Mi-8MTV2 Hip - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mi8">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mi8-1">ECLs middle detent, throttle fully left, collective down, rotor brake OFF</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-1b">Batteries ON and DC voltage ≥24 V</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-2">Set APU mode START; press APU START for 2–3 seconds and monitor indications</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-3">Wait for EGT below 720°C, air pressure 1.2–2.0 kg/cm², and normal RPM</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-3b">Warm APU at least 1 minute</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-4">Select START and press engine start for 2–3 seconds</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-4b">Move fuel shutoff lever forward as N1 rises</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-5">Confirm engine idle 70–75% N1</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-5b">Repeat start sequence for the other engine</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-6">Set throttle fully right/MAX to engage governor</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-6b">Verify rotor speed 95% and transmission indications nominal</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mi8-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mi8-takeoff-1">Check engine/transmission gauges and flight instruments</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-takeoff-1b">Perform a 3 m hover power check</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-takeoff-2">For ground taxi, push cyclic forward to place front wheel down and gently raise collective</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-takeoff-2b">Steer with brake lever and pedals</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-takeoff-3">When lined up, confirm rotor RPM at least 92%</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-takeoff-4">Ease nose forward and accelerate</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-takeoff-4b">Climb toward 120 km/h</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Visual Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mi8-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mi8-landing-1">Begin descent from about 500 m toward a reference point</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-landing-1b">Maintain about 120 km/h and 3–5 m/s descent</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-landing-2">At 100 m AGL, reduce to about 60 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-landing-2b">Adjust collective toward a 3 m hover</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-landing-3">Stop over the reference point in a 3 m hover</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-landing-3b">Use collective to cushion loss of translational lift and lower gently</button></li>
+              <li><button class="check-item" type="button" data-key="mi8-landing-4">Avoid VRS; the guide flags increased risk below 40 km/h</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-mirage2000" class="pernera-panel">
+            <h3>Mirage 2000C - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mirage2000">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mirage2000-1">Set FBW Gain NORMAL and G limiter for mission load</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-1b">Set FBW NORM/VRILLE NORMAL and high-lift AUTO</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-2">Radios ON; parachute/hook lever FORWARD; throttle STOP; parking brake ON</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-2b">Set bingo fuel</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-3">Close and lock canopy</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-3b">Set battery, both alternators, and TR switches ON</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-3c">Set audio warning ON/reset and emergency hydraulic pump ON</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-4">Select left or right ignition/ventilation; fuel shutoff OPEN</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-4b">Set both low-pressure fuel pumps and starter fuel pump ON</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-5">Press ignition; at 10% RPM move throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-5b">At 60% RPM begin INS alignment</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-6">Complete normal INS alignment (about 8 minutes) or stored heading only if aircraft has not moved</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-6b">Set INS NAV when alignment is complete</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-7">Power HUD/HDD, set radar Standby and radar altimeter ON</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-7b">Complete control sweeps and AP/FBW BITs; set pitot heat ON</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mirage2000-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mirage2000-takeoff-1">Release parking brake; engage DIRAV nosewheel steering</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-takeoff-1b">Taxi with rudder and toe brakes</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-takeoff-2">On runway line-up disengage DIRAV</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-takeoff-2b">Hold brakes and use 100% throttle to check spool-up and T7</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-takeoff-3">Apply full throttle with afterburner</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-takeoff-3b">Use HUD inverted-T to target 13° takeoff pitch</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-takeoff-4">Retract landing gear before 260 kt</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Normal Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="mirage2000-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-1">Select NAV master mode and APPROACH on PCA</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-1b">Lower gear below 230 kt</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-2">Keep HUD flight-path marker on touchdown point; trim for about 14° AoA</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-3">Adjust throttle and stick to keep flight-path marker and acceleration chevrons within HUD AoA bracket</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-4">At touchdown maintain AoA for aerobraking and set throttle IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-4b">Use airbrakes as needed</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-5">At 110 kt reset trim with AP standby/disconnect</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-5b">Reset trim again after nosewheel touchdown</button></li>
+              <li><button class="check-item" type="button" data-key="mirage2000-landing-5c">Brake gently below 100 kt; DIRAV below 40 kt</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-miragef1" class="pernera-panel">
+            <h3>Mirage F1 - Checklist <span class="wip-badge" title="Work in progress: validate variant differences">WIP</span></h3>
+            <h4>Cold Start (F1CE / F1EE)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="miragef1">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="miragef1-1">Parking brake ON; battery and both alternators ON</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-1b">Set warning horn ON/reset</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-2">Set oxygen NORMAL and check it; inflate canopy seal, close/lock canopy, fold rest stick</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-3">Set JPT/T4 emergency regulation AUTO LEFT (CE) or AUTO FWD (EE)</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-3b">Set afterburner main fuel cock OPEN LEFT (CE) or OPEN FWD (EE)</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-4">Set both low-pressure fuel pumps ON; select igniter and starter fuel pump ON</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-4b">Set throttle OFF/CUTOFF</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-5">Press starter 1–2 seconds; at 300–600 RPM advance throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-5b">Confirm engine accelerates above 2,000 RPM within 15 seconds and JPT ≤700°C</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-6">At stable idle near 2,900 RPM check hydraulic/oil/alternator warnings out</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-6b">Set radios, trims, INS/navigation, pitot heat, and flight controls for taxi</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (F1CE procedure)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="miragef1-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-1">Taxi light ON; release parking brake</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-1b">Set nosewheel steering high sensitivity and test brakes</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-2">Taxi about 6,000 RPM; keep straight taxi below 20 kt and take bends slowly</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-3">Line up with slats/flaps fully deployed, trims neutral, airbrakes retracted</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-3b">Set radar EMISSION and landing-gear safety lever OPEN</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-4">Set nosewheel steering low sensitivity; hold brakes and smoothly apply full throttle</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-4b">Confirm afterburner INJ then FON indications</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-5">At 120 kt establish about 12° incidence; rotate near 150 kt</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-takeoff-5b">Raise gear with positive climb</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Approach &amp; Landing (F1CE procedure)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="miragef1-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="miragef1-landing-1">Start 3 nm out at 1,500 ft; overfly runway and slow to 350 kt</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-1b">Make a 60°-bank overhead break</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-2">Downwind 215 kt; below 215 kt extend gear and fully deploy flaps/slats</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-2b">Below 240 kt set landing light ON</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-3">Downwind 7,300 RPM and 160 kt at 1,500 ft; trim for 8° incidence</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-4">Turn final 45° from threshold; target 9–11° incidence</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-4b">Place velocity vector on threshold by 1 nm</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-5">Maintain velocity vector on threshold and green incidence to touchdown</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-5b">Limit descent to 550 ft/min at 9,000 kg, 395 ft/min at 11,000 kg, and below 300 ft/min above 11,000 kg</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-6">Flare to 13° incidence; at 120 kt throttle fully back</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-6b">Brake gently below 100 kt</button></li>
+              <li><button class="check-item" type="button" data-key="miragef1-landing-7">Do not deploy optional drag chute above 210 kt</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-uh1h" class="pernera-panel">
+            <h3>UH-1H Huey - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="uh1h">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="uh1h-1">DC circuit breakers IN and pitot heat OFF</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-1b">Set lights, cargo release, wipers, and cabin heat as required</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-2">Set inverter OFF, main generator ON, and non-essential bus NORMAL</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-2b">Set starter-generator GEN START and battery ON</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-3">LOW RPM switch OFF; test warning lights; governor AUTO and fuel ON</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-3b">Set force trim and hydraulic control ON; armament safe</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-4">Check controls, close doors, and clear rotor area</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-4b">Collective fully down and throttle at IDLE-START</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-5">Hold starter; at 15% N1 confirm rotor turning</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-5b">Move throttle to IDLE-STOP/START; monitor EGT for hot start</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-6">At 40% N1 release starter (never hold over 1 minute)</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-6b">At 68–72% N1 slowly throttle FULLY OPEN</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-7">Set inverter MAIN and starter-generator STBY GEN</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-7b">Check EGT 400–610°C, oil/transmission pressures and temperatures within limits, and 6,600 RPM</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="uh1h-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="uh1h-takeoff-1">Check engine/transmission gauges and flight instruments</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-takeoff-1b">Perform 5-ft hover power check</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-takeoff-2">From hover move toward runway with slight forward cyclic</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-takeoff-2b">Maintain 6,600 RPM for normal takeoff</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-takeoff-3">Build translational lift and climb, aiming to maintain 60 kt</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-takeoff-3b">Use load/conditions to determine available hover power</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Visual Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="uh1h-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="uh1h-landing-1">Begin descent from 500 ft toward a runway reference point</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-landing-1b">Avoid vortex-ring-state conditions</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-landing-2">From 500 to 300 ft target 80 kt and 300–500 ft/min descent</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-landing-2b">From 450 to 50 ft target 60 kt at 300–500 ft/min</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-landing-3">At 50 ft reduce to 30 kt and reach a 5-ft hover over the reference point</button></li>
+              <li><button class="check-item" type="button" data-key="uh1h-landing-3b">Stop with cyclic, cushion with collective, then land gently</button></li>
+            </ul></div>
+          </div>
+
+          <div id="pernera-yak52" class="pernera-panel">
+            <h3>Yak-52 - Checklist <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <h4>Cold Start (Essential)</h4>
+            <div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="yak52">Mark/unmark all</button></div>
+            <ul class="checklist">
+              <li><button class="check-item" type="button" data-key="yak52-1">Rear cockpit: magnetos 1+2; gear lever NEUTRAL and locked; flaps NEUTRAL</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-1b">Front cockpit: gear DOWN/locked and flaps NEUTRAL</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-2">Open main pneumatic valve; confirm at least 50 kg/cm² in main and emergency systems</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-3">Propeller FULL FORWARD and fuel cock OPEN</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-3b">Battery, generator, and ignition ON; confirm battery ≥24 V</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-4">Cowling shutters fully OPEN; set friction lever mid-position</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-4b">Confirm brakes locked</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-5">Set magnetos OFF; below 0°C set carburettor heat ON</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-5b">Prime cylinders per outside temperature and fuel pressure</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-6">Exercise throttle twice and set one-third; crank</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-6b">After 2–3 propeller revolutions set magnetos 1+2</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-7">Warm at 40% then 44–48% RPM (summer) or 44–51% (winter) until CHT >120°C, oil >40°C and pressure >1 kg/cm²</button></li>
+            </ul>
+            <div class="engine-management"><h4>Taxi &amp; Takeoff (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="yak52-takeoff">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-1">After warm-up release parking brake; test brakes at 40% RPM</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-1b">Taxi using brake lever and rudder</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-2">Set propeller FULL FORWARD, flaps NEUTRAL/UP, and takeoff trim</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-2b">Set altimeter to field elevation; check engine limits</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-3">At runway hold brakes and use 70% RPM to burn off excess oil</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-3b">Set stick neutral, smoothly advance to 100% RPM, and counter right yaw with left rudder</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-4">At 90 km/h raise nosewheel; rotate at 120 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-takeoff-4b">Raise gear and climb at 170 km/h</button></li>
+            </ul></div>
+            <div class="engine-management"><h4>Circuit &amp; Landing (Essential)</h4><div class="checklist-toolbar"><button class="toggle-all-checklist" type="button" data-panel="yak52-landing">Mark/unmark all</button></div><ul class="checklist">
+              <li><button class="check-item" type="button" data-key="yak52-landing-1">Crosswind: 150 m AGL / 170 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-landing-1b">Downwind: 300 m AGL, prop 70%, throttle 470–490 mmHg, 180 km/h; extend gear</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-landing-2">Base: 200–250 m and 180 km/h</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-landing-2b">Turn final at 30° bank and 170 km/h, descent 4–5 m/s</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-landing-2c">Set propeller FULL FORWARD and flaps DOWN</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-landing-3">Enter final no lower than 150 m; maintain 160 km/h and control speed with throttle, glidepath with pitch</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-landing-4">At 5–6 m flare smoothly while reducing throttle to IDLE</button></li>
+              <li><button class="check-item" type="button" data-key="yak52-landing-4b">Target touchdown at 115–120 km/h</button></li>
+            </ul></div>
           </div>
         </div>
 

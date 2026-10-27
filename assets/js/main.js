@@ -307,9 +307,17 @@ document.addEventListener('DOMContentLoaded', function () {
       ]
     }
   };
+  var defaultChuckGuide = {
+    summary: 'Aircraft-specific quick tips are not available yet.',
+    items: [
+      'Use the selected aircraft checklist for its startup, takeoff, and landing steps.',
+      'Check the aircraft manual for configuration and limits that depend on load or conditions.',
+      'Confirm the aircraft indications before continuing.'
+    ]
+  };
 
   function renderChuckGuide(key) {
-    var guide = chuckGuides[key] || chuckGuides.tf51;
+    var guide = chuckGuides[key] || defaultChuckGuide;
     var summary = document.getElementById('chuck-guide-summary');
     var list = document.getElementById('chuck-guide-list');
     if (summary) summary.textContent = guide.summary;
