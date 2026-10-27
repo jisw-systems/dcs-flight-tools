@@ -473,6 +473,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (buttons && buttons.length && panels && panels.length) {
     function activatePlane(id) {
+      var selectedButton = Array.from(buttons).find(function (button) {
+        return button.getAttribute('data-plane') === id;
+      });
+      if (!selectedButton || selectedButton.disabled) return;
       var targetId = 'pernera-' + id;
       var target = document.getElementById(targetId);
       if (!target) return;
@@ -494,6 +498,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     buttons.forEach(function (btn) {
+      if (btn.disabled) {
+        btn.setAttribute('tabindex', '-1');
+        return;
+      }
       btn.setAttribute('role', 'button');
       btn.setAttribute('tabindex', '0');
       btn.setAttribute('aria-pressed', 'false');
@@ -512,17 +520,27 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    var anyActive = Array.from(panels).some(function (p) { return p.classList.contains('active'); });
-    if (!anyActive) {
-      var firstId = buttons[0].getAttribute('data-plane');
+    var activePanel = Array.from(panels).find(function (panel) {
+      return panel.classList.contains('active');
+    });
+    var activeButton = Array.from(buttons).find(function (button) {
+      return !button.disabled && (
+        button.classList.contains('active-btn') ||
+        (activePanel && activePanel.id === 'pernera-' + button.getAttribute('data-plane'))
+      );
+    });
+    if (!activeButton) {
+      var firstAvailableButton = Array.from(buttons).find(function (button) {
+        return !button.disabled;
+      });
+      if (!firstAvailableButton) return;
+      panels.forEach(function (panel) { panel.classList.remove('active'); });
+      var firstId = firstAvailableButton.getAttribute('data-plane');
       activatePlane(firstId);
     } else {
-      var activeButton = Array.from(buttons).find(function (b) {
-        return b.classList.contains('active-btn');
-      });
-      if (activeButton) {
-        renderChuckGuide(activeButton.getAttribute('data-plane'));
-      }
+      activeButton.setAttribute('aria-pressed', 'true');
+      activeButton.classList.add('active-btn');
+      renderChuckGuide(activeButton.getAttribute('data-plane'));
     }
   }
 
