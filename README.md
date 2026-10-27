@@ -1,6 +1,6 @@
 # J&I Flight Tools
 
-This repository contains the current static DCS World web toolkit for J&I Flight Tools. It is designed as a digital kneeboard and quick-reference toolkit for aircraft cold starts, checklists, radio brevities, training calendars, communications phrases, and a location finder based on DCS map data and airfield metadata.
+This repository contains the current static DCS World web toolkit for J&I Flight Tools. It provides separate pages for aircraft cold starts and checklists, mission navigation tools, radio brevities, training calendars, communications references, formations, threat data, and route timing.
 
 The project is intentionally lightweight and framework-free: HTML, CSS, vanilla JavaScript and generated JSON assets are used without a build pipeline. It can be opened locally in a browser or served directly through a static web server such as GitHub Pages.
 
@@ -10,7 +10,7 @@ This repository is the active project site for the J&I SimWorks Systems portfoli
 
 The site is organized as a framework-free static application. Public HTML pages stay at the repository root for stable GitHub Pages URLs; shared frontend resources live under `assets/`, generated data lives under `data/`, authoring references live under `docs/`, and data-generation utilities live under `tools/`.
 
-A comprehensive digital kneeboard and reference toolkit for DCS World (Digital Combat Simulator). This web application provides quick-access checklists, procedures, unit converters, a location finder, and mission-planning aids such as the Route Timing Calculator.
+A comprehensive digital kneeboard and reference toolkit for DCS World (Digital Combat Simulator). Aircraft procedures live in Flight Checklists; unit conversion, location search, and coordinate-based mission-planning tools are grouped on the separate Navigation Tools page.
 
 ## Project Relationship
 
@@ -21,7 +21,7 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 
 ## Features
 
-### Aircraft Checklists (Perneras)
+### [Aircraft Checklists (Perneras)](flight-checklists.html)
 - **24 Aircraft** with detailed cold start procedures and essential operations
 - Step-by-step interactive checklists with progress tracking
 - Technical notes and engine management procedures
@@ -70,7 +70,9 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 - Explore official and attack formations with interactive SVG diagrams or plain-text position lists
 - Expand each formation for its explanation, advantages, limitations, and typical use
 
-### Global Toolbox
+### [Navigation Tools](navigation-tools.html)
+
+The mission-planning tools live on their own page, separate from the aircraft procedures in [Flight Checklists](flight-checklists.html). Coordinate calculations are handled by `assets/js/coordinate-tools.js`; shared unit conversion and location search are handled by `assets/js/main.js`.
 
 #### Unit Converter
 Convert between common aviation units:
@@ -91,12 +93,13 @@ Convert between common aviation units:
 - Altitude data for airfields
 - Multiple coordinate formats for maximum compatibility
 
-#### MGRS and Navigation Tools
+#### Coordinate and Route Tools
 - Convert between MGRS and decimal latitude/longitude coordinates
 - Use MGRS, decimal latitude/longitude, or DMS coordinate input for offset and bearing calculations
 - Calculate an offset point from a coordinate origin, true bearing, and distance; show its destination in MGRS, decimal degrees, and DMS
 - Calculate the initial true bearing and WGS84 distance between two MGRS, decimal latitude/longitude, or DMS points
 - MGRS inputs use the center of the represented grid square
+- The location finder searches cities and airfields across DCS maps using map, name, or MGRS filters
 
 **Supported Maps:**
 - Caucasus
@@ -119,17 +122,18 @@ Convert between common aviation units:
 dcs-flight-tools/
 ├── index.html              # Landing page and module overview
 ├── flight-checklists.html  # Aircraft checklists
+├── navigation-tools.html   # Unit, location, and coordinate tools
 ├── threat-database.html    # Searchable threat reference page
 ├── tot-calculator.html     # Multi-leg route timing and ETA calculator
 ├── assets/
 │   ├── css/
 │   │   └── styles.css      # Global styles
 │   └── js/
-│       ├── main.js         # Shared frontend logic and tools
-│       ├── coordinate-tools.js # MGRS conversion and navigation calculations
+│       ├── main.js         # Shared frontend behavior and unit/location tools
+│       ├── coordinate-tools.js # MGRS conversion and route-navigation calculations
 │       ├── formations.js   # Interactive SVG/plain-text formation diagrams
-│       ├── shared-nav.js   # Shared navigation component
-│       ├── site-config.js  # Brand, title, and favicon configuration
+│       ├── shared-nav.js   # Shared navigation menu and footer
+│       ├── site-config.js  # Brand, page titles, and favicon configuration
 │       ├── vendor/         # Local MGRS and WGS84 geodesic browser libraries
 │       ├── tot-calculator.js # Route timing calculator logic
 │       └── threats.js      # Threat database rendering and filtering

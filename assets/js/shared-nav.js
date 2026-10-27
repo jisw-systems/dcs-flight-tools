@@ -15,6 +15,7 @@
       '    <a href="index.html">Home</a>',
       '    <a href="calendar.html">Calendar</a>',
       '    <a href="flight-checklists.html">Flight Checklists</a>',
+      '    <a href="navigation-tools.html">Navigation Tools</a>',
       '    <a href="threat-database.html">Threats</a>',
       '    <a href="comms.html">Comms</a>',
       '    <a href="brevities.html">Brevities</a>',
