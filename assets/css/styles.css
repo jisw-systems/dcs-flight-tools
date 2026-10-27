@@ -580,6 +580,18 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .flight-checklists-heading{
   margin:-18px -18px 18px;
 }
+.checklist-storage-consent{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;margin:0 0 16px;padding:13px 15px;border:1px solid rgba(179,57,57,0.3);border-left:3px solid var(--accent);border-radius:5px;background:linear-gradient(110deg,rgba(179,57,57,0.08),rgba(255,255,255,0.015))}
+.checklist-storage-consent[hidden]{display:none}
+.checklist-storage-consent h2{margin:0 0 4px;color:var(--text);font-size:0.88rem}
+.checklist-storage-consent p{margin:0;color:var(--sub);font-size:0.76rem;line-height:1.5}
+.checklist-storage-consent a{color:#e9a0a0;text-underline-offset:3px}
+.checklist-storage-actions{display:flex;flex-wrap:wrap;gap:8px}
+.checklist-storage-actions button{min-height:38px;padding:8px 11px;border:1px solid rgba(179,57,57,0.48);border-radius:4px;background:rgba(179,57,57,0.15);color:var(--text);font:inherit;font-size:0.75rem;font-weight:700;cursor:pointer}
+.checklist-storage-actions button:hover,.checklist-storage-actions button:focus-visible{border-color:var(--accent);background:rgba(179,57,57,0.28)}
+.checklist-storage-status:empty{display:none}
+.checklist-storage-status{grid-column:1/-1}
+.checklist-storage-manage{display:block;margin:0 0 14px;padding:0;border:0;background:transparent;color:#e9a0a0;font:inherit;font-size:0.75rem;text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.checklist-storage-manage[hidden]{display:none}
 .comms-header.page-heading,
 .formations-header.page-heading,
 .brevities-header.page-heading,
@@ -1512,9 +1524,36 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 }
 
 /* FOOTER small */
-.site-footer{max-width:var(--maxw);margin:18px auto 40px;color:var(--sub);font-size:0.85rem;padding:14px 18px 0;border-top:1px solid rgba(255,255,255,0.06);text-align:center}
+.site-footer{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;max-width:var(--maxw);margin:18px auto 40px;color:var(--sub);font-size:0.85rem;padding:14px 18px 0;border-top:1px solid rgba(255,255,255,0.06);text-align:center}
 .site-footer__link{color:var(--sub);text-decoration:none;border-bottom:1px solid rgba(179,57,57,0.45);transition:color .2s ease,border-color .2s ease}
 .site-footer__link:hover,.site-footer__link:focus-visible{color:var(--accent);border-color:var(--accent)}
+
+/* LEGAL AND PRIVACY */
+.legal-page{padding:86px 18px 28px}
+.legal-panel{max-width:var(--maxw);margin:18px auto 0;padding:28px}
+.legal-header.page-heading{margin:-28px -28px 24px}
+.legal-sections{display:grid;gap:22px}
+.legal-section{padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.legal-section h2{margin:0 0 12px;color:var(--text);font-size:1rem}
+.legal-language-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:10px}
+.legal-language-pair p{margin:0;color:var(--sub);font-size:0.86rem;line-height:1.65;text-align:justify;text-justify:inter-word;hyphens:auto}
+.legal-language-pair a{color:#e9a0a0;text-underline-offset:3px}
+.legal-language-pair a:hover,.legal-language-pair a:focus-visible{color:#fff}
+.legal-updated{margin:0;color:var(--muted);font-size:0.76rem}
+.video-privacy-notice{margin:0 0 12px;color:var(--sub);font-size:0.78rem;line-height:1.5}
+.video-privacy-notice a{color:#e9a0a0;text-underline-offset:3px}
+.video-link-list{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.video-link-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:14px;padding:10px 12px;border:1px solid rgba(255,255,255,0.07);border-radius:5px;background:rgba(255,255,255,0.025);transition:border-color .16s ease,background .16s ease}
+.video-link-card:hover{border-color:rgba(179,57,57,0.42);background:rgba(179,57,57,0.055)}
+.video-link-main{display:flex;min-width:0;align-items:center;justify-content:space-between;gap:12px;color:var(--text);font-size:0.84rem;line-height:1.45;text-decoration:none}
+.video-link-main>span:first-child{min-width:0}
+.video-link-arrow{flex:none;color:#e9a0a0}
+.video-channel{display:flex;flex:none;align-items:center;gap:8px;padding:5px 9px;border:1px solid rgba(179,57,57,0.24);border-radius:999px;background:rgba(179,57,57,0.06);color:var(--sub);text-decoration:none;transition:border-color .16s ease,background .16s ease,color .16s ease}
+.video-channel:hover,.video-channel:focus-visible{border-color:rgba(179,57,57,0.62);background:rgba(179,57,57,0.16);color:var(--text)}
+.video-channel-mark{display:grid;flex:none;width:24px;height:24px;place-items:center;border:1px solid rgba(179,57,57,0.4);border-radius:50%;color:#e9a0a0;font-size:0.6rem;font-weight:800;letter-spacing:-0.3px}
+.video-channel-copy{display:grid;gap:1px;line-height:1.15}
+.video-channel-copy>span{color:var(--muted);font-size:0.48rem;font-weight:800;letter-spacing:1px}
+.video-channel-copy strong{font-size:0.67rem;font-weight:700;white-space:nowrap}
 
 /* BREVITIES SEARCH */
 .brevities-page{padding:86px 18px 28px}
@@ -1774,6 +1813,9 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 @media (max-width:760px){
   .page-heading{padding:22px 28px 20px}
   .flight-checklists-heading{padding:22px 28px 20px}
+  .checklist-storage-consent{grid-template-columns:minmax(0,1fr);align-items:start}
+  .checklist-storage-actions{width:100%}
+  .checklist-storage-actions button{flex:1}
   .comms-header.page-heading,
   .formations-header.page-heading,
   .brevities-header.page-heading,
@@ -1977,6 +2019,12 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
   .threats-panel{padding:20px 14px}
   .navigation-tools-page{padding:76px 12px 22px}
   .navigation-tools-panel{padding:20px 14px}
+  .legal-page{padding:76px 12px 22px}
+  .legal-panel{padding:20px 14px}
+  .legal-header.page-heading{margin:-20px -14px 20px}
+  .legal-language-pair{grid-template-columns:minmax(0,1fr);gap:10px}
+  .video-link-card{grid-template-columns:minmax(0,1fr);gap:8px}
+  .video-channel{justify-self:end}
   .rwr-legend{align-items:flex-start;flex-direction:column;gap:6px}
   .threats-layout{margin-top:18px}
   .threats-controls{grid-template-columns:1fr}

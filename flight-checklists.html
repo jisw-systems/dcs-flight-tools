@@ -24,6 +24,19 @@
         <p>Aircraft checklists and practical references for your next sortie.</p>
       </header>
 
+      <aside class="checklist-storage-consent" id="checklist-storage-consent" aria-labelledby="checklist-storage-title" hidden>
+        <div>
+          <h2 id="checklist-storage-title">Remember checklist progress on this device?</h2>
+          <p>Allow saving to keep completed steps in this browser. This is optional; the checklists work without it. Choosing “Not now” clears any previously saved checklist progress. <a href="legal.html">Learn more</a>.</p>
+        </div>
+        <div class="checklist-storage-actions">
+          <button type="button" data-checklist-storage-choice="allow">Allow saving</button>
+          <button type="button" data-checklist-storage-choice="deny">Not now</button>
+        </div>
+        <p class="checklist-storage-status" data-checklist-storage-status role="status" aria-live="polite"></p>
+      </aside>
+      <button class="checklist-storage-manage" type="button" data-show-checklist-storage aria-controls="checklist-storage-consent" aria-expanded="false" hidden>Manage progress storage</button>
+
       <div class="perneras-layout" style="margin-top:12px">
         <div class="perneras-list">
           <div class="guide-card" id="chuck-guide" aria-live="polite">
@@ -875,10 +888,29 @@
               </button>
 
               <div class="video-accordion-content" hidden>
-                <div class="video-grid">
-                  <iframe src="https://www.youtube.com/embed/gWulKpNqtP8" title="F/A-18C recommended video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  <iframe src="https://www.youtube.com/embed/udRZ3O7dbD8" title="F/A-18C short recommended video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                <p class="video-privacy-notice">These links open videos on YouTube. YouTube receives your connection details when you follow a link. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.</p>
+                <ul class="video-link-list">
+                  <li class="video-link-card">
+                    <a class="video-link-main" href="https://www.youtube.com/watch?v=gWulKpNqtP8" target="_blank" rel="noopener noreferrer">
+                      <span>F-18 Cold Start Tutorial - Quick Hornet Cold Start using INS Stored Heading - DCS in 3 Or Less</span>
+                      <span class="video-link-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="video-channel" href="https://www.youtube.com/@GotSpaceGame" target="_blank" rel="noopener noreferrer" aria-label="Got Space Game YouTube channel">
+                      <span class="video-channel-mark" aria-hidden="true">GS</span>
+                      <span class="video-channel-copy"><span>CHANNEL</span><strong>Got Space Game</strong></span>
+                    </a>
+                  </li>
+                  <li class="video-link-card">
+                    <a class="video-link-main" href="https://www.youtube.com/watch?v=udRZ3O7dbD8" target="_blank" rel="noopener noreferrer">
+                      <span>F/A-18C Hornet Startup in 60 Seconds!</span>
+                      <span class="video-link-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="video-channel" href="https://www.youtube.com/@TrickerDCS" target="_blank" rel="noopener noreferrer" aria-label="Tricker YouTube channel">
+                      <span class="video-channel-mark" aria-hidden="true">T</span>
+                      <span class="video-channel-copy"><span>CHANNEL</span><strong>Tricker</strong></span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

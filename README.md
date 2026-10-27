@@ -70,6 +70,10 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 - Explore official and attack formations with interactive SVG diagrams or plain-text position lists
 - Expand each formation for its explanation, advantages, limitations, and typical use
 
+### Privacy and use
+- See [Legal & Privacy](legal.html) for browser storage, GitHub Pages hosting logs, external video embeds, and the simulator-only use disclaimer.
+- Checklist progress is saved in browser local storage only after the visitor opts in; YouTube videos are plain links and connect only when followed.
+
 ### [Navigation Tools](navigation-tools.html)
 
 The mission-planning tools live on their own page, separate from the aircraft procedures in [Flight Checklists](flight-checklists.html). Coordinate calculations are handled by `assets/js/coordinate-tools.js`; shared unit conversion and location search are handled by `assets/js/main.js`.
@@ -123,6 +127,7 @@ dcs-flight-tools/
 ├── index.html              # Landing page and module overview
 ├── flight-checklists.html  # Aircraft checklists
 ├── navigation-tools.html   # Unit, location, and coordinate tools
+├── legal.html              # Legal, privacy, and third-party media information
 ├── threat-database.html    # Searchable threat reference page
 ├── tot-calculator.html     # Multi-leg route timing and ETA calculator
 ├── assets/

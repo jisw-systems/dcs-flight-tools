@@ -8,6 +8,7 @@ window.siteConfig = window.siteConfig || {
     calendar: 'J&I Flight Tools — Calendar',
     'flight-checklists': 'J&I Flight Tools — Flight Checklists',
     'navigation-tools': 'J&I Flight Tools — Navigation Tools',
+    legal: 'J&I Flight Tools — Legal & Privacy',
     threats: 'J&I Flight Tools — Threat Database',
     comms: 'J&I Flight Tools — Comms',
     brevities: 'J&I Flight Tools — Brevities',

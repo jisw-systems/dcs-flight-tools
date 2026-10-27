@@ -3,6 +3,117 @@
    =========================== */
 document.addEventListener('DOMContentLoaded', function () {
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var checklistStorageConsentKey = 'dcs-checklist-storage-consent';
+  var checklistStorageConsent = false;
+  var checklistStorageAvailable = true;
+  var checklistStorageBanner = document.getElementById('checklist-storage-consent');
+  var checklistStorageManage = document.querySelector('[data-show-checklist-storage]');
+  var checklistStorageStatus = document.querySelector('[data-checklist-storage-status]');
+
+  if (checklistStorageBanner) {
+    try {
+      checklistStorageConsent = localStorage.getItem(checklistStorageConsentKey) === 'accepted';
+      if (checklistStorageManage && localStorage.getItem(checklistStorageConsentKey)) {
+        checklistStorageManage.hidden = false;
+      }
+    } catch (error) {
+      checklistStorageAvailable = false;
+      console.warn('Checklist storage preference could not be read.', error);
+    }
+  }
+
+  if (checklistStorageBanner && !checklistStorageConsent) {
+    checklistStorageBanner.hidden = false;
+  }
+
+  function reportChecklistStorageError(error) {
+    checklistStorageAvailable = false;
+    checklistStorageConsent = false;
+    console.warn('Checklist progress could not be saved in browser storage.', error);
+    if (checklistStorageStatus) {
+      checklistStorageStatus.textContent = 'Browser storage is unavailable. The checklists still work, but progress will not be saved.';
+    }
+    if (checklistStorageBanner) checklistStorageBanner.hidden = false;
+  }
+
+  function persistChecklistProgress() {
+    if (!checklistStorageConsent || !checklistStorageAvailable) return;
+
+    try {
+      document.querySelectorAll('.check-item[data-key]').forEach(function (item) {
+        var key = item.getAttribute('data-key');
+        var storageKey = 'dcs-checklist-' + key;
+        if (item.classList.contains('is-done')) {
+          localStorage.setItem(storageKey, 'done');
+        } else {
+          localStorage.removeItem(storageKey);
+        }
+      });
+    } catch (error) {
+      reportChecklistStorageError(error);
+    }
+  }
+
+  function restoreSavedChecklistProgress() {
+    if (!checklistStorageAvailable) return;
+
+    try {
+      document.querySelectorAll('.check-item[data-key]').forEach(function (item) {
+        if (item.dataset.checklistTouched === 'true') return;
+        var saved = localStorage.getItem('dcs-checklist-' + item.getAttribute('data-key'));
+        if (saved === 'done') {
+          item.classList.add('is-done');
+          item.setAttribute('aria-pressed', 'true');
+        }
+      });
+      document.querySelectorAll('.pernera-panel').forEach(refreshToggleAllButton);
+    } catch (error) {
+      reportChecklistStorageError(error);
+    }
+  }
+
+  if (checklistStorageBanner) {
+    if (checklistStorageManage) {
+      checklistStorageManage.addEventListener('click', function () {
+        checklistStorageBanner.hidden = false;
+        checklistStorageManage.setAttribute('aria-expanded', 'true');
+      });
+    }
+
+    checklistStorageBanner.querySelectorAll('[data-checklist-storage-choice]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        if (!checklistStorageAvailable) {
+          checklistStorageBanner.hidden = true;
+          return;
+        }
+
+        var allowStorage = button.getAttribute('data-checklist-storage-choice') === 'allow';
+        try {
+          localStorage.setItem(checklistStorageConsentKey, allowStorage ? 'accepted' : 'declined');
+          if (!allowStorage) {
+            for (var index = localStorage.length - 1; index >= 0; index -= 1) {
+              var key = localStorage.key(index);
+              if (key && key.indexOf('dcs-checklist-') === 0 && key !== checklistStorageConsentKey) {
+                localStorage.removeItem(key);
+              }
+            }
+          }
+          checklistStorageConsent = allowStorage;
+          if (checklistStorageManage) {
+            checklistStorageManage.hidden = false;
+            checklistStorageManage.setAttribute('aria-expanded', 'false');
+          }
+          if (allowStorage) {
+            restoreSavedChecklistProgress();
+            persistChecklistProgress();
+          }
+          if (checklistStorageAvailable) checklistStorageBanner.hidden = true;
+        } catch (error) {
+          reportChecklistStorageError(error);
+        }
+      });
+    });
+  }
 
   window.addEventListener('pageshow', function (event) {
     document.body.classList.remove('page-exit');
@@ -92,10 +203,16 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.classList.toggle('is-done', done);
     btn.setAttribute('aria-pressed', done ? 'true' : 'false');
     var key = btn.getAttribute('data-key');
-    if (!key) return;
+    if (!key || !checklistStorageConsent || !checklistStorageAvailable) return;
     try {
-      localStorage.setItem('dcs-checklist-' + key, done ? 'done' : 'pending');
-    } catch (e) {}
+      if (done) {
+        localStorage.setItem('dcs-checklist-' + key, 'done');
+      } else {
+        localStorage.removeItem('dcs-checklist-' + key);
+      }
+    } catch (error) {
+      reportChecklistStorageError(error);
+    }
   }
 
   function refreshToggleAllButton(panel) {
@@ -211,19 +328,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var key = btn.getAttribute('data-key');
     if (!key) return;
 
-    try {
-      var saved = localStorage.getItem('dcs-checklist-' + key);
-      if (saved === 'done') {
-        setChecklistState(btn, true);
-      } else {
-        setChecklistState(btn, false);
+    var saved = null;
+    if (checklistStorageConsent && checklistStorageAvailable) {
+      try {
+        saved = localStorage.getItem('dcs-checklist-' + key);
+      } catch (error) {
+        reportChecklistStorageError(error);
       }
-    } catch (e) {
-      setChecklistState(btn, false);
     }
+    setChecklistState(btn, saved === 'done');
 
     btn.addEventListener('click', function () {
       var done = !btn.classList.contains('is-done');
+      btn.dataset.checklistTouched = 'true';
       setChecklistState(btn, done);
       var panel = btn.closest('.pernera-panel');
       if (panel) refreshToggleAllButton(panel);
@@ -249,6 +366,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return !item.classList.contains('is-done');
       });
       items.forEach(function (item) {
+        item.dataset.checklistTouched = 'true';
         setChecklistState(item, shouldMarkAll);
       });
       refreshUI();
