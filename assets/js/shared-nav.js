@@ -44,7 +44,7 @@
   renderSharedNav();
 
   if (!document.querySelector('.site-footer')) {
-    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer"><span>Part of <a class="site-footer__link" href="https://jisw-systems.github.io/main-site/">J&amp;I SimWorks Systems</a></span><a class="site-footer__link" href="legal.html">Legal &amp; Privacy</a></footer>');
+    document.body.insertAdjacentHTML('beforeend', '<footer class="site-footer"><span>Part of <a class="site-footer__link" href="https://jisw-systems.github.io/main-site/">J&amp;I SimWorks Systems</a></span><a class="site-footer__link" href="legal.html">Legal &amp; Privacy</a><a class="site-footer__link" href="legal.html#source-terms">Source &amp; Use</a></footer>');
   }
 
   var refreshButton = document.querySelector('.site-nav__refresh');
