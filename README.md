@@ -335,9 +335,11 @@ Contributions are welcome! Areas for improvement:
 - Location data: Extracted from DCS World game files (`towns.lua`)
 - MGRS conversion: Using the [mgrs](https://www.npmjs.com/package/mgrs) npm package
 
-## License
+## Community licenses
 
-This is a community tool for DCS World players. DCS World is a trademark of Eagle Dynamics.
+The project is published for the community to use, share, and improve. Original code is licensed under [GNU GPL-3.0-or-later](LICENSE); original written content, including original checklist wording, is licensed under [CC BY-SA 4.0](CONTENT-LICENSE.md). Both allow commercial use, subject to their terms: code redistributions must preserve the GPL freedoms, and adapted content must retain attribution and use the same CC BY-SA license. Project names, logos, and third-party material are excluded.
+
+Third-party code and data remain subject to their own notices and licences; see [third-party software notices](assets/js/vendor/THIRD-PARTY-LICENSES.md). DCS World is a trademark of Eagle Dynamics; this project is independent and is not affiliated with or endorsed by Eagle Dynamics.
 
 ## Acknowledgments
 
