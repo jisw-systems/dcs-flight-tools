@@ -579,6 +579,209 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  (function initAircraftPagination() {
+    function cleanText(element) {
+      var copy = element.cloneNode(true);
+      copy.querySelectorAll('.wip-badge').forEach(function (badge) { badge.remove(); });
+      return copy.textContent.replace(/\s+/g, ' ').trim();
+    }
+
+    function sectionLabel(element) {
+      var heading = element.matches('h4') ? element : element.querySelector('h4');
+      var label = heading ? cleanText(heading) : '';
+      if (!label) {
+        var toggle = element.querySelector('.video-accordion-toggle');
+        if (toggle) label = toggle.textContent.replace(/\s+/g, ' ').trim();
+      }
+      if (!label) label = 'Details';
+
+      if (/^Cold Start\b/i.test(label)) return 'Start';
+      if (/^Engine Management\b/i.test(label)) return 'Engine';
+      if (/^Technical Notes?\b/i.test(label)) return 'Notes';
+      return label.replace(/\s*\(Essential\)\s*/i, ' ').replace(/\s+/g, ' ').trim();
+    }
+
+    function createPagination(aircraftPanel) {
+      var title = aircraftPanel.querySelector(':scope > h3');
+      var originalNodes = Array.from(aircraftPanel.children).filter(function (child) {
+        return child !== title;
+      });
+      if (!originalNodes.length) return;
+
+      var sections = [];
+      var currentSection = null;
+
+      function finishSection() {
+        if (!currentSection || !currentSection.nodes.length) return;
+        sections.push(currentSection);
+        currentSection = null;
+      }
+
+      originalNodes.forEach(function (node) {
+        if (node.matches('h4')) {
+          finishSection();
+          currentSection = { label: sectionLabel(node), nodes: [node] };
+        } else if (node.querySelector('h4') || node.classList.contains('video-accordion')) {
+          finishSection();
+          sections.push({ label: sectionLabel(node), nodes: [node] });
+        } else {
+          if (!currentSection) currentSection = { label: 'Details', nodes: [] };
+          currentSection.nodes.push(node);
+        }
+      });
+      finishSection();
+      if (!sections.length) return;
+
+      var aircraftId = aircraftPanel.id || 'aircraft';
+      var titleText = title ? cleanText(title) : 'Aircraft';
+      var pagination = document.createElement('div');
+      pagination.className = 'aircraft-pagination';
+
+      var tabList = document.createElement('div');
+      tabList.className = 'aircraft-tabs';
+      tabList.setAttribute('role', 'tablist');
+      tabList.setAttribute('aria-label', titleText + ' pages');
+
+      var controls = document.createElement('div');
+      controls.className = 'aircraft-page-controls';
+      controls.setAttribute('role', 'group');
+      controls.setAttribute('aria-label', 'Page navigation');
+
+      var previousButton = document.createElement('button');
+      previousButton.className = 'aircraft-page-control';
+      previousButton.type = 'button';
+      previousButton.textContent = 'Previous';
+      previousButton.disabled = true;
+
+      var nextButton = document.createElement('button');
+      nextButton.className = 'aircraft-page-control';
+      nextButton.type = 'button';
+      nextButton.textContent = 'Next';
+
+      controls.append(previousButton, nextButton);
+      pagination.append(tabList, controls);
+
+      sections.forEach(function (section, sectionIndex) {
+        var pageSuffix = section.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'section';
+        var pageId = aircraftId + '-page-' + pageSuffix + '-' + sectionIndex;
+        var tab = document.createElement('button');
+        tab.id = aircraftId + '-tab-' + sectionIndex;
+        tab.className = 'aircraft-tab';
+        tab.type = 'button';
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-selected', sectionIndex === 0 ? 'true' : 'false');
+        tab.setAttribute('aria-controls', pageId);
+        tab.setAttribute('tabindex', sectionIndex === 0 ? '0' : '-1');
+        tab.setAttribute('data-aircraft-tab', '');
+        tab.textContent = section.label;
+
+        var page = document.createElement('section');
+        page.id = pageId;
+        page.className = 'aircraft-page';
+        page.setAttribute('role', 'tabpanel');
+        page.setAttribute('aria-labelledby', tab.id);
+        page.tabIndex = 0;
+        page.hidden = sectionIndex !== 0;
+        section.nodes.forEach(function (node) { page.appendChild(node); });
+
+        tabList.appendChild(tab);
+        aircraftPanel.appendChild(page);
+      });
+
+      aircraftPanel.insertBefore(pagination, title ? title.nextSibling : aircraftPanel.firstChild);
+      aircraftPanel.querySelectorAll('.aircraft-page').forEach(function (page, index) {
+        if (sections[index]) return;
+        page.remove();
+      });
+    }
+
+    document.querySelectorAll('.pernera-panel').forEach(function (aircraftPanel) {
+      var pagination = aircraftPanel.querySelector(':scope > .aircraft-pagination');
+      if (!pagination) {
+        createPagination(aircraftPanel);
+        pagination = aircraftPanel.querySelector(':scope > .aircraft-pagination');
+      }
+      if (!pagination) return;
+
+      var tabs = Array.from(pagination.querySelectorAll('[data-aircraft-tab]'));
+      var pages = Array.from(aircraftPanel.children).filter(function (child) {
+        return child.classList.contains('aircraft-page');
+      });
+      var previousButton = pagination.querySelector('.aircraft-page-control:first-child');
+      var nextButton = pagination.querySelector('.aircraft-page-control:last-child');
+      if (!tabs.length || tabs.length !== pages.length || !previousButton || !nextButton) return;
+
+      var activeIndex = tabs.findIndex(function (tab) {
+        return tab.getAttribute('aria-selected') === 'true';
+      });
+      if (activeIndex < 0) activeIndex = 0;
+
+      function showPage(index, moveFocus) {
+        if (index < 0 || index >= pages.length) return;
+        activeIndex = index;
+
+        tabs.forEach(function (tab, tabIndex) {
+          var isSelected = tabIndex === activeIndex;
+          tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+          tab.setAttribute('tabindex', isSelected ? '0' : '-1');
+        });
+        pages.forEach(function (page, pageIndex) {
+          page.hidden = pageIndex !== activeIndex;
+        });
+
+        previousButton.disabled = activeIndex === 0;
+        nextButton.disabled = activeIndex === pages.length - 1;
+        previousButton.setAttribute('aria-controls', pages[activeIndex].id);
+        nextButton.setAttribute('aria-controls', pages[activeIndex].id);
+        if (moveFocus) tabs[activeIndex].focus();
+      }
+
+      tabs.forEach(function (tab, tabIndex) {
+        tab.addEventListener('click', function () {
+          showPage(tabIndex, false);
+        });
+
+        tab.addEventListener('keydown', function (event) {
+          var nextIndex = activeIndex;
+          switch (event.key) {
+            case 'ArrowRight':
+              nextIndex = (activeIndex + 1) % tabs.length;
+              break;
+            case 'ArrowLeft':
+              nextIndex = (activeIndex - 1 + tabs.length) % tabs.length;
+              break;
+            case 'ArrowDown':
+              if (window.innerWidth > 760) return;
+              nextIndex = Math.min(activeIndex + 2, tabs.length - 1);
+              break;
+            case 'ArrowUp':
+              if (window.innerWidth > 760) return;
+              nextIndex = Math.max(activeIndex - 2, 0);
+              break;
+            case 'Home':
+              nextIndex = 0;
+              break;
+            case 'End':
+              nextIndex = tabs.length - 1;
+              break;
+            default:
+              return;
+          }
+          event.preventDefault();
+          showPage(nextIndex, true);
+        });
+      });
+
+      previousButton.addEventListener('click', function () {
+        showPage(activeIndex - 1, false);
+      });
+      nextButton.addEventListener('click', function () {
+        showPage(activeIndex + 1, false);
+      });
+      showPage(activeIndex, false);
+    });
+  })();
+
   // Smooth anchor links (works across pages for same-domain anchors)
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
