@@ -523,6 +523,21 @@
 
           <div id="pernera-fw190a8" class="pernera-panel">
             <h3>FW-190 A8 Anton <span class="wip-badge" title="Work in progress: pending validation">WIP</span></h3>
+            <div class="aircraft-pagination">
+              <div class="aircraft-tabs" role="tablist" aria-label="FW-190 A-8 pages">
+                <button id="fw190a8-tab-start" class="aircraft-tab" type="button" role="tab" aria-selected="true" aria-controls="fw190a8-page-start" tabindex="0" data-aircraft-tab>Start</button>
+                <button id="fw190a8-tab-takeoff" class="aircraft-tab" type="button" role="tab" aria-selected="false" aria-controls="fw190a8-page-takeoff" tabindex="-1" data-aircraft-tab>Takeoff</button>
+                <button id="fw190a8-tab-landing" class="aircraft-tab" type="button" role="tab" aria-selected="false" aria-controls="fw190a8-page-landing" tabindex="-1" data-aircraft-tab>Landing</button>
+                <button id="fw190a8-tab-engine" class="aircraft-tab" type="button" role="tab" aria-selected="false" aria-controls="fw190a8-page-engine" tabindex="-1" data-aircraft-tab>Engine</button>
+                <button id="fw190a8-tab-armament" class="aircraft-tab" type="button" role="tab" aria-selected="false" aria-controls="fw190a8-page-armament" tabindex="-1" data-aircraft-tab>Armament</button>
+                <button id="fw190a8-tab-notes" class="aircraft-tab" type="button" role="tab" aria-selected="false" aria-controls="fw190a8-page-notes" tabindex="-1" data-aircraft-tab>Notes</button>
+              </div>
+              <div class="aircraft-page-controls" role="group" aria-label="Page navigation">
+                <button id="fw190a8-previous" class="aircraft-page-control" type="button" aria-controls="fw190a8-page-start" disabled>Previous</button>
+                <button id="fw190a8-next" class="aircraft-page-control" type="button" aria-controls="fw190a8-page-start">Next</button>
+              </div>
+            </div>
+            <section id="fw190a8-page-start" class="aircraft-page" role="tabpanel" aria-labelledby="fw190a8-tab-start" tabindex="0">
             <h4>Cold Start</h4>
             <div class="checklist-toolbar">
               <button class="toggle-all-checklist" type="button" data-panel="fw190a8">Mark/unmark all</button>
@@ -550,6 +565,8 @@
                <li><button class="check-item" type="button" data-key="fw190a8-8c">Uncover landing gear rise cover</button></li>
                <li><button class="check-item" type="button" data-key="fw190a8-8d">Remove wheel chocks and leave the governor in automatic after takeoff</button></li>
             </ul>
+            </section>
+            <section id="fw190a8-page-takeoff" class="aircraft-page" role="tabpanel" aria-labelledby="fw190a8-tab-takeoff" tabindex="0" hidden>
             <div class="engine-management takeoff-management">
               <h4>Takeoff (Essential)</h4>
               <div class="checklist-toolbar">
@@ -572,6 +589,8 @@
                 <li><button class="check-item" type="button" data-key="fw190a8-takeoff-8-split-2">Raise the flaps before 250 km/h</button></li>
               </ul>
             </div>
+            </section>
+            <section id="fw190a8-page-landing" class="aircraft-page" role="tabpanel" aria-labelledby="fw190a8-tab-landing" tabindex="0" hidden>
             <div class="engine-management">
               <h4>Landing (Essential)</h4>
               <div class="checklist-toolbar">
@@ -591,7 +610,8 @@
                 <li><button class="check-item" type="button" data-key="fw190a8-landing-v2-9">Gently tap the brakes to steer when the rudder becomes ineffective</button></li>
               </ul>
             </div>
-
+            </section>
+            <section id="fw190a8-page-engine" class="aircraft-page" role="tabpanel" aria-labelledby="fw190a8-tab-engine" tabindex="0" hidden>
             <div class="engine-management">
               <h4>Engine Management</h4>
               <div class="engine-table-wrapper">
@@ -608,10 +628,37 @@
                 </table>
               </div>
             </div>
+            </section>
+            <section id="fw190a8-page-armament" class="aircraft-page" role="tabpanel" aria-labelledby="fw190a8-tab-armament" tabindex="0" hidden>
+            <div class="armament-guide">
+              <h4>Armament</h4>
+              <p>In-cockpit preparation by weapon family, summarized from Part 9 of the DCS FW 190 A-8 Guide.</p>
+              <h5>Fixed guns (pp. 120–122)</h5>
+              <ol>
+                <li>Confirm the P80 outer-wing, P1 inner-wing, and P2 engine-mounted armament circuit breakers are ON.</li>
+                <li>Set MASTER ARM SAFETY I UP for the machineguns and inner-wing cannons; set MASTER ARM SAFETY II UP for the outer-wing cannons.</li>
+                <li>Raise the Cannon Safety Cover.</li>
+              </ol>
+              <p><strong>Triggers:</strong> A fires the machineguns and inner-wing cannons; B1 fires the outer-wing cannons. Holding both fires all guns.</p>
+              <h5>SC-250 bomb (p. 128)</h5>
+              <ol>
+                <li>Set MASTER ARM SAFETY I UP.</li>
+                <li>Set the Bomb Release Mode Selector to Sturz (left/red) for dive bombing or Wagerecht (right/green) for level bombing. Center/Aus disarms the selector.</li>
+                <li>Select MV for fuze delay or OV for no delay.</li>
+              </ol>
+              <h5>BR 21 rockets (pp. 133–134)</h5>
+              <ol>
+                <li>Set the SICHERHEITSSCHA. GERÄT 21 rocket arming switch to EIN/UP.</li>
+                <li>Use the B2 Bomb/Rocket Release control to fire the rockets (RSHIFT+SPACE).</li>
+              </ol>
+            </div>
+            </section>
+            <section id="fw190a8-page-notes" class="aircraft-page" role="tabpanel" aria-labelledby="fw190a8-tab-notes" tabindex="0" hidden>
             <div class="technical-notes">
               <h4>Technical Notes <span class="wip-badge" title="Sample content: pending validation">WIP</span></h4>
               <ul><li>Takeoff and landing procedures include source revisions pending module validation.</li></ul>
             </div>
+            </section>
           </div>
 
           <div id="pernera-fw190d9" class="pernera-panel">
@@ -1285,14 +1332,10 @@
                 <li><button class="check-item" type="button" data-key="fa18-landing-carrier-3b">Set FLAPS FULL</button></li>
               </ul>
             </div>
-            <div class="video-accordion">
-              <button class="video-accordion-toggle" type="button" aria-expanded="false">
-                Recommended videos
-              </button>
-
-              <div class="video-accordion-content" hidden>
-                <p class="video-privacy-notice">These links open videos on YouTube. YouTube receives your connection details when you follow a link. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.</p>
-                <ul class="video-link-list">
+            <div class="recommended-videos">
+              <h4>Recommended videos</h4>
+              <p class="video-privacy-notice">These links open videos on YouTube. YouTube receives your connection details when you follow a link. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.</p>
+              <ul class="video-link-list">
                   <li class="video-link-card">
                     <a class="video-link-main" href="https://www.youtube.com/watch?v=gWulKpNqtP8" target="_blank" rel="noopener noreferrer">
                       <span>F-18 Cold Start Tutorial - Quick Hornet Cold Start using INS Stored Heading - DCS in 3 Or Less</span>
@@ -1313,8 +1356,7 @@
                       <span class="video-channel-copy"><span>CHANNEL</span><strong>Tricker</strong></span>
                     </a>
                   </li>
-                </ul>
-              </div>
+              </ul>
             </div>
           </div>
 
@@ -1454,14 +1496,10 @@
               <li><button class="check-item" type="button" data-key="f14-landing-carrier-7">At the break, extend the speedbrake</button></li>
             </ul>
           </div>
-          <div class="video-accordion">
-            <button class="video-accordion-toggle" type="button" aria-expanded="false">
-              Recommended videos
-            </button>
-
-            <div class="video-accordion-content" hidden>
-              <p class="video-privacy-notice">These links open videos on YouTube. YouTube receives your connection details when you follow a link. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.</p>
-              <ul class="video-link-list">
+          <div class="recommended-videos">
+            <h4>Recommended videos</h4>
+            <p class="video-privacy-notice">These links open videos on YouTube. YouTube receives your connection details when you follow a link. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.</p>
+            <ul class="video-link-list">
                 <li class="video-link-card">
                   <a class="video-link-main" href="https://www.youtube.com/watch?v=Trg0mG_Dh_w" target="_blank" rel="noopener noreferrer">
                     <span>F-14B Tomcat: Walkman Music User Playlist, Asteroids Game &amp; Optimus Prime | DCS WORLD</span>
@@ -1482,8 +1520,7 @@
                     <span class="video-channel-copy"><span>CHANNEL</span><strong>Skunk McFunk</strong></span>
                   </a>
                 </li>
-              </ul>
-            </div>
+            </ul>
           </div>
         </div>
 
