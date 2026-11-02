@@ -77,7 +77,13 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 
 ### [Navigation Tools](navigation-tools.html)
 
-The mission-planning tools live on their own page, separate from the aircraft procedures in [Flight Checklists](flight-checklists.html). Coordinate calculations are handled by `assets/js/coordinate-tools.js`; shared unit conversion and location search are handled by `assets/js/main.js`.
+The mission-planning tools live on their own page, separate from the aircraft procedures in [Flight Checklists](flight-checklists.html). Select a tool from the tabs to switch between the unit converter, airfield and city finder, coordinate tools, and Morse translator. Coordinate calculations are handled by `assets/js/coordinate-tools.js`; Morse translation is handled by `assets/js/morse-translator.js`; shared unit conversion and location search are handled by `assets/js/main.js`.
+
+#### Morse Translator
+- Translate text to International Morse code and decode Morse back to text
+- Enter Morse with dot and dash buttons or type it directly
+- Separate letters with spaces and words with `/`
+- Supports letters, numbers, and common punctuation; accented letters are normalized to their base letters
 
 #### Unit Converter
 Convert between common aviation units:
