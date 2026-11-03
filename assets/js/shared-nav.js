@@ -20,7 +20,7 @@
       '    <a href="comms.html">Comms</a>',
       '    <a href="brevities.html">Brevities</a>',
       '    <a href="formations.html">Formations</a>',
-      '    <a href="tot-calculator.html">TOT Calculator</a>',
+      '    <a href="navigation-tools.html#tot">TOT Calculator</a>',
       '    <button class="site-nav__refresh" type="button" aria-label="Refresh page and resources" title="Refresh page and resources">',
       '      <svg class="site-nav__refresh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 11a8 8 0 0 0-14.9-4M5 3v4h4M4 13a8 8 0 0 0 14.9 4M19 21v-4h-4"/></svg>',
       '      <span class="site-nav__refresh-label" role="status" aria-live="polite">Refresh</span>',

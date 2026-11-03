@@ -18,7 +18,7 @@
       <header class="navigation-tools-heading page-heading">
         <span class="page-heading-kicker">Flight planning</span>
         <h1>Navigation Tools</h1>
-        <p>Unit and coordinate conversion, airfield search, Morse translation, and route-planning calculations for DCS World.</p>
+        <p>Unit and coordinate conversion, airfield search, Morse translation, and route timing calculations for DCS World.</p>
       </header>
 
         <div class="navigation-tool-tabs" role="tablist" aria-label="Flight tools">
@@ -26,6 +26,7 @@
           <button id="location-finder-tab" class="navigation-tool-tab" type="button" role="tab" aria-selected="false" aria-controls="location-finder-panel" tabindex="-1">Airfield &amp; City Finder</button>
           <button id="coordinate-tools-tab" class="navigation-tool-tab" type="button" role="tab" aria-selected="false" aria-controls="coordinate-tools-panel" tabindex="-1">Coordinate Tools</button>
           <button id="morse-translator-tab" class="navigation-tool-tab" type="button" role="tab" aria-selected="false" aria-controls="morse-translator-panel" tabindex="-1">Morse Translator</button>
+          <button id="tot-calculator-tab" class="navigation-tool-tab" type="button" role="tab" aria-selected="false" aria-controls="tot-calculator-panel" data-tab-hash="tot" tabindex="-1">TOT Calculator</button>
         </div>
 
         <div class="engine-management global-converter-block navigation-tool-panels">
@@ -325,6 +326,113 @@
             </div>
             <p class="morse-note">Use spaces between letters and / between words.</p>
           </section>
+
+          <section id="tot-calculator-panel" class="navigation-tool-panel tot-tool-panel" role="tabpanel" aria-labelledby="tot-calculator-tab" tabindex="0" hidden>
+            <form class="tot-form" id="tot-form">
+              <label class="tot-field tot-departure" for="departure-time">
+                Departure time (mission clock, optional)
+                <input id="departure-time" name="departure-time" type="time" step="60">
+                <small>Leave blank to calculate leg and total durations without clock ETAs.</small>
+              </label>
+
+              <div class="tot-unit-controls" aria-label="Route units">
+                <label class="tot-field" for="distance-unit">
+                  Distance units
+                  <select id="distance-unit" name="distance-unit">
+                    <option value="nm">Nautical miles (NM)</option>
+                    <option value="km">Kilometres (km)</option>
+                    <option value="mi">Miles (mi)</option>
+                  </select>
+                </label>
+                <label class="tot-field" for="speed-unit">
+                  Speed units
+                  <select id="speed-unit" name="speed-unit">
+                    <option value="kt">Knots (kt)</option>
+                    <option value="kmh">Kilometres per hour (km/h)</option>
+                    <option value="mph">Miles per hour (mph)</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="tot-route-heading">
+                <div>
+                  <h2>Route legs</h2>
+                  <p>Enter the planned track distance and average groundspeed for each leg.</p>
+                </div>
+              </div>
+
+              <div class="tot-route-legs" id="route-legs"></div>
+              <button class="btn tot-add-leg" id="add-route-leg" type="button">+ Add waypoint</button>
+
+              <template id="route-leg-template">
+                <section class="tot-leg">
+                  <header class="tot-leg-header">
+                    <h3 class="tot-leg-title"></h3>
+                    <button class="btn tot-remove-leg" type="button">Remove</button>
+                  </header>
+                  <div class="tot-fields">
+                    <label class="tot-field">
+                      From
+                      <input data-field="from" type="text" autocomplete="off" required>
+                    </label>
+                    <label class="tot-field">
+                      To waypoint or target
+                      <input data-field="to" type="text" autocomplete="off" required>
+                    </label>
+                    <label class="tot-field">
+                      <span>Leg distance (<span class="tot-distance-unit-label">NM</span>)</span>
+                      <input data-field="distance" type="number" min="0.1" step="any" inputmode="decimal" required>
+                    </label>
+                    <label class="tot-field">
+                      <span>Average groundspeed (<span class="tot-speed-unit-label">kt</span>)</span>
+                      <input data-field="groundspeed" type="number" min="1" step="any" inputmode="decimal" required>
+                    </label>
+                  </div>
+                </section>
+              </template>
+
+              <div class="tot-actions">
+                <button class="btn" type="submit">Calculate route timing</button>
+                <button class="btn tot-reset" type="reset">Clear route</button>
+              </div>
+            </form>
+
+            <section class="tot-results" id="tot-results" aria-live="polite" hidden>
+              <h2>Route estimate</h2>
+              <dl class="tot-results-grid">
+                <div>
+                  <dt>Total distance</dt>
+                  <dd id="total-distance"></dd>
+                </div>
+                <div>
+                  <dt>Total time en route</dt>
+                  <dd id="total-flight-time"></dd>
+                </div>
+                <div class="tot-result-primary">
+                  <dt>Final arrival</dt>
+                  <dd id="final-arrival"></dd>
+                </div>
+              </dl>
+              <div class="table-wrapper tot-table-wrapper">
+                <table class="kneeboard-table tot-table">
+                  <thead>
+                    <tr>
+                      <th>Leg</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Distance</th>
+                      <th>Avg GS</th>
+                      <th>Time</th>
+                      <th>ETA</th>
+                    </tr>
+                  </thead>
+                  <tbody id="route-results-rows"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <p class="tot-note">Groundspeed should include expected wind effects. Estimates assume steady speed for each leg; account for climb, ingress, holding, and other phases in your distances or speeds. Mission-clock ETAs wrap through midnight without needing a calendar date.</p>
+          </section>
         </div>
 
     </section>
@@ -337,6 +445,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/coordinate-tools.js"></script>
   <script src="assets/js/morse-translator.js"></script>
+  <script src="assets/js/tot-calculator.js"></script>
   <script src="assets/js/navigation-tool-tabs.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ This repository is the active project site for the J&I SimWorks Systems portfoli
 
 The site is organized as a framework-free static application. Public HTML pages stay at the repository root for stable GitHub Pages URLs; shared frontend resources live under `assets/`, generated data lives under `data/`, authoring references live under `docs/`, and data-generation utilities live under `tools/`.
 
-A comprehensive digital kneeboard and reference toolkit for DCS World (Digital Combat Simulator). Aircraft procedures live in Flight Checklists; unit conversion, location search, and coordinate-based mission-planning tools are grouped on the separate Navigation Tools page.
+A comprehensive digital kneeboard and reference toolkit for DCS World (Digital Combat Simulator). Aircraft procedures live in Flight Checklists; flight planning and conversion tools are grouped on the Navigation Tools page.
 
 ## Project Relationship
 
@@ -59,13 +59,6 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 - Standard radio procedures and phrases
 - Real-time search filtering
 
-### Route Timing Calculator
-- Build multi-leg routes with distance and speed per leg
-- Enter distances in nautical miles, kilometres, or miles, and speeds in knots, km/h, or mph
-- Calculate cumulative en-route time and ETA
-- Support departure times and midnight rollover
-- Useful for mission planning and flight timing estimates
-
 ### Formation Reference
 - Explore official and attack formations with interactive SVG diagrams or plain-text position lists
 - Expand each formation for its explanation, advantages, limitations, and typical use
@@ -77,13 +70,20 @@ A comprehensive digital kneeboard and reference toolkit for DCS World (Digital C
 
 ### [Navigation Tools](navigation-tools.html)
 
-The mission-planning tools live on their own page, separate from the aircraft procedures in [Flight Checklists](flight-checklists.html). Select a tool from the tabs to switch between the unit converter, airfield and city finder, coordinate tools, and Morse translator. Coordinate calculations are handled by `assets/js/coordinate-tools.js`; Morse translation is handled by `assets/js/morse-translator.js`; shared unit conversion and location search are handled by `assets/js/main.js`.
+The mission-planning tools live on their own page, separate from the aircraft procedures in [Flight Checklists](flight-checklists.html). Select a tool from the tabs to switch between the unit converter, airfield and city finder, coordinate tools, Morse translator, and route timing calculator. Coordinate calculations are handled by `assets/js/coordinate-tools.js`; Morse translation is handled by `assets/js/morse-translator.js`; route timing is handled by `assets/js/tot-calculator.js`; shared unit conversion and location search are handled by `assets/js/main.js`.
 
 #### Morse Translator
 - Translate text to International Morse code and decode Morse back to text
 - Enter Morse with dot and dash buttons or type it directly
 - Separate letters with spaces and words with `/`
 - Supports letters, numbers, and common punctuation; accented letters are normalized to their base letters
+
+#### [Route Timing Calculator](navigation-tools.html#tot)
+- Build multi-leg routes with distance and speed per leg
+- Enter distances in nautical miles, kilometres, or miles, and speeds in knots, km/h, or mph
+- Calculate cumulative en-route time and ETA
+- Support departure times and midnight rollover
+- Useful for mission planning and flight timing estimates
 
 #### Unit Converter
 Convert between common aviation units:
@@ -133,10 +133,10 @@ Convert between common aviation units:
 dcs-flight-tools/
 ├── index.html              # Landing page and module overview
 ├── flight-checklists.html  # Aircraft checklists
-├── navigation-tools.html   # Unit, location, and coordinate tools
+├── navigation-tools.html   # Unit, location, coordinate, Morse, and route timing tools
 ├── legal.html              # Legal, privacy, and third-party media information
 ├── threat-database.html    # Searchable threat reference page
-├── tot-calculator.html     # Multi-leg route timing and ETA calculator
+├── tot-calculator.html     # Compatibility redirect to the Navigation Tools TOT tab
 ├── assets/
 │   ├── css/
 │   │   └── styles.css      # Global styles

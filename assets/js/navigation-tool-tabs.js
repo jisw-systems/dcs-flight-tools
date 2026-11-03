@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function initNavigationToolTabs() {
   var tabList = document.querySelector('[role="tablist"]');
   if (!tabList) return;
 
@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var panels = tabs.map(function (tab) {
     return document.getElementById(tab.getAttribute('aria-controls'));
   });
+
+  function tabForCurrentHash() {
+    var hash = window.location.hash.slice(1);
+    return tabs.find(function (tab) {
+      return tab.dataset.tabHash === hash || tab.id === hash;
+    });
+  }
 
   function activateTab(activeTab, moveFocus) {
     tabs.forEach(function (tab, index) {
@@ -17,9 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (moveFocus) activeTab.focus();
   }
 
+  function updateTabHash(tab) {
+    var hash = tab.dataset.tabHash ? '#' + tab.dataset.tabHash : '';
+    window.history.replaceState(null, '', window.location.pathname + window.location.search + hash);
+  }
+
   tabs.forEach(function (tab, index) {
     tab.addEventListener('click', function () {
       activateTab(tab, false);
+      updateTabHash(tab);
     });
 
     tab.addEventListener('keydown', function (event) {
@@ -38,6 +51,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       event.preventDefault();
       activateTab(tabs[nextIndex], true);
+      updateTabHash(tabs[nextIndex]);
     });
   });
-});
+
+  var linkedTab = tabForCurrentHash();
+  if (linkedTab) activateTab(linkedTab, false);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initNavigationToolTabs, { once: true });
+} else {
+  initNavigationToolTabs();
+}

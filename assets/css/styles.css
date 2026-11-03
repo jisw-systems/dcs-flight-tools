@@ -582,6 +582,10 @@ body[data-page="inicio"] .home-main{background:rgba(13,13,15,0.62)}
 .navigation-coordinate-section + .navigation-coordinate-section{margin-top:24px;padding-top:20px;border-top:1px solid rgba(179,57,57,0.24)}
 .navigation-coordinate-section h2{margin:0 0 12px;color:var(--text);font-size:1rem}
 .navigation-coordinate-section > .geo-tool-note{margin-top:12px}
+.navigation-tool-panel .tot-form{grid-template-columns:minmax(0,1fr);padding:18px 10px 24px}
+.navigation-tool-panel .tot-departure,.navigation-tool-panel .tot-unit-controls{grid-column:1/-1}
+.navigation-tool-panel .tot-results{margin:0 10px 20px}
+.navigation-tool-panel .tot-note{margin:0 10px 10px}
 .morse-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .morse-card{display:grid;align-content:start;gap:12px;min-width:0;padding:18px;border:1px solid rgba(255,255,255,0.08);border-radius:6px;background:rgba(255,255,255,0.02)}
 .morse-card h2{margin:0;color:var(--text);font-size:1rem}
